@@ -83,5 +83,15 @@ solved-mantle and full game/runtime integration are not demonstrated by this dem
 MAIForge project code is offered under GNU AGPL version 3 only. See LICENSE.
 Commercial use is permitted under that license. For different terms, including
 proprietary integration, open a [licensing inquiry](https://github.com/matlowai/MAIForge/issues)
-to contact the maintainers. Alternative terms require a separate written agreement;
+to contact **MATLOWAI**, which handles official alternative-license negotiations.
+Alternative terms require a separate written agreement;
 third-party rights and dependency licenses remain applicable. See LICENSING.md.
+
+
+## Contributions
+
+Before submitting a pull request, read [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[MATLOWAI Contributor Agreement v1.0](docs/legal/CONTRIBUTOR_AGREEMENT_v1.0.md).
+Submitting an acknowledged PR grants MATLOWAI additional licensing permissions
+for your contribution, including separate commercial/proprietary licensing;
+you retain your copyright. The PR template records that acknowledgement.
