@@ -3,9 +3,15 @@
 MAIForge project code is licensed under the GNU Affero General Public License,
 version 3 only (SPDX: AGPL-3.0-only). The unmodified license text is in LICENSE.
 
-Commercial use is allowed under AGPL. Customers who need different terms,
-including proprietary integration, must negotiate those terms with **MATLOWAI**
-through a licensing inquiry at https://github.com/matlowai/MAIForge/issues.
+Commercial use is allowed under AGPL. If you need different terms, including
+proprietary integration, please say hello to **MATLOWAI** through a
+[licensing inquiry](https://github.com/matlowai/MAIForge/issues).
+
+**Separate licenses may be free of charge or offered on mutually agreed terms.**
+MATLOWAI considers the project, the people involved and the intended use when
+agreeing an arrangement. Individuals, hobbyists, small teams and organizations
+of any size are welcome to ask. A small budget is not a reason to assume you
+cannot get in touch; there is no fee simply to make an inquiry.
 
 An inquiry does not grant an exception. Alternative permissions require a separate
 written agreement from MATLOWAI, identifying the legal contracting party and any

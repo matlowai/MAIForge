@@ -30,5 +30,8 @@ This is a maintainer-reviewed acceptance policy. The template is not an automate
 CLA bot or a configured required status check. Changes to agreement terms require
 a new version; preserve previously accepted versions and their records.
 
-For separate licensing, contact **MATLOWAI** through a
-[licensing inquiry](https://github.com/matlowai/MAIForge/issues).
+For separate licensing, [say hello to **MATLOWAI**](https://github.com/matlowai/MAIForge/issues).
+An alternative license may be free or negotiated to suit the project and its
+circumstances. Individuals and small teams are welcome; you do not need a big
+budget to start a conversation. Any license exception still needs a written
+agreement.
