@@ -1,0 +1,1076 @@
+{
+  "schema": "picea-abies-calibration-evidence/v0",
+  "fixture_family": "PiceaAbiesCalibrationV0",
+  "artifact_class": "visual-calibration-fixture",
+  "world_admission": false,
+  "written": "2026-09-07",
+  "statement": "Authored calibration hypothesis for one Norway spruce rendering fixture. Nothing here is admitted world truth, and nothing here is a measurement of the individual tree this fixture renders. Every row records what kind of thing it is before it records a number.",
+  "evidence_classes": {
+    "verified-measurement": "Independently read from a primary source with a table locator. No row in this release has this class.",
+    "peer-reported-source-read": "Reported transcription with a named table and population; not independently rechecked for this release.",
+    "supplied-unverified-claim": "Restated claim attributed to a source without an independently checked locator.",
+    "qualitative-observation": "A described relationship or direction of effect with no coefficients supplied. Constrains a shape decision without parameterizing it.",
+    "derived-consistency-check": "Not evidence. An arithmetic relation computed here between reported values, recorded so a reader can see which reported numbers do and do not describe one consistent tree.",
+    "explicit-calibration-choice": "Chosen here to make the fixture renderable. Not measured, not inferred, not a production default.",
+    "unavailable": "Known gap. Carries no value. Reading it raises."
+  },
+  "sources": {
+    "src.packet": {
+      "title": "Unpublished calibration specification",
+      "locator": "Not distributed; retain unverified status for its claims.",
+      "kind": "Unverified source of calibration claims",
+      "note": "Only restated claims were available. No underlying research dossier was independently examined."
+    },
+    "src.peer_patch": {
+      "title": "Reported primary-source transcriptions",
+      "kind": "Secondary transcription report",
+      "independently_verified_for_release": false,
+      "note": "Contains table locators and named populations; internal consistency was checked, but original tables were not independently rechecked for this release. See peer_patch_audit."
+    },
+    "src.makinen2006": {
+      "title": "Maekinen and Hein 2006, Effect of wide spacing on increment and branch properties of young Norway spruce",
+      "url": "https://www.researchgate.net/publication/225561155_Effect_of_wide_spacing_on_increment_and_branch_properties_of_young_Norway_spruce",
+      "opened_in_session": false,
+      "read_by": "src.peer_patch",
+      "sample": "45 trees, 5661 measured branches, spacings 350, 700 and 1600 stems per hectare",
+      "population": "the 350 stems per hectare treatment, described by the authors as open grown to almost open grown during development",
+      "note": "The authors note the widest spaced trees had almost closed their growing space by measurement, so 350 stems per hectare is an open grown CALIBRATION population and not an archetypal solitary spruce. All values are treatment means over 45 trees split across three densities."
+    },
+    "src.fabrika2019": {
+      "title": "Fabrika et al. 2019, Crown architecture and structural development of young Norway spruce trees (Picea abies Karst.): a basis for more realistic growth modelling",
+      "url": "https://bioresources.cnr.ncsu.edu/resources/crown-architecture-and-structural-development-of-young-norway-spruce-trees-picea-abies-karst-a-basis-for-more-realistic-growth-modelling/",
+      "opened_in_session": false,
+      "read_by": "src.peer_patch",
+      "sample": "15 felled trees, more than 12000 growth units measured",
+      "site": "naturally regenerated Norway spruce dominated stand, central Slovakia, about 700 m elevation, average stand age about 10 years",
+      "population": "young trees in very dense natural regeneration under high competition",
+      "note": "A DIFFERENT population from src.makinen2006 in age, density and competition. No sylleptic or polycyclic growth was observed in this sample, so a growth unit corresponded to an annual shoot THERE. That correspondence is a property of that sample and is not transferred."
+    },
+    "src.colin1992": {
+      "title": "Colin and Houllier 1992, Branchiness of Norway spruce in northeastern France: predicting the main crown characteristics from usual tree measurements",
+      "url": "https://www.researchgate.net/publication/41706880_Branchiness_of_Norway_spruce_in_northeastern_France_predicting_the_main_crown_characteristics_from_usual_tree_measurements",
+      "opened_in_session": false,
+      "read_by": "nobody in this exchange",
+      "sample": "117 Norway spruces, northeastern France",
+      "note": "Identified by the peer patch as the source that models primary branch INSERTION ANGLE, branch size, branch number and whorl position from usual tree measurements. No coefficient, table or equation from it has been transcribed. It is the named next source for the largest remaining gap, not a current input."
+    },
+    "src.fna": {
+      "title": "Flora of North America treatment of Picea abies, via eFloras",
+      "url": "https://efloras.org/florataxon.aspx?flora_id=1&taxon_id=200005295",
+      "opened_in_session": false,
+      "read_by": "src.peer_patch",
+      "note": "Institutional flora. Species level morphology only. Supplies no quantitative branch angle or packing distribution."
+    },
+    "src.niinemets1995": {
+      "title": "Niinemets and Kull 1995 and companion, effects of light availability and tree size on the architecture of assimilative surface in the canopy of Picea abies",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14965954/",
+      "opened_in_session": false,
+      "read_by": "src.peer_patch, abstract and bibliographic record only",
+      "note": "Reports that needle width increases with diffuse light availability while thickness stays comparatively stable, and that irradiance and tree size affect needle packing, orientation and shoot silhouette. Abstract level only. No coefficients. This fixture has no light state, so nothing here is consumed."
+    },
+    "src.supplied_unconsumed": {
+      "title": "Packet sources with no transcribed content",
+      "urls": [
+        "https://www.soiltest.vt.edu/content/pubs_ext_vt_edu/en/HORT/HORT-20/HORT-20.html",
+        "https://www.fs.usda.gov/rm/pubs_journals/2007/rmrs_2007_metslaid_m001.pdf",
+        "https://www.mendeley.com/catalogue/f443e1da-69b6-3750-9861-ef122da5fd8b/"
+      ],
+      "opened_in_session": false,
+      "note": "Nobody in this exchange has reported reading these. No parameter draws on them. The Mendeley catalogue entry is plausibly a duplicate record of src.makinen2006; that was not checked."
+    },
+    "src.photographs": {
+      "title": "Reference photographs listed by the packet",
+      "obtained": false,
+      "entries": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Young_Norway_Spruce_needles.jpg",
+          "license_reported": "CC BY-SA 4.0",
+          "reported_by": "src.peer_patch"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Picea_abies.jpg",
+          "license_reported": "CC BY-SA 3.0",
+          "reported_by": "src.peer_patch"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Picea_abies_branch.jpg",
+          "license_reported": "not reported",
+          "reported_by": null
+        }
+      ],
+      "note": "Not downloaded, not viewed, not used as texture or shape reference, and not required in committed files. Licenses differ between the two reported entries, which is why a per file check is needed rather than a gallery assumption. Uploader identification of the species is not expert verification. Per file attribution strings were not captured, so none of these could be used as an asset without going back to the file page."
+    }
+  },
+  "population_transfers": [
+    {
+      "id": "xfer.growth_unit_decomposition",
+      "from": "src.fabrika2019",
+      "to": "the src.makinen2006 envelope fixture",
+      "what": "that an axis decomposes into growth units, and that branching is approximately plagiotropic with left, right and upward daughter classes",
+      "status": "structural hypothesis adopted; direction marginals adopted as bin masses; no growth unit lengths, counts, chronology or conditional transitions transferred",
+      "limitation": "About 10 year old trees in very dense natural regeneration versus an open grown 350 stems per hectare treatment. Competition is the dominant driver in the source stand and is absent here. This is an authored hybrid hypothesis, not one calibrated biological model."
+    },
+    {
+      "id": "xfer.branch_angle_distribution",
+      "from": "src.fabrika2019",
+      "to": "second and third order insertion angles in this fixture",
+      "what": "the three angle bin masses and the direction of the order effect",
+      "status": "adopted as bin masses; within bin shape and the order shift magnitude are choices; never applied to primary branches",
+      "limitation": "The source excluded first order branches emerging from the trunk from its angle analysis, and the reference axis it measured from is not established here. The dense regeneration population is not the open grown population."
+    },
+    {
+      "id": "xfer.needle_morphology",
+      "from": "src.fna",
+      "to": "the needle primitive",
+      "what": "four angled cross section, 10 to 25 mm length, conic crown with ascending upper and drooping lower branches",
+      "status": "adopted for shape class and length support; all packing, density, width and orientation numbers remain choices",
+      "limitation": "Species level flora prose. It supplies no distribution, no density and no per population variation."
+    }
+  ],
+  "parameters": [
+    {
+      "id": "pa.stand.density_stems_per_ha",
+      "value": 350,
+      "units": "stems/ha",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "wide spacing trial, 350 stems/ha treatment",
+      "regime": "treatment label",
+      "applicability": "Identifies which reported population the envelope numbers came from. Not a placement instruction: this fixture places no stand and no second tree.",
+      "consumed_by": "provenance label only",
+      "locator": "treatment means, 350 stems per hectare column"
+    },
+    {
+      "id": "pa.tree.height_m",
+      "value": 15.7,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "A population mean adopted as a fixture envelope target. It is not the measured height of any individual, and this fixture is not a reconstruction of a real tree.",
+      "consumed_by": "fixture envelope target",
+      "locator": "treatment means, 350 stems per hectare column"
+    },
+    {
+      "id": "pa.tree.crown_diameter_m",
+      "value": 6.3,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "Adopted as the second fixture envelope target. The reported spread for this treatment is 4.8 to 8.6 m, so one tree at 6.3 m is a tree at the treatment mean, not a species constant. The crown width definition used by the authors (widest live spread, projected crown, or mean of two axes) is still not established here.",
+      "consumed_by": "fixture envelope target; fx.envelope_fit_scalar is solved against it",
+      "locator": "treatment means, 350 stems per hectare column",
+      "reported_range_m": [
+        4.8,
+        8.6
+      ]
+    },
+    {
+      "id": "pa.tree.crown_ratio_pct",
+      "value": 89.7,
+      "units": "percent",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "DIAGNOSTIC ONLY, still not an input. See chk.crown_base_definition: this ratio is consistent with a crown base at the lowest living BRANCH, not the lowest living whorl. The fixture reports its own ratio beside it and adjusts neither.",
+      "consumed_by": "reported alongside the fixture's own crown ratio without reconciliation",
+      "recorded_tension": "Resolved as a definitional difference rather than a contradiction, by arithmetic here and not by a statement from the authors.",
+      "locator": "treatment means, 350 stems per hectare column"
+    },
+    {
+      "id": "pa.tree.lowest_living_whorl_m",
+      "value": 1.9,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "A stated whorl height. This fixture adopts it as the height of its own first live whorl, which is a choice to follow one reported measure rather than a reconciliation of two.",
+      "consumed_by": "fx.first_live_whorl_m",
+      "locator": "treatment means, 350 stems per hectare column"
+    },
+    {
+      "id": "pa.branch.thickest_diameter_m",
+      "value": 0.055,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean of the thickest branch",
+      "applicability": "Reported as a DIAMETER; halved exactly once in fx.thickest_branch_radius_m. This is a mean of per tree maxima and is a DIFFERENT statistic from pa.branch.max_diameter_by_stratum_m, which the generator actually consumes. The two are reported side by side and never reconciled.",
+      "consumed_by": "reported comparison only; superseded as a generator input by pa.branch.max_diameter_by_stratum_m",
+      "locator": "treatment means, 350 stems per hectare column"
+    },
+    {
+      "id": "pa.branch.nonprimary_angle_deg_range",
+      "value": [
+        40,
+        70
+      ],
+      "units": "degrees",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported range, EXCLUDING primary trunk branches",
+      "applicability": "Still never a primary insertion angle. Superseded as a distribution by pa.branch.nonprimary_angle_bin_masses: the reported range holds only about 60 percent of the mass, so uniform over 40 to 70 would silently discard the 30 percent below 40 degrees. Reference axis convention is not established; this fixture measures from the parent axis tangent, which remains a chosen convention.",
+      "consumed_by": "superseded by pa.branch.nonprimary_angle_bin_masses",
+      "locator": "growth unit branching angle analysis, first order trunk branches excluded"
+    },
+    {
+      "id": "pa.needle.length_m_range",
+      "value": [
+        0.01,
+        0.025
+      ],
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fna",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "regime": "reported range",
+      "applicability": "A species level length range from an institutional flora. Still a range and still not a probability distribution.",
+      "consumed_by": "support of fx.needle_length_distribution",
+      "locator": "Flora of North America leaf description, 1 to 2.5 cm"
+    },
+    {
+      "id": "pa.gu.axis_decomposes_into_growth_units",
+      "value": null,
+      "units": null,
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "juvenile dense natural regeneration",
+      "applicability": "Supports representing growth units as an explicit decomposition of an axis, and confirms the concept is measurable at scale. In THAT sample no sylleptic or polycyclic growth was observed, so a growth unit was an annual shoot there. That correspondence belongs to that stand and is NOT transferred: growth units here carry year null. Supplies no unit lengths for this fixture's population.",
+      "consumed_by": "graph decomposition structure; see xfer.growth_unit_decomposition and fx.growth_unit_arc_m",
+      "locator": "more than 12000 growth units over 15 felled trees"
+    },
+    {
+      "id": "pa.gu.daughter_orientation_association",
+      "value": null,
+      "units": null,
+      "evidence_class": "qualitative-observation",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "taxon": "Picea abies",
+      "population": "juvenile dense natural regeneration",
+      "applicability": "Mother to first successor direction association, Fisher exact p = 0.0019. A p value plus marginals does not supply a conditional transition table. Still implemented as nothing. The marginals moved to pa.gu.daughter_direction_marginals, which IS consumed.",
+      "consumed_by": "nothing; recorded as a deliberate non use, reaffirmed after the peer patch listed it as safe"
+    },
+    {
+      "id": "pa.branch.primary_insertion_angle_deg",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "The largest remaining gap, now with a named next source. src.fabrika2019 explicitly EXCLUDED first order trunk branches from its angle analysis, and src.colin1992 is reported to model primary insertion angle from usual tree measurements but has not been transcribed by anyone here. fx.primary_angle_base_deg and fx.primary_angle_apex_deg remain named choices whose only support is the flora's qualitative ascending-upper, drooping-lower habit.",
+      "extraction_question": "From src.colin1992, transcribe the insertion angle model for first order branches: response variable, predictors, coefficients, and the range of relative crown depth over which it was fitted."
+    },
+    {
+      "id": "pa.tree.trunk_base_diameter_m",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Still unavailable AS A BASE DIAMETER. The patch supplies diameter at breast height, which is a measurement at 1.3 m and not at the root collar. See pa.tree.dbh_m; the base radius is now derived from that constraint plus a chosen taper, and the derivation is recorded rather than the number guessed.",
+      "extraction_question": "Is stem taper below breast height, or a root collar diameter, reported for this treatment?"
+    },
+    {
+      "id": "pa.tree.whorl_count",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Narrowed, not closed. pa.branch.mean_count_per_whorl_by_stratum tabulates 20 whorls from the apex with the lowest stratum 83 percent alive, so at least 20 whorls exist and about 19 are live. Whether whorls continue below the tabulated 20 is not established, and none of this is an age.",
+      "extraction_question": "Do the branch strata continue below 20 whorls from the apex, and what internode lengths were recorded?"
+    },
+    {
+      "id": "pa.tree.age_years",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Still unavailable FOR THIS POPULATION. src.fabrika2019 reports an average stand age of about 10 years, but that is the dense regeneration stand, not the 350 stems per hectare treatment. Importing it would be a population transfer of exactly the kind this ledger exists to prevent. Every growth unit still carries year null.",
+      "extraction_question": "What was the stand age in years at measurement, and the mean annual height increment?"
+    },
+    {
+      "id": "pa.branch.count_per_whorl",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "CLOSED for the tabulated strata by pa.branch.mean_count_per_whorl_by_stratum. This row remains only for the per whorl distribution: the source supplies stratum means, so the variation between individual whorls inside a stratum is still a gap and fx.branch_count_realization fills it.",
+      "extraction_question": "Is a per whorl branch count distribution available, or only the five whorl stratum means?"
+    },
+    {
+      "id": "pa.branch.taper_profile",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Only a single thickest branch diameter was supplied. Taper along a branch and the diameter of any other branch are gaps. fx.branch_taper_exponent and fx.branch_radius_length_exponent are choices.",
+      "extraction_question": "Is branch diameter reported against branch length, insertion height or relative crown depth, and is a taper profile available?"
+    },
+    {
+      "id": "pa.branch.droop",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Narrowed. pa.crown.branch_orientation_by_position supplies the DIRECTION of the effect (upper ascending, lower drooping) from the flora. No curvature equation, sag law or tip deflection was supplied by any source, so fx.primary_droop_deg_per_m stays a pure magnitude choice.",
+      "extraction_question": "Is branch curvature, sag or tip deflection recorded for either population, and does src.colin1992 model it?"
+    },
+    {
+      "id": "pa.needle.cross_section",
+      "available": true,
+      "evidence_class": "peer-reported-source-read",
+      "applicability": "CLOSED at species level by the flora description. The four sided needle prism in the geometry is now a shape supported by a read source rather than a bare rendering choice, though the prism proportions remain fx.needle_width_m.",
+      "extraction_question": "Quote the eFloras or Flora Europaea leaf description for Picea abies: cross section, number of angles, width, apex, and persistence.",
+      "value": "four angled, rigid, stomata on all surfaces",
+      "source": "src.fna",
+      "via": "src.peer_patch",
+      "consumed_by": "fx.needle_cross_section, which now records agreement rather than invention"
+    },
+    {
+      "id": "pa.needle.width_m",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Only needle length was supplied. Width is a gap; fx.needle_width_m is a choice, and it directly controls whether the near tier reads as needles or as wire.",
+      "extraction_question": "What is the needle width or thickness range in millimetres?"
+    },
+    {
+      "id": "pa.needle.density_per_m",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Needles per unit shoot length, and needle persistence in years, were not supplied. fx.needle_sites_per_m is a choice, and it is the single largest driver of near tier cost.",
+      "extraction_question": "How many needles per centimetre of shoot, over how many years of retained shoot, for this species?"
+    },
+    {
+      "id": "pa.crown.widest_height",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Still unavailable for crown WIDTH. Note that the maximum branch DIAMETER is now located at whorls 11 to 15 from the apex by pa.branch.max_diameter_by_stratum_m, and that it decreases again below that. Diameter and spread need not peak at the same height, so this does not close the row and the widest spread is still placed by fx.crown_taper_exponent.",
+      "extraction_question": "At what height, or relative crown depth, was the reported crown diameter measured, and is branch LENGTH tabulated by stratum as diameter is?"
+    },
+    {
+      "id": "fx.first_live_whorl_m",
+      "value": 1.9,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "a reconciled crown base",
+      "rationale": "Adopts pa.tree.lowest_living_whorl_m verbatim rather than the 1.62 m implied by pa.tree.crown_ratio_pct. Choosing one reported measure over another is a choice; averaging them would have invented a third measurement.",
+      "diagnostic": "The fixture's own crown ratio follows from this and is reported next to the source's 89.7 percent. See chk.crown_base_definition: the reported ratio actually matches the lowest living branch at 1.6 m, so the fixture's 87.9 percent is the expected consequence of placing the crown base at the whorl instead."
+    },
+    {
+      "id": "fx.whorl_count",
+      "value": 20,
+      "units": "count",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.tree.whorl_count",
+      "rationale": "Set to the 20 whorls from the apex covered by the measured strata table, with the lowest stratum thinned by its measured 83 percent survival. Constrained by measurement rather than picked; still not an age, and whether whorls continue below the tabulated 20 is unknown."
+    },
+    {
+      "id": "fx.leader_length_m",
+      "value": 0.55,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "an unbranched leader length",
+      "rationale": "Keeps the topmost whorl below the apex so the leader reads. Not measured."
+    },
+    {
+      "id": "fx.whorl_spacing_exponent",
+      "value": 0.85,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured internode lengths",
+      "rationale": "Whorl heights follow first_live_whorl + span * u^exponent for u in [0,1]. An exponent below 1 spaces lower whorls further apart than upper ones. Chosen by eye, not fitted to any internode series."
+    },
+    {
+      "id": "fx.branch_count_per_whorl",
+      "value": "SUPERSEDED by pa.branch.mean_count_per_whorl_by_stratum",
+      "units": "count",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.count_per_whorl",
+      "rationale": "Was a flat 5 branches on every whorl. Measured stratum means replace it, and the peer patch is right that a flat count reads procedurally fake.",
+      "superseded_by": "pa.branch.mean_count_per_whorl_by_stratum"
+    },
+    {
+      "id": "fx.whorl_azimuth_step_deg",
+      "value": 137.507764,
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "a measured whorl to whorl azimuth relationship",
+      "rationale": "The golden angle is used to keep successive whorls from stacking their branches in vertical columns. It is a decorrelation device, not a claim about spruce phyllotaxy."
+    },
+    {
+      "id": "fx.branch_azimuth_jitter_deg",
+      "value": 7.0,
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured within whorl azimuth spacing",
+      "rationale": "Breaks exact fivefold symmetry. Keyed to the branch id, so it is stable across tiers and rebuilds."
+    },
+    {
+      "id": "fx.primary_angle_base_deg",
+      "value": 103.0,
+      "units": "degrees from the trunk axis",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.primary_insertion_angle_deg",
+      "rationale": "90 degrees is horizontal, so 103 is 13 degrees below horizontal at the first live whorl. Chosen to read as a lower crown branch. The reported 40 to 70 degree range was NOT used here; it excludes primary branches."
+    },
+    {
+      "id": "fx.primary_angle_apex_deg",
+      "value": 52.0,
+      "units": "degrees from the trunk axis",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.primary_insertion_angle_deg",
+      "rationale": "Ascending near the leader. Interpolated linearly against relative crown height from fx.primary_angle_base_deg. The linear form is itself a choice; no angle by height series was supplied."
+    },
+    {
+      "id": "fx.primary_droop_deg_per_m",
+      "value": 9.0,
+      "units": "degrees per metre of arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.droop",
+      "rationale": "Bends a primary progressively downward along its own length so branches are curved rather than straight rays."
+    },
+    {
+      "id": "fx.crown_taper_exponent",
+      "value": 0.78,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.crown.widest_height and a measured crown profile",
+      "rationale": "Primary length follows Lmax * (1-u)^exponent + min_length, putting the widest spread at the first live whorl. This is the conical read chosen for the fixture, not a measured crown profile."
+    },
+    {
+      "id": "fx.min_primary_length_m",
+      "value": 0.22,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured topmost whorl branch length",
+      "rationale": "Keeps the topmost whorl branches from collapsing to zero length."
+    },
+    {
+      "id": "fx.envelope_fit_scalar",
+      "value": null,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing; it is solved, not chosen by hand",
+      "rationale": "Lmax is solved by bisection at build time so that the compiled crown's widest horizontal diameter equals pa.tree.crown_diameter_m within fx.envelope_tolerance_m. The solved value is recorded in the build manifest. Solving to an envelope target is a fitting procedure, and it does not make any other measure agree with its source."
+    },
+    {
+      "id": "fx.envelope_tolerance_m",
+      "value": 0.01,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing",
+      "rationale": "Acceptance tolerance for the two envelope targets. A test setting."
+    },
+    {
+      "id": "fx.thickest_branch_radius_m",
+      "value": 0.0275,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing; it is pa.branch.thickest_diameter_m halved",
+      "rationale": "The reported 0.055 m is a DIAMETER. This row exists so the halving happens exactly once, in one place, and is visible in the ledger rather than buried in code."
+    },
+    {
+      "id": "fx.thickest_branch_location",
+      "value": "SUPERSEDED by pa.branch.max_diameter_by_stratum_m",
+      "units": null,
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unstated location of the reported thickest branch",
+      "rationale": "Was a choice placing the thickest branch at the first live whorl. The peer transcribed stratum table measures maximum branch diameter by crown depth and puts the peak at whorls 11 to 15 from the apex, decreasing below it. The choice was wrong in shape, not only in value, and the measurement replaces it.",
+      "superseded_by": "pa.branch.max_diameter_by_stratum_m"
+    },
+    {
+      "id": "fx.branch_radius_length_exponent",
+      "value": "SUPERSEDED by pa.branch.max_diameter_by_stratum_m",
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.taper_profile",
+      "rationale": "Was a chosen length to diameter scaling for branches other than the thickest. Branch base radius now comes from the measured stratum table instead, and only within whorl spread remains a choice.",
+      "superseded_by": "pa.branch.max_diameter_by_stratum_m"
+    },
+    {
+      "id": "fx.branch_taper_exponent",
+      "value": 0.7,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.taper_profile",
+      "rationale": "Radius along an axis follows r0 * (1 - s/L)^exponent, floored so it never reaches zero. A zero radius would be an invalid dimension, not a thin tip."
+    },
+    {
+      "id": "fx.min_wood_radius_m",
+      "value": 0.0006,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing",
+      "rationale": "Positive floor on every wood radius. Present so tapering cannot produce a degenerate tube, and so a zero never masquerades as an unavailable measurement."
+    },
+    {
+      "id": "fx.trunk_base_radius_m",
+      "value": "SUPERSEDED by fx.trunk_radius_from_dbh",
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.tree.trunk_base_diameter_m",
+      "rationale": "Was a hand chosen 0.115 m, which the measured DBH of 30.7 cm shows was far too thin for an open grown tree of this size. Now solved from the measurement.",
+      "superseded_by": "pa.tree.dbh_m"
+    },
+    {
+      "id": "fx.trunk_taper_exponent",
+      "value": 0.75,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "a stem taper table",
+      "rationale": "Same tapering form as branches, applied to the stem."
+    },
+    {
+      "id": "fx.nonprimary_angle_distribution",
+      "value": "uniform within each bin of pa.branch.nonprimary_angle_bin_masses",
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unsupplied within bin shape only",
+      "rationale": "Draws a bin using the measured masses (30 percent below 40 degrees, 60 percent from 40 to 70, 10 percent at or above 70), then draws uniformly WITHIN the bin, which is the part that is chosen. The earlier uniform over 40 to 70 was wrong: it discarded the 30 percent of the distribution below 40 degrees. Bins outside the 40 to 70 report are bounded by 12 and 88 degrees, which are chosen limits."
+    },
+    {
+      "id": "fx.branchlet_azimuth_scheme",
+      "value": "left, right and up direction classes drawn from measured marginals, in an approximately plagiotropic plane",
+      "units": null,
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "a daughter orientation model",
+      "rationale": "Direction class comes from pa.gu.daughter_direction_marginals; left and right lie in the branch plane, up leaves it, following pa.crown.branching_is_plagiotropic. Still NOT derived from pa.gu.daughter_orientation_association, which supplies no conditional coefficients. What remains chosen is the plane definition, the scatter within a class, and the absence of any mother to daughter persistence."
+    },
+    {
+      "id": "fx.branchlet_azimuth_jitter_deg",
+      "value": 22.0,
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured azimuth scatter",
+      "rationale": "Keyed per daughter axis so it is stable across tiers."
+    },
+    {
+      "id": "fx.branchlet_upward_bias_deg",
+      "value": "SUPERSEDED by pa.gu.daughter_direction_marginals",
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured upward daughter proportion",
+      "rationale": "Was a 14 degree upward lean applied to every daughter. The measured marginals show about a third of daughters are upward as a CLASS, which is a different structure from a small uniform bias.",
+      "superseded_by": "pa.gu.daughter_direction_marginals"
+    },
+    {
+      "id": "fx.secondary_spacing_m",
+      "value": 0.065,
+      "units": "m of parent arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured daughter spacing",
+      "rationale": "Spacing of second order axes along a primary."
+    },
+    {
+      "id": "fx.secondary_start_m",
+      "value": 0.16,
+      "units": "m of parent arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured bare basal length",
+      "rationale": "Bare length at the base of a primary before the first branchlet."
+    },
+    {
+      "id": "fx.secondary_length_fraction",
+      "value": 0.42,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured daughter length",
+      "rationale": "Second order length as a fraction of the parent's remaining length, so branchlets shorten toward the tip and the spray reads as tapered."
+    },
+    {
+      "id": "fx.secondary_max_length_m",
+      "value": 0.62,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing",
+      "rationale": "Cap on second order length."
+    },
+    {
+      "id": "fx.tertiary_spacing_m",
+      "value": 0.05,
+      "units": "m of parent arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured daughter spacing",
+      "rationale": "Spacing of third order axes along a secondary."
+    },
+    {
+      "id": "fx.tertiary_start_m",
+      "value": 0.05,
+      "units": "m of parent arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured bare basal length",
+      "rationale": "Bare length at the base of a secondary."
+    },
+    {
+      "id": "fx.tertiary_length_fraction",
+      "value": 0.35,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured daughter length",
+      "rationale": "Third order length as a fraction of the parent's remaining length."
+    },
+    {
+      "id": "fx.tertiary_max_length_m",
+      "value": 0.14,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing",
+      "rationale": "Cap on third order length."
+    },
+    {
+      "id": "fx.daughter_radius_fraction",
+      "value": 0.22,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.branch.taper_profile",
+      "rationale": "A daughter's base radius as a fraction of the parent radius at its attachment point. Tuned once against a measured ceiling rather than by taste; see tuned_from and tuned_because.",
+      "tuned_from": 0.42,
+      "tuned_because": "At 0.42 the compiled second order twigs reached 18.6 mm base diameter, which is 40 percent of the tree's thickest measured FIRST order branch (46 mm from pa.branch.max_diameter_by_stratum_m), and they read as fat wooden rods in the near capture. Tuned to 0.22 against that measured ceiling, which puts second order maxima near 10 mm and third order near 2 mm. The measurement did not supply this ratio; it only made the old value visibly impossible. This row is still a calibration choice, now a checked one."
+    },
+    {
+      "id": "fx.primary_foliated_from_fraction",
+      "value": 0.72,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured needle bearing extent",
+      "rationale": "First order axes carry needle sites only beyond this fraction of their length; second and third order axes carry them throughout. Needle persistence along older shoots was not supplied."
+    },
+    {
+      "id": "fx.needle_sites_per_m",
+      "value": 700,
+      "units": "sites per metre of shoot",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.needle.density_per_m",
+      "rationale": "Sets both the near tier's look and its cost. The single most consequential unsupported number in this fixture."
+    },
+    {
+      "id": "fx.needle_length_distribution",
+      "value": "uniform over pa.needle.length_m_range",
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unknown shape of the reported needle length range",
+      "rationale": "A TEST DISTRIBUTION over the reported endpoints, chosen for rendering variety. The source reported a range, and a range is not a uniform distribution."
+    },
+    {
+      "id": "fx.needle_width_m",
+      "value": 0.0011,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.needle.width_m",
+      "rationale": "Side length of the needle cross section."
+    },
+    {
+      "id": "fx.needle_cross_section",
+      "value": "four sided tapered prism",
+      "units": null,
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.needle.cross_section",
+      "rationale": "Four side faces from a base ring to a single tip vertex, no base cap. The four angled cross section is now supported by the flora description in pa.needle.cross_section rather than being a bare guess; the prism proportions are still fx.needle_width_m."
+    },
+    {
+      "id": "fx.needle_pitch_deg",
+      "value": 52.0,
+      "units": "degrees from the shoot axis",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured needle attachment angle",
+      "rationale": "Forward pitch of a needle away from its radial direction toward the shoot tip. Controls whether the shoot reads as a bottlebrush or a spike."
+    },
+    {
+      "id": "fx.needle_azimuth_step_deg",
+      "value": 137.507764,
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured phyllotaxy",
+      "rationale": "Successive needle sites on a shoot advance by the golden angle so needles radiate all round the shoot rather than forming rows. Spruce phyllotaxy is spiral, but this specific divergence angle is a rendering choice."
+    },
+    {
+      "id": "fx.needle_pitch_jitter_deg",
+      "value": 9.0,
+      "units": "degrees",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured needle angle scatter",
+      "rationale": "Keyed per site."
+    },
+    {
+      "id": "fx.growth_unit_arc_m",
+      "value": 0.3,
+      "units": "m of axis arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "measured growth unit lengths",
+      "rationale": "Growth units partition each axis into equal arc segments. This is a STRUCTURAL PLACEHOLDER that exercises the distinction between decomposition membership and branch order. It is not a season, and every emitted growth unit carries year null. Real growth unit lengths would replace this partition wholesale."
+    },
+    {
+      "id": "fx.mid_bucket_arc_m",
+      "value": 0.09,
+      "units": "m of axis arc",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing botanical",
+      "rationale": "A RENDERING BUDGET setting, not a botanical parameter. Arc length of one twig scale foliage cluster at the mid tier."
+    },
+    {
+      "id": "fx.mid_cards_per_bucket",
+      "value": 2,
+      "units": "count",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing botanical",
+      "rationale": "Rendering budget setting. Crossed cards per mid tier cluster."
+    },
+    {
+      "id": "fx.far_bin_m",
+      "value": 0.55,
+      "units": "m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing botanical",
+      "rationale": "Rendering budget setting. Edge of the spatial bin that one far tier proxy aggregates."
+    },
+    {
+      "id": "fx.seed",
+      "value": 20260907,
+      "units": null,
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing",
+      "rationale": "Root key for every deterministic draw. Draws are keyed by stable node id, so they do not depend on traversal order or on which detail tier asked."
+    },
+    {
+      "id": "pa.tree.dbh_m",
+      "value": 0.307,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "treatment means, 350 stems per hectare column",
+      "taxon": "Picea abies",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "Diameter at BREAST HEIGHT, that is at 1.3 m, not at the root collar. Consumed as a constraint the stem taper must satisfy at 1.3 m; the base radius is solved from it, not set equal to it. Comparison across the treatments (30.7, 25.9 and 20.7 cm at 350, 700 and 1600 stems per hectare against heights of 15.7, 16.0 and 17.2 m) is what makes this an open grown tree rather than a forest tree.",
+      "consumed_by": "fx.trunk_radius_from_dbh"
+    },
+    {
+      "id": "pa.tree.lowest_living_branch_m",
+      "value": 1.6,
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "treatment means, 350 stems per hectare column",
+      "population": "350 stems/ha treatment",
+      "regime": "reported population mean",
+      "applicability": "Distinct from the lowest living WHORL at 1.9 m. It is the number that makes the reported crown ratio arithmetic close; see chk.crown_base_definition. Not consumed as geometry: this fixture renders whorl branches only and does not model an isolated surviving branch below the lowest live whorl.",
+      "consumed_by": "chk.crown_base_definition only"
+    },
+    {
+      "id": "pa.stand.treatment_contrast",
+      "value": {
+        "350": {
+          "dbh_m": 0.307,
+          "height_m": 15.7,
+          "crown_diameter_m": 6.3,
+          "crown_ratio_pct": 89.7,
+          "lowest_living_whorl_m": 1.9,
+          "lowest_living_branch_m": 1.6,
+          "thickest_branch_m": 0.055
+        },
+        "700": {
+          "dbh_m": 0.259,
+          "height_m": 16.0,
+          "crown_diameter_m": 5.1,
+          "crown_ratio_pct": 80.5,
+          "lowest_living_whorl_m": 3.5,
+          "lowest_living_branch_m": 3.2,
+          "thickest_branch_m": 0.045
+        },
+        "1600": {
+          "dbh_m": 0.207,
+          "height_m": 17.2,
+          "crown_diameter_m": 3.5,
+          "crown_ratio_pct": 75.0,
+          "lowest_living_whorl_m": 7.4,
+          "lowest_living_branch_m": 4.3,
+          "thickest_branch_m": 0.038
+        }
+      },
+      "units": "mixed, see keys",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "treatment means table",
+      "applicability": "CONTEXT ONLY, and the most important context in this ledger: height barely moves across a fourfold density change while crown width, crown ratio, branch size and crown base move enormously. A spruce silhouette is mostly a statement about stand density. This fixture renders ONE treatment. Nothing here authorizes placing a stand, choosing a density for a scene, or interpolating between columns.",
+      "consumed_by": "nothing; displayed in the viewer so a reviewer sees which column is being rendered"
+    },
+    {
+      "id": "pa.branch.max_diameter_by_stratum_m",
+      "value": {
+        "1-5": 0.021,
+        "6-10": 0.036,
+        "11-15": 0.046,
+        "16-20": 0.044
+      },
+      "units": "m",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "branch strata table, whorls from apex, 350 stems per hectare column",
+      "population": "350 stems/ha treatment",
+      "regime": "mean of the maximum branch diameter within each five whorl group",
+      "applicability": "A DIAMETER, halved once in fx.stratum_radius_from_diameter. It is the MAXIMUM in each group, so it sizes the thickest branch of a whorl and not every branch; within whorl spread is fx.within_whorl_radius_min_fraction. Note the peak at whorls 11 to 15 and the decrease below it: the thickest branches are in the mid lower crown, not at the very bottom.",
+      "consumed_by": "primary branch base radius by stratum"
+    },
+    {
+      "id": "pa.branch.mean_count_per_whorl_by_stratum",
+      "value": {
+        "1-5": 5.5,
+        "6-10": 7.3,
+        "11-15": 6.7,
+        "16-20": 6.4
+      },
+      "units": "branches per whorl",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "branch strata table, whorls from apex, 350 stems per hectare column",
+      "population": "350 stems/ha treatment",
+      "regime": "stratum mean",
+      "applicability": "Replaces a flat branch count. These are means over whorls and trees, so they are not integers; realizing them as integers per whorl is fx.branch_count_realization. Variation between individual whorls inside a stratum is not supplied.",
+      "consumed_by": "branches per whorl"
+    },
+    {
+      "id": "pa.branch.alive_fraction_by_stratum",
+      "value": {
+        "1-5": 1.0,
+        "6-10": 1.0,
+        "11-15": 1.0,
+        "16-20": 0.83
+      },
+      "units": "fraction",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.makinen2006",
+      "via": "src.peer_patch",
+      "locator": "branch strata table, whorls from apex, 350 stems per hectare column",
+      "population": "350 stems/ha treatment",
+      "applicability": "Branch survival by crown depth. Even at this wide spacing the lowest tabulated stratum has lost 17 percent of its branches. Consumed to thin the lowest whorls, since this fixture renders live branches only. It does NOT license modelling mortality, shade or competition as a process: it is a measured standing fraction, not a cause.",
+      "consumed_by": "live branch count in the lowest stratum"
+    },
+    {
+      "id": "pa.branch.nonprimary_angle_bin_masses",
+      "value": {
+        "below_40": 0.3,
+        "from_40_to_70": 0.6,
+        "at_least_70": 0.1
+      },
+      "units": "fraction of measured growth unit branching angles",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "locator": "about 90 percent of angles below 70 degrees, about 60 percent between 40 and 70",
+      "population": "juvenile dense natural regeneration",
+      "regime": "reported proportions of a measured distribution",
+      "applicability": "Reported PROPORTIONS OF A DISTRIBUTION, which is a legitimate thing to use as bin masses, unlike a mean or a p value. Both bin masses are given as approximate in the source summary and the below_40 mass is a subtraction of two approximations, so it inherits their error. The shape WITHIN each bin is unsupplied and is fx.nonprimary_angle_distribution. Trunk branches were excluded from the analysis and are excluded here.",
+      "consumed_by": "second and third order insertion angle"
+    },
+    {
+      "id": "pa.branch.angle_decreases_with_order",
+      "value": null,
+      "units": null,
+      "evidence_class": "qualitative-observation",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "applicability": "Mean branching angle decreases as branching order increases. Direction of the effect only; no magnitude. fx.angle_order_shift_deg supplies the magnitude and is a choice with a measured sign.",
+      "consumed_by": "sign of fx.angle_order_shift_deg"
+    },
+    {
+      "id": "pa.branch.angle_depends_on_position_along_mother",
+      "value": null,
+      "units": null,
+      "evidence_class": "qualitative-observation",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "applicability": "Branching angle also depends on relative position along the mother growth unit. No functional form and no coefficients. NOT implemented: a positional angle law invented here would look like a finding. Recorded so the gap is visible.",
+      "consumed_by": "nothing"
+    },
+    {
+      "id": "pa.gu.daughter_direction_marginals",
+      "value": {
+        "left": 0.338,
+        "right": 0.343,
+        "up": 0.319
+      },
+      "units": "fraction of daughters",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "population": "juvenile dense natural regeneration",
+      "regime": "reported marginal proportions",
+      "applicability": "Marginal proportions, which are consumable as bin masses. Roughly equal thirds: about a third of daughters go up, which is far more than a small upward bias. Explicitly NOT a transition matrix, and consuming these marginals is not consuming pa.gu.daughter_orientation_association. Cross population transfer, see xfer.growth_unit_decomposition.",
+      "consumed_by": "fx.branchlet_direction_scheme"
+    },
+    {
+      "id": "pa.crown.branching_is_plagiotropic",
+      "value": null,
+      "units": null,
+      "evidence_class": "qualitative-observation",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "applicability": "First and higher order branches are described as approximately plagiotropic, developing roughly in a plane rather than as isotropic radial noise. This is the strongest available support for building a flattened spray, and it rules out scattering branchlets isotropically. It supplies no plane thickness, so the out of plane component comes from the measured up class plus fx.branchlet_azimuth_jitter_deg.",
+      "consumed_by": "fx.branchlet_direction_scheme"
+    },
+    {
+      "id": "pa.gu.order_distribution_pct",
+      "value": {
+        "first": 26.7,
+        "second": 52.8,
+        "third": 16.59,
+        "fourth": 3.98,
+        "living_share": 64.1
+      },
+      "units": "percent of measured growth units",
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fabrika2019",
+      "via": "src.peer_patch",
+      "population": "juvenile dense natural regeneration, about 10 years old, high competition",
+      "applicability": "DIAGNOSTIC ONLY, never a target. Two reasons. First, the population is wrong for this fixture: the source authors report competition strongly shifted this distribution, with suppressed trees carrying proportionally more low order growth. Second, the order indexing convention is not established, so it is unknown whether their first order is the trunk or the first order of branches; the build emits the comparison under both alignments and forces neither. The 64.10 percent living share is not transferred at all, since this fixture renders live structure only.",
+      "consumed_by": "nothing; emitted as a side by side diagnostic in the build manifest"
+    },
+    {
+      "id": "pa.crown.branch_orientation_by_position",
+      "value": "conic crown, upper branches ascending, lower branches drooping",
+      "units": null,
+      "evidence_class": "peer-reported-source-read",
+      "source": "src.fna",
+      "via": "src.peer_patch",
+      "applicability": "Species level habit from an institutional flora. It supports the SIGN of the primary angle profile (ascending near the leader, drooping at the base) and nothing about its magnitude or its functional form. fx.primary_angle_base_deg and fx.primary_angle_apex_deg remain choices; this row is why they lean the way they do.",
+      "consumed_by": "sign of the primary angle profile"
+    },
+    {
+      "id": "pa.needle.light_response",
+      "value": null,
+      "units": null,
+      "evidence_class": "qualitative-observation",
+      "source": "src.niinemets1995",
+      "via": "src.peer_patch",
+      "applicability": "Needle width increases with diffuse light availability while thickness stays comparatively stable, and irradiance and tree size affect needle packing, orientation and shoot silhouette. Abstract level, no coefficients. NOT consumed: this fixture has no light state and no crown position light model, and synthesizing coefficients from an abstract would be invention. Recorded because it means a single global needle width is known to be wrong in a way we currently cannot fix.",
+      "consumed_by": "nothing"
+    },
+    {
+      "id": "pa.needle.packing_orientation",
+      "available": false,
+      "evidence_class": "unavailable",
+      "applicability": "Needles per unit shoot length, needle azimuth and elevation distributions, and needle persistence in years are all unsupplied. src.niinemets1995 is reported to study exactly these against irradiance and tree size, but nothing quantitative has been transcribed. fx.needle_sites_per_m, fx.needle_azimuth_step_deg and fx.needle_pitch_deg fill the gap and together drive both the near tier look and its whole cost.",
+      "extraction_question": "From the Niinemets shoot structure companion paper, transcribe needle number per unit shoot length, needle inclination angle distribution and shoot silhouette to total area ratio, with the irradiance and tree size each was measured at."
+    },
+    {
+      "id": "fx.branchlet_direction_scheme",
+      "value": {
+        "classes": [
+          "left",
+          "right",
+          "up"
+        ],
+        "masses_from": "pa.gu.daughter_direction_marginals",
+        "plane_from": "pa.crown.branching_is_plagiotropic"
+      },
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "a conditional daughter orientation model",
+      "rationale": "Realizes the measured marginals as an independent per daughter draw. Independence is the choice: the source reports a significant mother to successor association, so real daughters are correlated with their mother's direction and these are not. This is the row a transcribed conditional table replaces, and it is deliberately the simplest thing that matches the marginals."
+    },
+    {
+      "id": "fx.angle_order_shift_deg",
+      "value": -6.0,
+      "units": "degrees per branching order",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unsupplied magnitude of the order effect on branch angle",
+      "rationale": "Shifts the drawn insertion angle down by this much per order beyond the second. The SIGN is measured (pa.branch.angle_decreases_with_order); the magnitude is chosen. Applied after the bin draw and clamped to the 12 to 88 degree limits."
+    },
+    {
+      "id": "fx.branch_count_realization",
+      "value": "floor of the stratum mean times survival, plus one more when a keyed draw falls below the fractional part",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unsupplied per whorl branch count distribution",
+      "rationale": "Turns a non integer stratum mean into an integer count per whorl while preserving the mean in expectation. Keyed on the whorl id, so it is stable across tiers and rebuilds. The source supplies stratum means only, so whorl to whorl variation here is invented texture, not a measured distribution."
+    },
+    {
+      "id": "fx.stratum_radius_from_diameter",
+      "value": 0.5,
+      "units": "factor",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "nothing; it is the halving of pa.branch.max_diameter_by_stratum_m",
+      "rationale": "Exists so diameter to radius conversion happens exactly once, in one visible place. The same discipline as fx.thickest_branch_radius_m."
+    },
+    {
+      "id": "fx.within_whorl_radius_min_fraction",
+      "value": 0.55,
+      "units": "dimensionless",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "the unsupplied within whorl branch size distribution",
+      "rationale": "The stratum table gives the MAXIMUM branch diameter in each group, so only the thickest branch of a whorl gets it. The others ramp down to this fraction of it by index. The ramp is chosen; only its top end is measured."
+    },
+    {
+      "id": "fx.trunk_radius_from_dbh",
+      "value": "solve the base radius so the chosen taper passes through pa.tree.dbh_m at 1.3 m",
+      "evidence_class": "explicit-calibration-choice",
+      "substitutes": "pa.tree.trunk_base_diameter_m",
+      "rationale": "Breast height diameter is measured at 1.3 m, not at the collar, so it cannot be used as a base diameter directly. The base radius is solved from it under fx.trunk_taper_exponent, which makes the base a DERIVED value whose error is entirely the taper exponent's. The solved value is recorded in the build manifest."
+    }
+  ],
+  "revision": "v0.2-public-metadata-1; parameter values unchanged",
+  "peer_patch_audit": [
+    {
+      "finding": "Crown ratio, lowest living whorl and lowest living branch are mutually consistent once the third number is present.",
+      "detail": "89.7 percent of 15.7 m gives a crown length of 14.083 m and a crown base at 1.617 m, which matches the reported lowest living BRANCH of 1.6 m to 17 mm, not the lowest living whorl of 1.9 m. The assignment packet warned that crown ratio and lowest living whorl may use different definitions. They do, and the patch supplies the number that shows it.",
+      "status": "recorded as derived-consistency-check, not promoted to a measurement of crown base definition. This is arithmetic on three reported means, and it agrees with an obvious reading; it is not a statement from the authors."
+    },
+    {
+      "finding": "The patch lists daughter direction persistence among safe measured inputs, but supplies only marginal proportions and a Fisher exact p of 0.0019.",
+      "detail": "A significance result plus marginals does not supply the conditional table. The assignment packet flagged exactly this trap.",
+      "status": "NOT FOLLOWED. The marginal proportions are consumed as measured bin masses. No mother to successor transition model is implemented. If the conditional table arrives, fx.branchlet_direction_scheme is the row it replaces."
+    },
+    {
+      "finding": "The patch recommends not optimizing for exact agreement with a treatment mean, while the assignment names height and crown width as envelope targets.",
+      "detail": "Both are reasonable. Landing on the mean gives a crisp pass or fail acceptance test; landing inside the range better reflects that one tree is not a population mean.",
+      "status": "PARTIALLY FOLLOWED. The solver still targets the 6.3 m mean so the envelope test stays exact, and the reported 4.8 to 8.6 m range travels with it in the ledger, the build manifest and the viewer readout so 6.3 is never read as a species constant. Retargeting is a one line fixture change."
+    },
+    {
+      "finding": "Per tree thickest branch (5.5 cm) and the stratum maximum table (4.6 cm at whorls 11 to 15) are different statistics.",
+      "detail": "A mean of per tree maxima exceeds the mean of per stratum maxima, which is expected and not a contradiction.",
+      "status": "Both retained. The generator uses the stratum table because it is resolved by crown depth; the 5.5 cm figure is reported alongside as a comparison and is not forced to agree."
+    },
+    {
+      "finding": "The growth unit order distribution cannot be aligned to this fixture's order indexing without knowing the source convention.",
+      "detail": "26.70 percent of more than 12000 growth units being first order is far too high for a trunk only order 1 in 15 trees, which suggests order 1 means first order BRANCHES there. That is an inference from the magnitude, not a stated convention.",
+      "status": "The comparison is emitted as a diagnostic under both alignments, and forcing agreement is refused outright: the populations differ in age, density and competition."
+    }
+  ],
+  "consistency_checks": [
+    {
+      "id": "chk.crown_base_definition",
+      "computed": "height 15.7 m times crown ratio 89.7 percent gives crown length 14.083 m and crown base 1.617 m",
+      "compares_to": "reported lowest living branch 1.6 m and reported lowest living whorl 1.9 m",
+      "reading": "the reported crown ratio is consistent with a crown base at the lowest living BRANCH; the lowest living whorl sits 0.3 m above it",
+      "fixture_handling": "the fixture places its first live whorl at 1.9 m and reports its own crown ratio of 87.9 percent beside the source's 89.7 percent. Neither number is adjusted to meet the other, and no third crown base measurement is derived."
+    },
+    {
+      "id": "chk.internode",
+      "computed": "20 tabulated whorls from the apex, first live whorl at 1.9 m, leader 0.55 m, giving a mean internode of about 0.70 m over 19 gaps",
+      "reading": "a plausible annual height increment for a vigorous open grown young spruce, which is a sanity check on the whorl count choice only",
+      "fixture_handling": "NOT used to assign an age. Whorls are not asserted to be annual for this population and every emitted growth unit carries year null."
+    },
+    {
+      "id": "chk.live_branch_count",
+      "computed": "summing mean branches per whorl times fraction alive over the four tabulated strata gives about 124 live first order branches and about 19.15 live whorl equivalents",
+      "fixture_handling": "the fixture realizes an integer branch count per whorl from these means and reports its own total beside this figure."
+    }
+  ],
+  "verification_status": {
+    "primary_source_transcriptions": "Reported transcriptions have not been independently checked for this release.",
+    "verified_measurements": false,
+    "scope": "Calibration hypotheses and reported population statistics; not measurements of the generated tree."
+  }
+}

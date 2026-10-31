@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+exclude = ["crates/pf-rockspec", "crates/pf-fracture", "crates/pf-volume", "crates/pf-ore", "crates/pf-hydro-catchment"]
+members = [
+  "crates/pf-contracts",
+  "crates/pf-grid",
+  "crates/pf-geodynamics",
+  "crates/pf-surface",
+  "crates/pf-lab",
+  "crates/pf-region",
+  "crates/pf-detail",
+  "crates/pf-weather",
+  "crates/pf-coast",
+  "crates/pf-soil",
+  "crates/pf-talus",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+# float_roundtrip: header digests are blake3 over canonical JSON and are
+# verified after a disk round trip; without correctly rounded float parsing a
+# 17-digit f64 comes back one ULP off and every real artifact fails verify
+# (found 2026-09-13 by the first preview run; pinned in tests/publish.rs).
+serde_json = { version = "1", features = ["float_roundtrip"] }
+blake3 = "1"
+thiserror = "2"
+# Shared with world/ as PATH dependencies, not members (see world/Cargo.toml).
+vz-keyed-rng = { path = "../shared-crates/vz-keyed-rng" }
+vz-tilekey = { path = "../shared-crates/vz-tilekey" }

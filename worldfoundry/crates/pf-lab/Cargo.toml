@@ -1,0 +1,20 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-lab"
+version.workspace = true
+edition.workspace = true
+build = "build.rs"
+autobins = false
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+pf-grid = { path = "../pf-grid" }
+pf-geodynamics = { path = "../pf-geodynamics" }
+pf-surface = { path = "../pf-surface" }
+serde.workspace = true
+serde_json.workspace = true
+sha2 = "=0.10.9"
+
+[[bin]]
+name = "pf-lab"
+path = "src/main.rs"

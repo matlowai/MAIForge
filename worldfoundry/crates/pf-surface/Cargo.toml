@@ -1,0 +1,14 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-surface"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+pf-grid = { path = "../pf-grid" }
+# CLIMATE-V0 (lane CL, 2026-10-12): serde for the pf.climate/v0 payload.
+serde.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

@@ -1,0 +1,17 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-weather"
+version.workspace = true
+edition.workspace = true
+description = "WEATHER-V0 and COLDPOOL-1 (lane WEATHER-COLDPOOL, 2026-10-21): a keyed, deterministic hourly weather record (cloud, precipitation type and rate, wind, air temperature, humidity, meteorological visibility V) from T0 climate fields + world seed + world hour + planet location, and a dawn cold-air-pool / radiation-fog product over T1b windows; opt-in, derived, never canon by itself. Lane WEATHER-V1 (2026-10-21) adds opt-in fronts=1 / oro=1 (frontal band families, convective clusters, orographic modulation) and coldflow=1 (COLDPOOL-2 cold-air drainage over the chart-wide rivernet)"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+blake3.workspace = true
+vz-keyed-rng.workspace = true
+vz-tilekey.workspace = true
+
+[[bin]]
+name = "pf-weather"
+path = "src/bin/pf-weather.rs"

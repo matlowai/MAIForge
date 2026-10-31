@@ -1,0 +1,14 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-hydro-catchment"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# T-Q24 / D-0155: isolated build, engine routing library; adapter pending.
+[workspace]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"

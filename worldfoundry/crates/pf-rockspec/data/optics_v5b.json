@@ -1,0 +1,34 @@
+{
+  "schema": "pf-rockspec-optics/5b",
+  "coherence_length_m": {
+    "value": 0.001584893192461114,
+    "interval": [
+      1e-05,
+      0.1
+    ],
+    "unit": "m",
+    "interval_kind": "tested_search_support_not_confidence",
+    "distribution": "not_a_probability_distribution",
+    "reference": "USGS splib07 record11848 fresh basalt interior; fit SHA256 d23ddb139f0acd3179b510deac02489a0b490c7259628ce914d45d94544f3311",
+    "evidence_kind": "USGS_known_solid_conditional_fit",
+    "support_scale": "coherent diffuse optical chord",
+    "conditions": "Fit coherent broken surface with zero additional RMS slope; catalogue basalt modes are not specimen matched. L/(L+d) interface-retention closure. Only USGS11848 sets L; three USGS powders are checks.",
+    "covariance_group": "v5b_form"
+  },
+  "maximum_connected_chord_m": {
+    "value": 0.01,
+    "interval": [
+      0.001,
+      0.1
+    ],
+    "unit": "m",
+    "interval_kind": "plausible_prior_support",
+    "distribution": "unspecified",
+    "reference": "V5B-MODEL",
+    "evidence_kind": "project_prior",
+    "support_scale": "connected glass optical domain, not body geometry",
+    "conditions": "Finite geometric-run closure cap; unknown material depth and crack spacing",
+    "covariance_group": "v5b_form"
+  },
+  "qualification": "USGS-only form candidate. RELAB never sets parameters. Crystal interface loss and glass connectivity are reduced-order closures, not a full radiative transfer solve."
+}

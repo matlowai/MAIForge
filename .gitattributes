@@ -1,0 +1,3 @@
+# Keep source-bound generator identities stable across checkout platforms.
+* text=auto eol=lf
+LICENSE -text

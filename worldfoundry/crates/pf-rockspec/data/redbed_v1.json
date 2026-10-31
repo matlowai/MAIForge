@@ -1,0 +1,116 @@
+{
+  "schema": "pf-rockspec-redbed/2",
+  "qualification": "Inherited hematite-bearing illite grain coating; stock remains in the dry-solid mode. The v2 realization uses a finite particulate shell in v3.2c. Old saved v1 IDs retain bulk optics. Geological eligibility and bleaching limitations are unchanged. Conditional morphology, not a measured formation match.",
+  "conditional_model": {
+    "hematite_mass_fraction": {
+      "value": 0.007,
+      "unit": "kg hematite / kg dry solid",
+      "interval": [
+        0.002,
+        0.02
+      ],
+      "interval_kind": "literature-informed scenario support, not measured formation range",
+      "conditions": "quartz-rich arid oxidizing continental deposition; early diagenesis; no later bleaching; Fe is allocated within the closed mode",
+      "reference": "UGS-2020; NPS-Navajo; other host fractions remain v3.1 project priors",
+      "evidence_kind": "project_prior"
+    },
+    "aridity_max": {
+      "value": 0.5,
+      "unit": "P/PET",
+      "interval": [
+        0.5,
+        0.5
+      ],
+      "interval_kind": "classification boundary, not uncertainty",
+      "conditions": "entire recorded deposition interval; oxidation must be independently recorded",
+      "reference": "resolver-v1 declared dryland classification",
+      "evidence_kind": "project_model_choice"
+    },
+    "maximum_supported_burial_m": {
+      "value": 3000,
+      "unit": "m",
+      "interval": [
+        3000,
+        3000
+      ],
+      "interval_kind": "validity limit, not uncertainty",
+      "conditions": "grade zero; deeper diagenetic transformations unsupported",
+      "reference": "resolver-v1 declared validity limit",
+      "evidence_kind": "project_model_choice"
+    },
+    "coating_illite_mass_fraction": {
+      "value": 0.025,
+      "unit": "kg illite/kg dry solid",
+      "interval": [
+        0,
+        0.025
+      ],
+      "interval_kind": "partition sensitivity support, not formation measurement",
+      "conditions": "All inherited illite assigned to the conformal grain rim in the central scenario; no added mass. Clay matrix for iron-oxide coatings is supported qualitatively, partition not measured.",
+      "reference": "Baranoski et al. 2014 https://doi.org/10.1109/JSTARS.2014.2299813",
+      "evidence_kind": "project_prior"
+    }
+  },
+  "literature": [
+    {
+      "id": "NPS-Navajo",
+      "url": "https://www.nps.gov/zion/learn/nature/navajo-colors.htm",
+      "formation": "Navajo",
+      "colour": "red, brown, pink, salmon, gold, white",
+      "Fe2O3_mass_fraction_range": null,
+      "conditions": "Early hematite coatings; subsequent reducing fluids can bleach them. No numeric colour coordinates supplied.",
+      "evidence_kind": "agency geological interpretation"
+    },
+    {
+      "id": "UGS-2020",
+      "url": "https://ugspub.nr.utah.gov/publications/survey_notes/snt52-3.pdf",
+      "formation": "Navajo",
+      "iron_oxide_mass_fraction": {
+        "white_sample": 0.002,
+        "red_sample_mean": 0.007
+      },
+      "Fe2O3_mass_fraction_range": null,
+      "conditions": "Reported iron oxide, not a formation-wide Fe2O3 range or a measurement of the simulated body; spatial distribution also affects colour.",
+      "evidence_kind": "agency summary of sample analyses"
+    },
+    {
+      "id": "USGS-1752",
+      "url": "https://pubs.usgs.gov/bul/1752/report.pdf",
+      "formation": "Navajo and Wingate, Sids Mountain",
+      "Fe2O3_mass_fraction": {
+        "reported_maximum": 0.0045,
+        "reported_minimum": null
+      },
+      "Fe2O3_mass_fraction_range": null,
+      "conditions": "Combined sandstone sample assessment; no formation-separated lower/upper range verified.",
+      "evidence_kind": "agency sample analyses"
+    },
+    {
+      "id": "NPS-Wingate",
+      "url": "https://home.nps.gov/colm/learn/nature/wingate-sandstone.htm",
+      "formation": "Wingate",
+      "colour": "reddish orange; many cliff faces carry desert varnish",
+      "Fe2O3_mass_fraction_range": null,
+      "conditions": "Qualitative appearance, not numeric reflectance or Lab.",
+      "evidence_kind": "agency field description"
+    },
+    {
+      "id": "BAILEY-2022",
+      "url": "https://doi.org/10.1029/2022GC010465",
+      "formation": "Entrada",
+      "colour": "red host and bleached facies",
+      "Fe2O3_mass_fraction_range": {
+        "red_facies_mean": 0.0068,
+        "gray_facies_mean": 0.0021,
+        "concretion_mean": 0.168
+      },
+      "conditions": "Published Entrada facies means as Fe2O3 equivalent; total iron analysis is not exclusively coating hematite. Red to gray reduction exceeds factor three.",
+      "evidence_kind": "primary research abstract"
+    }
+  ],
+  "colour_validation": {
+    "method": "CIE tabulated 1931 2deg and D65 for USGS; RIT renotation C with Bradford C->D65 for Munsell. See lane evidence/standards.json and report; no universal single formation standard.",
+    "deltaE76": null,
+    "reason": "Per-standard errors are measured in lane report; quantitative formation equivalence remains unqualified."
+  }
+}

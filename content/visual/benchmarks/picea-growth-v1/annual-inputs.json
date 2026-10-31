@@ -1,0 +1,252 @@
+{
+  "artifact_class": "explicit-annual-calibration-inputs",
+  "tree_id": "calibration.picea.individual-01",
+  "description": "Authored annual resource/light sequence, not weather or site observations. Years18\u201320 exercise low extension and year21 restores it. No source population age is asserted.",
+  "years": [
+    {
+      "year": 1,
+      "light": 1.0,
+      "extension_factor": 1.148541341829182,
+      "new_wood_m3": 0.0026,
+      "competition": 0.25
+    },
+    {
+      "year": 2,
+      "light": 1.0,
+      "extension_factor": 0.9302803071453045,
+      "new_wood_m3": 0.0031999999999999997,
+      "competition": 0.25
+    },
+    {
+      "year": 3,
+      "light": 1.0,
+      "extension_factor": 0.8129824305926469,
+      "new_wood_m3": 0.0038,
+      "competition": 0.25
+    },
+    {
+      "year": 4,
+      "light": 1.0,
+      "extension_factor": 1.0614698364492565,
+      "new_wood_m3": 0.004399999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 5,
+      "light": 1.0,
+      "extension_factor": 1.1147352447091108,
+      "new_wood_m3": 0.004999999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 6,
+      "light": 1.0,
+      "extension_factor": 0.8525219296711302,
+      "new_wood_m3": 0.0056,
+      "competition": 0.25
+    },
+    {
+      "year": 7,
+      "light": 1.0,
+      "extension_factor": 0.8668260053585192,
+      "new_wood_m3": 0.0062,
+      "competition": 0.25
+    },
+    {
+      "year": 8,
+      "light": 1.0,
+      "extension_factor": 1.1253533175998869,
+      "new_wood_m3": 0.0068,
+      "competition": 0.25
+    },
+    {
+      "year": 9,
+      "light": 1.0,
+      "extension_factor": 1.0444296002978575,
+      "new_wood_m3": 0.0073999999999999995,
+      "competition": 0.25
+    },
+    {
+      "year": 10,
+      "light": 1.0,
+      "extension_factor": 0.8067554389210776,
+      "new_wood_m3": 0.008,
+      "competition": 0.25
+    },
+    {
+      "year": 11,
+      "light": 1.0,
+      "extension_factor": 0.9489251704825152,
+      "new_wood_m3": 0.0086,
+      "competition": 0.25
+    },
+    {
+      "year": 12,
+      "light": 1.0,
+      "extension_factor": 1.149963757524967,
+      "new_wood_m3": 0.0092,
+      "competition": 0.25
+    },
+    {
+      "year": 13,
+      "light": 1.0,
+      "extension_factor": 0.9559885958007867,
+      "new_wood_m3": 0.0098,
+      "competition": 0.25
+    },
+    {
+      "year": 14,
+      "light": 1.0,
+      "extension_factor": 0.804935271994824,
+      "new_wood_m3": 0.0104,
+      "competition": 0.25
+    },
+    {
+      "year": 15,
+      "light": 1.0,
+      "extension_factor": 1.0378352119538794,
+      "new_wood_m3": 0.011,
+      "competition": 0.25
+    },
+    {
+      "year": 16,
+      "light": 1.0,
+      "extension_factor": 1.1288727857888767,
+      "new_wood_m3": 0.0116,
+      "competition": 0.25
+    },
+    {
+      "year": 17,
+      "light": 1.0,
+      "extension_factor": 0.8725134655044979,
+      "new_wood_m3": 0.012199999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 18,
+      "light": 1.0,
+      "extension_factor": 0.42376843281473536,
+      "new_wood_m3": 0.012799999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 19,
+      "light": 1.0,
+      "extension_factor": 0.5551661903370444,
+      "new_wood_m3": 0.013399999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 20,
+      "light": 1.0,
+      "extension_factor": 0.5337947350355021,
+      "new_wood_m3": 0.013999999999999999,
+      "competition": 0.25
+    },
+    {
+      "year": 21,
+      "light": 1.0,
+      "extension_factor": 0.8158083324291331,
+      "new_wood_m3": 0.014599999999999998,
+      "competition": 0.25
+    },
+    {
+      "year": 22,
+      "light": 1.0,
+      "extension_factor": 0.923432469737455,
+      "new_wood_m3": 0.015199999999999998,
+      "competition": 0.25
+    },
+    {
+      "year": 23,
+      "light": 1.0,
+      "extension_factor": 1.1474800522883608,
+      "new_wood_m3": 0.015799999999999998,
+      "competition": 0.25
+    },
+    {
+      "year": 24,
+      "light": 1.0,
+      "extension_factor": 0.9821213200362264,
+      "new_wood_m3": 0.016399999999999998,
+      "competition": 0.25
+    },
+    {
+      "year": 25,
+      "light": 1.0,
+      "extension_factor": 0.8006848619540711,
+      "new_wood_m3": 0.017,
+      "competition": 0.25
+    },
+    {
+      "year": 26,
+      "light": 1.0,
+      "extension_factor": 1.012797771582938,
+      "new_wood_m3": 0.017599999999999998,
+      "competition": 0.25
+    },
+    {
+      "year": 27,
+      "light": 1.0,
+      "extension_factor": 1.139575068515726,
+      "new_wood_m3": 0.0182,
+      "competition": 0.25
+    },
+    {
+      "year": 28,
+      "light": 1.0,
+      "extension_factor": 0.894793045463941,
+      "new_wood_m3": 0.018799999999999997,
+      "competition": 0.25
+    },
+    {
+      "year": 29,
+      "light": 1.0,
+      "extension_factor": 0.831093380476639,
+      "new_wood_m3": 0.0194,
+      "competition": 0.25
+    },
+    {
+      "year": 30,
+      "light": 1.0,
+      "extension_factor": 1.0922901057725907,
+      "new_wood_m3": 0.019999999999999997,
+      "competition": 0.25
+    },
+    {
+      "year": 31,
+      "light": 1.0,
+      "extension_factor": 1.0886822507950853,
+      "new_wood_m3": 0.0206,
+      "competition": 0.25
+    },
+    {
+      "year": 32,
+      "light": 1.0,
+      "extension_factor": 0.8284152299992702,
+      "new_wood_m3": 0.021199999999999997,
+      "competition": 0.25
+    },
+    {
+      "year": 33,
+      "light": 1.0,
+      "extension_factor": 0.8990910303292553,
+      "new_wood_m3": 0.0218,
+      "competition": 0.25
+    },
+    {
+      "year": 34,
+      "light": 1.0,
+      "extension_factor": 1.1411456756201728,
+      "new_wood_m3": 0.022399999999999996,
+      "competition": 0.25
+    },
+    {
+      "year": 35,
+      "light": 1.0,
+      "extension_factor": 1.0080950585614061,
+      "new_wood_m3": 0.023,
+      "competition": 0.25
+    }
+  ]
+}

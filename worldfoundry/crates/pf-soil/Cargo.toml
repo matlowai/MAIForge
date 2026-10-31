@@ -1,0 +1,16 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-soil"
+version.workspace = true
+edition.workspace = true
+description = "SOIL-VEG-1 (lane SOIL-VEG-1, 2026-10-22): vegetation zonation from fields that already exist (seed-climate-v1 temperature lapsed to the post, growing-season treeline, summer-warmth alpine cover, Ohmura snowline, aspect insolation, topographic wetness, regime / slope / volcanic unit age substrate, vent and tephra kill zones, coast and lake fringes) on the T1b 32 m window lattice and on pf-detail 2 m blocks; opt-in, derived, never canon"
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+serde_json.workspace = true
+blake3.workspace = true
+vz-tilekey.workspace = true
+
+[[bin]]
+name = "pf-soil"
+path = "src/bin/pf-soil.rs"

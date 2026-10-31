@@ -1,0 +1,16 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-talus"
+version.workspace = true
+edition.workspace = true
+description = "TALUS-1 (lane TALUS-1, 2026-10-21): rockfall talus as a process: cliff sources by lithology (retreat rate x exposure stand-in, block-size distribution), deterministic size-dependent runout (sliding-block energy line with impact losses, keyed chutes), repose-limited talus thickness on the 2 m grid, keyed large-block point set with world-stable ids, budget per source unit; opt-in, derived, never canon"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+blake3.workspace = true
+vz-keyed-rng.workspace = true
+
+[[bin]]
+name = "pf-talus"
+path = "src/bin/pf-talus.rs"

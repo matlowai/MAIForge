@@ -1,0 +1,4 @@
+[env]
+# Debug native producer/checkpoint tests need more than Rust's default test-thread
+# stack. Keep assertions intact; callers can explicitly override this setting.
+RUST_MIN_STACK = { value = "16777216", force = false }

@@ -1,0 +1,23 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-region"
+version.workspace = true
+edition.workspace = true
+description = "T1a chart-wide drainage skeleton (TER-SKELETON) and T1b regional relief windows (TER-REGION), ADR 043 terrain tiers; labelled pre-signoff"
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+pf-grid = { path = "../pf-grid" }
+serde.workspace = true
+serde_json.workspace = true
+blake3.workspace = true
+vz-tilekey.workspace = true
+vz-keyed-rng.workspace = true
+
+[[bin]]
+name = "pf-region-skeleton"
+path = "src/bin/pf-region-skeleton.rs"
+
+[[bin]]
+name = "pf-region-relief"
+path = "src/bin/pf-region-relief.rs"

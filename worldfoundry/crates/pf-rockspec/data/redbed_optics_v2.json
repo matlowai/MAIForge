@@ -1,0 +1,30 @@
+{
+  "schema": "pf-rockspec-redbed-optics/2",
+  "model": "finite-km-grain-shell-rgb/2",
+  "hematite_rgb": [
+    0.19396411220799778,
+    0.028934848825621792,
+    0.015938767725785067
+  ],
+  "hematite_spectrum_source": {
+    "title": "splib07a Record=4865: Hematite GDS27                BECKa AREF",
+    "path": "splib07a_Hematite_GDS27_BECKa_AREF.txt",
+    "sha256": "39d4822eb489410f4080552ef086f8f04a9983c9dc157bf448a4cc110796d8f6",
+    "distribution_note": "Source spectrum is not bundled. Title and SHA256 identify the original record; RGB values are derived."
+  },
+  "colour_method": "CIE tabulated 1931 2 degree/D65,380..780 nm,1 nm; integrate pure pigment then RGB finite KM layer; not full spectral transport",
+  "pigment_scattering_length_m": {
+    "value": 2.5e-06,
+    "interval": [
+      1e-06,
+      1e-05
+    ],
+    "unit": "m",
+    "interval_kind": "sensitivity support, not measured S uncertainty",
+    "evidence_kind": "dimensioned model assumption informed by microscopy",
+    "reference": "https://clarkvision.com/science/usgs-spectral-library-06/DESCRIPT/M/hematite_gds27.html",
+    "conditions": "S=1/length for the particulate hematite-clay rim; hematite primary pigment grains 2-3 um, aggregates 50-150 um; applying this length to the clay matrix is a project assumption. Transport mean free path not identified by reflectance alone."
+  },
+  "coverage": 1.0,
+  "qualification": "Only inherited redbed realization. Hematite stock is a conformal particulate shell on host grains. The saved hematite and illite grain_coatings partition is a particulate shell; all other mass remains host. Silica cement uses the same optical host approximation. RGB two-flux layer; spherical representative grains; no smooth film interference; facet Fresnel/lustre retained as uncalibrated host/bulk prior. No fitted colour coordinates or formation identity."
+}

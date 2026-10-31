@@ -1,0 +1,10 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-geodynamics"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+pf-grid = { path = "../pf-grid" }
+serde_json.workspace = true

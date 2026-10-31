@@ -1,0 +1,819 @@
+{
+  "reference": {
+    "citation": "Winter (2010), Principles of Igneous and Metamorphic Petrology, 2nd ed.; Deer, Howie and Zussman (1992), An Introduction to the Rock-Forming Minerals, 2nd ed.; Butt and Zeegers, eds. (1992), Regolith Exploration Geochemistry in Tropical and Subtropical Terrains; MODEL_V3_1.md",
+    "qualification": "Offline memory only; broad petrological relationships, no consulted pages or extracted modal/optical numbers. All new numbers are conditional project priors, not setting-wide averages, measurements, or calibration.",
+    "verification": "offline_memory_unverified_project_prior"
+  },
+  "families": {
+    "pegmatite": {
+      "family": "silicate_hydrolysis",
+      "residue_mode": [
+        {
+          "mineral": "kaolinite",
+          "mass_fraction": {
+            "value": 0.8,
+            "interval": [
+              0.24,
+              1
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "quartz",
+          "mass_fraction": {
+            "value": 0.2,
+            "interval": [
+              0.06,
+              0.36000000000000004
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.18,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    },
+    "skarn": {
+      "family": "silicate_hydrolysis",
+      "residue_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": {
+            "value": 0.45,
+            "interval": [
+              0.135,
+              0.81
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "smectite",
+          "mass_fraction": {
+            "value": 0.35,
+            "interval": [
+              0.105,
+              0.63
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "calcite",
+          "mass_fraction": {
+            "value": 0.2,
+            "interval": [
+              0.06,
+              0.36000000000000004
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.4,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    },
+    "banded_iron_formation": {
+      "family": "oxidation_residual",
+      "residue_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": {
+            "value": 0.5,
+            "interval": [
+              0.15,
+              0.9
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "hematite",
+          "mass_fraction": {
+            "value": 0.25,
+            "interval": [
+              0.075,
+              0.45
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "quartz",
+          "mass_fraction": {
+            "value": 0.25,
+            "interval": [
+              0.075,
+              0.45
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.4,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    },
+    "laterite": {
+      "family": "oxidation_residual",
+      "residue_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": {
+            "value": 0.4,
+            "interval": [
+              0.12,
+              0.7200000000000001
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "hematite",
+          "mass_fraction": {
+            "value": 0.15,
+            "interval": [
+              0.045,
+              0.27
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "gibbsite",
+          "mass_fraction": {
+            "value": 0.3,
+            "interval": [
+              0.09,
+              0.54
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "kaolinite",
+          "mass_fraction": {
+            "value": 0.15,
+            "interval": [
+              0.045,
+              0.27
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.4,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    },
+    "mylonite": {
+      "family": "silicate_hydrolysis",
+      "residue_mode": [
+        {
+          "mineral": "kaolinite",
+          "mass_fraction": {
+            "value": 0.65,
+            "interval": [
+              0.195,
+              1
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "quartz",
+          "mass_fraction": {
+            "value": 0.25,
+            "interval": [
+              0.075,
+              0.45
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "goethite",
+          "mass_fraction": {
+            "value": 0.1,
+            "interval": [
+              0.03,
+              0.18000000000000002
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.18,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    },
+    "gossan": {
+      "family": "oxidation_residual",
+      "residue_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": {
+            "value": 0.65,
+            "interval": [
+              0.195,
+              1
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "hematite",
+          "mass_fraction": {
+            "value": 0.15,
+            "interval": [
+              0.045,
+              0.27
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "quartz",
+          "mass_fraction": {
+            "value": 0.2,
+            "interval": [
+              0.06,
+              0.36000000000000004
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "supplied diagnostic residue dry mass mode; joint simplex; no chemical reaction or external flux solved",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "coverage": {
+        "value": 0.4,
+        "interval": [
+          0.05,
+          0.65
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured wet-temperate residual patch coverage, not predicted exposure",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "thickness_m": {
+        "value": 5e-05,
+        "interval": [
+          1e-05,
+          0.0002
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual rind; unknown weathering duration",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "grain_diameter_m": {
+        "value": 0.0002,
+        "interval": [
+          2e-05,
+          0.001
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured residual aggregate domain",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "rms_slope_history_rad": {
+        "value": 0.08,
+        "interval": [
+          0.02,
+          0.2
+        ],
+        "unit": "rad",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured surface roughening",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "abrasion": {
+        "value": 0.05,
+        "interval": [
+          0,
+          0.2
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "RS31",
+        "evidence_kind": "project_prior",
+        "support_scale": "body realization; no site admission",
+        "conditions": "manufactured minor wear",
+        "covariance_group": "v31_closed_assemblage"
+      },
+      "qualification": "Supplied diagnostic surface phase assemblage. No reaction, elemental balance, or stock transfer inferred."
+    }
+  }
+}

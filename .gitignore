@@ -1,0 +1,9 @@
+target/
+**/target/
+generated/
+**/generated-test-data/
+.maiforge-test-output/
+**/__pycache__/
+*.pyc
+*.core
+core

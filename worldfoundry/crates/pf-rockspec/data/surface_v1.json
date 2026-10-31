@@ -1,0 +1,4651 @@
+{
+  "schema": "pf-rockspec-surface/1",
+  "references": {
+    "USGS": {
+      "citation": "Kokaly et al. 2017, USGS Spectral Library 7, https://doi.org/10.5066/F7RR1WDJ",
+      "qualification": "Public domain measured directional reflectance factors; not hemispherical albedo. Instrument/sample geometry retained in source title; no colour photographs used.",
+      "verification": "admitted local splib07a numeric data read 2026-10-25"
+    },
+    "COLOR": {
+      "citation": "Wyman, Sloan, Shirley 2013 https://jcgt.org/published/0002/02/01/ ; existing mat-calibrate reference_reader.py",
+      "qualification": "Analytic CIE 1931 approximation, equal energy E, Bradford E to D65; NOT spectral daylight D65. 5 nm quadrature tested against existing 1 nm reader.",
+      "verification": "existing local v5 calibration colour path reused"
+    },
+    "VAR": {
+      "citation": "Lingappa et al. 2021 https://doi.org/10.1073/pnas.2025188118 ; Kuhlman et al. 2008 https://doi.org/10.1029/2007JG000677",
+      "qualification": "Millennial Mn-Fe-clay coating; dust source, not host-rock Fe constraint. Broad 1-40 micrometre/kyr reported range, no site-specific rate fit.",
+      "verification": "abstract/full page read 2026-10-25"
+    },
+    "RED": {
+      "citation": "Seiler and Chan 2007 https://gsa.confex.com/gsa/2007AM/webprogram/Paper131772.html ; NPS https://home.nps.gov/zion/learn/nature/navajo-colors.htm",
+      "qualification": "Inherited diagenetic coatings explain Navajo reds; external exposure is not formation age. Qualitative red/orange/pink/white, no numeric Lab standard.",
+      "verification": "pages read 2026-10-25"
+    },
+    "RIND": {
+      "citation": "Colman 1981 https://doi.org/10.1016/0033-5894(81)90029-6 ; Colman and Pierce 1981 https://doi.org/10.3133/pp1210",
+      "qualification": "Decelerating weathering; square-root penetration is a reduced-order diffusion analogue, not a universal rock rind law or extracted measured coefficient.",
+      "verification": "USGS abstract read 2026-10-25"
+    },
+    "MODEL": {
+      "citation": "surface_v1.rs and lane MODEL.md, 2026-10-25",
+      "qualification": "Declared reduced-order candidate assumptions, not measurements. No stock transfer is admitted by this predictor.",
+      "verification": "explicit project prior"
+    }
+  },
+  "parameters": {
+    "seconds_per_year": {
+      "value": 31557600,
+      "interval": [
+        31557600,
+        31557600
+      ],
+      "unit": "s/yr",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Julian year unit conversion",
+      "covariance_group": "surface_v1"
+    },
+    "maximum_age_yr": {
+      "value": 1000000.0,
+      "interval": [
+        1000000.0,
+        1000000.0
+      ],
+      "unit": "yr",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Validity boundary; older input refused",
+      "covariance_group": "surface_v1"
+    },
+    "minimum_temperature_c": {
+      "value": -80,
+      "interval": [
+        -80,
+        -80
+      ],
+      "unit": "degC",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Input validity, not reaction threshold",
+      "covariance_group": "surface_v1"
+    },
+    "maximum_temperature_c": {
+      "value": 60,
+      "interval": [
+        60,
+        60
+      ],
+      "unit": "degC",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Input validity",
+      "covariance_group": "surface_v1"
+    },
+    "reference_temperature_c": {
+      "value": 15,
+      "interval": [
+        15,
+        15
+      ],
+      "unit": "degC",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Temperature normalization",
+      "covariance_group": "surface_v1"
+    },
+    "temperature_q10": {
+      "value": 2,
+      "interval": [
+        1.3,
+        3
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Conditional rate doubles per 10 K; not site fitted",
+      "covariance_group": "surface_v1"
+    },
+    "temperature_step_k": {
+      "value": 10,
+      "interval": [
+        10,
+        10
+      ],
+      "unit": "K",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Q10 definition",
+      "covariance_group": "surface_v1"
+    },
+    "thaw_ramp_k": {
+      "value": 5,
+      "interval": [
+        1,
+        10
+      ],
+      "unit": "K",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Linear reaction activity from annual mean 0 C to this value; no seasonality model",
+      "covariance_group": "surface_v1"
+    },
+    "precip_half_mm_yr": {
+      "value": 100,
+      "interval": [
+        25,
+        400
+      ],
+      "unit": "mm/yr",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "P/(P+half) moisture response; no response at zero precipitation",
+      "covariance_group": "surface_v1"
+    },
+    "aridity_transition": {
+      "value": 0.5,
+      "interval": [
+        0.2,
+        0.65
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "P/PET; 1/(1+(AI/transition)^2) dry hematite fraction and arid varnish opportunity",
+      "covariance_group": "surface_v1"
+    },
+    "penetration_m2_yr": {
+      "value": 1e-10,
+      "interval": [
+        1e-12,
+        1e-08
+      ],
+      "unit": "m2/yr",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "RIND",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "depth=sqrt(k*time*moisture*thermal); cap by sampled reactive depth",
+      "covariance_group": "surface_v1"
+    },
+    "reactive_depth_m": {
+      "value": 0.001,
+      "interval": [
+        0.0001,
+        0.01
+      ],
+      "unit": "m",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "RIND",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Maximum near-surface oxide inventory sampled; not erosion-derived age",
+      "covariance_group": "surface_v1"
+    },
+    "mobile_oxide_fraction": {
+      "value": 0.2,
+      "interval": [
+        0.01,
+        0.8
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Fraction of recognized oxide Fe that can redistribute; unmodeled silicate Fe is not counted",
+      "covariance_group": "surface_v1"
+    },
+    "hematite_density": {
+      "value": 5260,
+      "interval": [
+        4900,
+        5300
+      ],
+      "unit": "kg/m3",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Hematite solid density; approximate endmember",
+      "covariance_group": "surface_v1"
+    },
+    "goethite_density": {
+      "value": 4260,
+      "interval": [
+        3800,
+        4400
+      ],
+      "unit": "kg/m3",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Goethite solid density; approximate endmember",
+      "covariance_group": "surface_v1"
+    },
+    "varnish_density": {
+      "value": 2500,
+      "interval": [
+        1800,
+        3500
+      ],
+      "unit": "kg/m3",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "VAR",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Effective Mn-Fe-clay dry coating density",
+      "covariance_group": "surface_v1"
+    },
+    "hematite_fe": {
+      "value": 0.6994307614270416,
+      "interval": [
+        0.6994307614270416,
+        0.6994307614270416
+      ],
+      "unit": "kg Fe/kg mineral",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Stoichiometric pure endmember; no inferred Fe in solid solutions",
+      "covariance_group": "surface_v1"
+    },
+    "goethite_fe": {
+      "value": 0.6285241584225276,
+      "interval": [
+        0.6285241584225276,
+        0.6285241584225276
+      ],
+      "unit": "kg Fe/kg mineral",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Stoichiometric pure endmember; no inferred Fe in solid solutions",
+      "covariance_group": "surface_v1"
+    },
+    "magnetite_fe": {
+      "value": 0.7235964082563457,
+      "interval": [
+        0.7235964082563457,
+        0.7235964082563457
+      ],
+      "unit": "kg Fe/kg mineral",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Stoichiometric pure endmember; no inferred Fe in solid solutions",
+      "covariance_group": "surface_v1"
+    },
+    "hematite_extinction": {
+      "value": 200000.0,
+      "interval": [
+        20000.0,
+        2000000.0
+      ],
+      "unit": "1/m",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Effective two-pass optical attenuation, not measured coating K/S",
+      "covariance_group": "surface_v1"
+    },
+    "rind_extinction": {
+      "value": 100000.0,
+      "interval": [
+        10000.0,
+        1000000.0
+      ],
+      "unit": "1/m",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Effective two-pass optical attenuation, not measured coating K/S",
+      "covariance_group": "surface_v1"
+    },
+    "varnish_extinction": {
+      "value": 50000.0,
+      "interval": [
+        5000.0,
+        500000.0
+      ],
+      "unit": "1/m",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Effective two-pass optical attenuation, not measured coating K/S",
+      "covariance_group": "surface_v1"
+    },
+    "varnish_rate_m_yr": {
+      "value": 5e-09,
+      "interval": [
+        1e-09,
+        4e-08
+      ],
+      "unit": "m/yr",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "VAR",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Stable arid exposed face with sufficient dust supply; climate opportunity multiplies rate",
+      "covariance_group": "surface_v1"
+    },
+    "varnish_max_m": {
+      "value": 0.0005,
+      "interval": [
+        5e-06,
+        0.0005
+      ],
+      "unit": "m",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "VAR",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Validity cap for thin varnish analogue, not universal saturation",
+      "covariance_group": "surface_v1"
+    },
+    "hematite_roughness": {
+      "value": 0.8,
+      "interval": [
+        0.5,
+        1
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "GGX perceptual roughness; broad unmeasured surface prior, fourth-power area mixing",
+      "covariance_group": "surface_v1"
+    },
+    "rind_roughness": {
+      "value": 0.9,
+      "interval": [
+        0.6,
+        1
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "GGX perceptual roughness; broad unmeasured surface prior, fourth-power area mixing",
+      "covariance_group": "surface_v1"
+    },
+    "varnish_roughness": {
+      "value": 0.55,
+      "interval": [
+        0.2,
+        0.9
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "GGX perceptual roughness; broad unmeasured surface prior, fourth-power area mixing",
+      "covariance_group": "surface_v1"
+    },
+    "coating_f0": {
+      "value": 0.04,
+      "interval": [
+        0.02,
+        0.12
+      ],
+      "unit": "1",
+      "interval_kind": "plausible_support_not_confidence_interval",
+      "distribution": "unspecified",
+      "reference": "MODEL",
+      "evidence_kind": "conditional_project_prior",
+      "support_scale": "exposed rock patch; not site admission",
+      "conditions": "Effective dielectric normal-incidence reflectance prior; no BRDF fit",
+      "covariance_group": "surface_v1"
+    }
+  },
+  "wavelength_nm": [
+    380,
+    385,
+    390,
+    395,
+    400,
+    405,
+    410,
+    415,
+    420,
+    425,
+    430,
+    435,
+    440,
+    445,
+    450,
+    455,
+    460,
+    465,
+    470,
+    475,
+    480,
+    485,
+    490,
+    495,
+    500,
+    505,
+    510,
+    515,
+    520,
+    525,
+    530,
+    535,
+    540,
+    545,
+    550,
+    555,
+    560,
+    565,
+    570,
+    575,
+    580,
+    585,
+    590,
+    595,
+    600,
+    605,
+    610,
+    615,
+    620,
+    625,
+    630,
+    635,
+    640,
+    645,
+    650,
+    655,
+    660,
+    665,
+    670,
+    675,
+    680,
+    685,
+    690,
+    695,
+    700,
+    705,
+    710,
+    715,
+    720,
+    725,
+    730,
+    735,
+    740,
+    745,
+    750,
+    755,
+    760,
+    765,
+    770,
+    775,
+    780
+  ],
+  "linear_rgb_weights": [
+    [
+      -0.0001416859236612806,
+      2.599729175745286e-05,
+      0.0003614931114278099
+    ],
+    [
+      -0.0002042397082894882,
+      2.7308061846967184e-05,
+      0.0006409737654856316
+    ],
+    [
+      -0.0002356805124382826,
+      4.918249323822136e-06,
+      0.0011074755612519882
+    ],
+    [
+      -0.00014210946390178384,
+      -8.1877955638589e-05,
+      0.0018952093767362081
+    ],
+    [
+      0.0002351656421462841,
+      -0.00030876931550477364,
+      0.0032964418000902772
+    ],
+    [
+      0.0010704100235520181,
+      -0.0007897648351478083,
+      0.005958018108338204
+    ],
+    [
+      0.0024176654022637356,
+      -0.0016567716274718757,
+      0.011113741773601495
+    ],
+    [
+      0.004070129012901854,
+      -0.0030081749096224613,
+      0.02051162948181685
+    ],
+    [
+      0.0056299938630265675,
+      -0.004841895206304879,
+      0.03549586255585308
+    ],
+    [
+      0.006900645543305932,
+      -0.007006237192271303,
+      0.05522436497502946
+    ],
+    [
+      0.008253825268410698,
+      -0.009190530334777711,
+      0.07537991310518345
+    ],
+    [
+      0.010339009048556993,
+      -0.010953700330620087,
+      0.08941383539832136
+    ],
+    [
+      0.012341725857366998,
+      -0.011731686635635721,
+      0.09429079924576417
+    ],
+    [
+      0.010888792167486658,
+      -0.01107400036861696,
+      0.09650151042424188
+    ],
+    [
+      0.007975673697286929,
+      -0.009646206183922996,
+      0.09665556172341978
+    ],
+    [
+      0.0040674532410193125,
+      -0.007558625881990965,
+      0.09461250361145956
+    ],
+    [
+      -0.0005270737811600762,
+      -0.004878639019053322,
+      0.09031618374746787
+    ],
+    [
+      -0.0046072474528152125,
+      -0.0017685785688987214,
+      0.08181479347579672
+    ],
+    [
+      -0.00787365184353906,
+      0.0016756154343217896,
+      0.06943696826911128
+    ],
+    [
+      -0.010892602954383228,
+      0.00543637737232059,
+      0.05559284826575237
+    ],
+    [
+      -0.014210753907587245,
+      0.00951922525231981,
+      0.04255171559926038
+    ],
+    [
+      -0.01805492767586117,
+      0.013949860582292263,
+      0.03162983887151783
+    ],
+    [
+      -0.022324270892296758,
+      0.01879544312517524,
+      0.023085332558997862
+    ],
+    [
+      -0.026779320296628197,
+      0.02418765261977225,
+      0.01651753222770947
+    ],
+    [
+      -0.031224969632582804,
+      0.030306043071069398,
+      0.01134426826049902
+    ],
+    [
+      -0.03561801051130325,
+      0.03731044173665193,
+      0.007089169450835509
+    ],
+    [
+      -0.03995049525168736,
+      0.04518495361047557,
+      0.003463623900941215
+    ],
+    [
+      -0.043829281165712754,
+      0.05350490440402509,
+      0.0003448966317634994
+    ],
+    [
+      -0.046547742084688086,
+      0.061444016985554656,
+      -0.002281968168657358
+    ],
+    [
+      -0.0472055029077543,
+      0.06793470243022733,
+      -0.004379315418554461
+    ],
+    [
+      -0.04498190291786002,
+      0.07199808483262915,
+      -0.005908762473808459
+    ],
+    [
+      -0.03994193587560452,
+      0.07368841767173337,
+      -0.006938564318117379
+    ],
+    [
+      -0.0329851289559268,
+      0.07402361466219211,
+      -0.007635410583705326
+    ],
+    [
+      -0.024172428716861292,
+      0.07300646364386035,
+      -0.008045973798691153
+    ],
+    [
+      -0.013631343991117656,
+      0.07067393225494652,
+      -0.008211563264724974
+    ],
+    [
+      -0.0015885160645439118,
+      0.06712346819054069,
+      -0.008171163898590052
+    ],
+    [
+      0.011630464166180006,
+      0.06250574626874451,
+      -0.007961362041329193
+    ],
+    [
+      0.025610343917053396,
+      0.05701389509177977,
+      -0.007616260492668167
+    ],
+    [
+      0.03987161276391666,
+      0.050862219919606294,
+      -0.0071664479305225135
+    ],
+    [
+      0.054049330494004545,
+      0.044093112859264406,
+      -0.006619179540731961
+    ],
+    [
+      0.06765524470298834,
+      0.03688065972058212,
+      -0.005993084063581444
+    ],
+    [
+      0.08013379810325519,
+      0.029493722906780723,
+      -0.005315387225627066
+    ],
+    [
+      0.09097158157309633,
+      0.022197800198110833,
+      -0.004612267490652125
+    ],
+    [
+      0.09973370163175752,
+      0.015240803561559258,
+      -0.003908240404766199
+    ],
+    [
+      0.10609358919535988,
+      0.008840327039877579,
+      -0.0032254725993526617
+    ],
+    [
+      0.10914527035662484,
+      0.0033970335252461446,
+      -0.0025973951202645676
+    ],
+    [
+      0.10831880286272576,
+      -0.0007990576091338768,
+      -0.00204982633034525
+    ],
+    [
+      0.10395201874306045,
+      -0.003753754994520921,
+      -0.001588965844855861
+    ],
+    [
+      0.09662844488744707,
+      -0.0055635797875151416,
+      -0.0012143010987936357
+    ],
+    [
+      0.08709900373183573,
+      -0.006394298844399329,
+      -0.000919812993437996
+    ],
+    [
+      0.07619027072351882,
+      -0.006454020248610948,
+      -0.0006955873631906244
+    ],
+    [
+      0.06471383557451083,
+      -0.005965269324015122,
+      -0.0005295674263089574
+    ],
+    [
+      0.053389615957599834,
+      -0.0051401156697057524,
+      -0.000409190606817247
+    ],
+    [
+      0.04279203306054165,
+      -0.00416134572064311,
+      -0.0003227097618954729
+    ],
+    [
+      0.03332288549971453,
+      -0.00317119313091899,
+      -0.00026008493076739225
+    ],
+    [
+      0.02520977578250868,
+      -0.00226762505533603,
+      -0.00021342400779278146
+    ],
+    [
+      0.01852506547104487,
+      -0.0015069578114661703,
+      -0.00017702850118622373
+    ],
+    [
+      0.013218145063443763,
+      -0.0009108365210706232,
+      -0.00014715043244841017
+    ],
+    [
+      0.009153391521751406,
+      -0.00047540547533503097,
+      -0.0001215844302344724
+    ],
+    [
+      0.006147225541217695,
+      -0.0001807345507125344,
+      -9.920940509662983e-05
+    ],
+    [
+      0.003999605835245238,
+      9.114191019536299e-07,
+      -7.956629716327763e-05
+    ],
+    [
+      0.002517496026310812,
+      9.875152123467114e-05,
+      -6.252322825415361e-05
+    ],
+    [
+      0.00152980876322872,
+      0.0001393377407851795,
+      -4.804634226229588e-05
+    ],
+    [
+      0.0008947653554523236,
+      0.00014437440112453968,
+      -3.6069679630353504e-05
+    ],
+    [
+      0.0005014091292660171,
+      0.00013006794562610524,
+      -2.644284399615572e-05
+    ],
+    [
+      0.0002672422510073593,
+      0.00010749088926948397,
+      -1.8930179972544144e-05
+    ],
+    [
+      0.0001337782339470171,
+      8.348672004364212e-05,
+      -1.3237096763630983e-05
+    ],
+    [
+      6.140028660375516e-05,
+      6.175090517496823e-05,
+      -9.044918821280457e-06
+    ],
+    [
+      2.4448829186413105e-05,
+      4.385041055887939e-05,
+      -6.042497027004501e-06
+    ],
+    [
+      7.039577705412627e-06,
+      3.0058460928594066e-05,
+      -3.948919187405138e-06
+    ],
+    [
+      -2.0744002806698454e-07,
+      1.9966685547489648e-05,
+      -2.526105629663427e-06
+    ],
+    [
+      -2.55506306497583e-06,
+      1.2890065290977403e-05,
+      -1.5827045794678655e-06
+    ],
+    [
+      -2.7881654863893423e-06,
+      8.105898684215138e-06,
+      -9.718129946084075e-07
+    ],
+    [
+      -2.27731908331928e-06,
+      4.974382196668458e-06,
+      -5.851274928493696e-07
+    ],
+    [
+      -1.6321023905731686e-06,
+      2.983489361235675e-06,
+      -3.456537802768699e-07
+    ],
+    [
+      -1.0805271441482355e-06,
+      1.7510827812903612e-06,
+      -2.004371125386148e-07
+    ],
+    [
+      -6.765206919167548e-07,
+      1.0068190719537878e-06,
+      -1.1414767809495777e-07
+    ],
+    [
+      -4.057457416242e-07,
+      5.676176615872242e-07,
+      -6.386987255208958e-08
+    ],
+    [
+      -2.3494599136771427e-07,
+      3.140214705850804e-07,
+      -3.512643294479065e-08
+    ],
+    [
+      -1.320341764986758e-07,
+      1.7058902929988865e-07,
+      -1.8994637606399654e-08
+    ],
+    [
+      -7.22761568744418e-08,
+      9.10493366506999e-08,
+      -1.0102249403668667e-08
+    ]
+  ],
+  "colour_method": {
+    "value": 5,
+    "interval": [
+      5,
+      5
+    ],
+    "unit": "nm",
+    "interval_kind": "fixed_method",
+    "distribution": "unspecified",
+    "reference": "COLOR",
+    "evidence_kind": "numerical_method",
+    "support_scale": "exposed rock patch; not site admission",
+    "conditions": "Quadrature spacing; CIE analytic E to D65 using existing v5 reference reader",
+    "covariance_group": "surface_v1"
+  },
+  "spectra": {
+    "hematite": {
+      "sources": [
+        {
+          "file": "ChapterC_Coatings/splib07a_Hematite_Thin_Film_GDS27_BECKa_AREF.txt",
+          "sha256": "9ad062e4527dfc12b3bb044aadc87ad107b4f00bbfbd36b086af2f86b055f3cd",
+          "title": "splib07a Record=13485: Hematite_Thin_Film GDS27      BECKa AREF"
+        }
+      ],
+      "reflectance": [
+        {
+          "value": 0.05583279622006664,
+          "interval": [
+            0.05583279622006664,
+            0.05583279622006664
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05716629044670777,
+          "interval": [
+            0.05716629044670777,
+            0.05716629044670777
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.058001349632745,
+          "interval": [
+            0.058001349632745,
+            0.058001349632745
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05908167632917334,
+          "interval": [
+            0.05908167632917334,
+            0.05908167632917334
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05936174990528858,
+          "interval": [
+            0.05936174990528858,
+            0.05936174990528858
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05969880335071324,
+          "interval": [
+            0.05969880335071324,
+            0.05969880335071324
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05955870167147007,
+          "interval": [
+            0.05955870167147007,
+            0.05955870167147007
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06008597107572,
+          "interval": [
+            0.06008597107572,
+            0.06008597107572
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06034944220083199,
+          "interval": [
+            0.06034944220083199,
+            0.06034944220083199
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.060098416157460526,
+          "interval": [
+            0.060098416157460526,
+            0.060098416157460526
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06048273950711169,
+          "interval": [
+            0.06048273950711169,
+            0.06048273950711169
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.059955842231298455,
+          "interval": [
+            0.059955842231298455,
+            0.059955842231298455
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05941378574448,
+          "interval": [
+            0.05941378574448,
+            0.05941378574448
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05939652507263691,
+          "interval": [
+            0.05939652507263691,
+            0.05939652507263691
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.059424819039999986,
+          "interval": [
+            0.059424819039999986,
+            0.059424819039999986
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.058565408949999995,
+          "interval": [
+            0.058565408949999995,
+            0.058565408949999995
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.058462191772357716,
+          "interval": [
+            0.058462191772357716,
+            0.058462191772357716
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05759519623131498,
+          "interval": [
+            0.05759519623131498,
+            0.05759519623131498
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.057225437207202065,
+          "interval": [
+            0.057225437207202065,
+            0.057225437207202065
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05690012202044,
+          "interval": [
+            0.05690012202044,
+            0.05690012202044
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05700546615296424,
+          "interval": [
+            0.05700546615296424,
+            0.05700546615296424
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.056965968750000005,
+          "interval": [
+            0.056965968750000005,
+            0.056965968750000005
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05714072680567306,
+          "interval": [
+            0.05714072680567306,
+            0.05714072680567306
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05745243749241001,
+          "interval": [
+            0.05745243749241001,
+            0.05745243749241001
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05757876401396014,
+          "interval": [
+            0.05757876401396014,
+            0.05757876401396014
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05790612673517234,
+          "interval": [
+            0.05790612673517234,
+            0.05790612673517234
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05873510881331315,
+          "interval": [
+            0.05873510881331315,
+            0.05873510881331315
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05821935508421084,
+          "interval": [
+            0.05821935508421084,
+            0.05821935508421084
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05850644976410764,
+          "interval": [
+            0.05850644976410764,
+            0.05850644976410764
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05880898392003418,
+          "interval": [
+            0.05880898392003418,
+            0.05880898392003418
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05968936960160608,
+          "interval": [
+            0.05968936960160608,
+            0.05968936960160608
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06012981790420906,
+          "interval": [
+            0.06012981790420906,
+            0.06012981790420906
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06152672159110817,
+          "interval": [
+            0.06152672159110817,
+            0.06152672159110817
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06393334808864096,
+          "interval": [
+            0.06393334808864096,
+            0.06393334808864096
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06597522040798913,
+          "interval": [
+            0.06597522040798913,
+            0.06597522040798913
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06932133274019739,
+          "interval": [
+            0.06932133274019739,
+            0.06932133274019739
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07479178337245566,
+          "interval": [
+            0.07479178337245566,
+            0.07479178337245566
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08293282743635441,
+          "interval": [
+            0.08293282743635441,
+            0.08293282743635441
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.09530181572626076,
+          "interval": [
+            0.09530181572626076,
+            0.09530181572626076
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.11094713230592301,
+          "interval": [
+            0.11094713230592301,
+            0.11094713230592301
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.13004952199573008,
+          "interval": [
+            0.13004952199573008,
+            0.13004952199573008
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1525852995486454,
+          "interval": [
+            0.1525852995486454,
+            0.1525852995486454
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1777828782373767,
+          "interval": [
+            0.1777828782373767,
+            0.1777828782373767
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.20158135365653645,
+          "interval": [
+            0.20158135365653645,
+            0.20158135365653645
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.22258403313088881,
+          "interval": [
+            0.22258403313088881,
+            0.22258403313088881
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.23963095960830513,
+          "interval": [
+            0.23963095960830513,
+            0.23963095960830513
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2529563474755778,
+          "interval": [
+            0.2529563474755778,
+            0.2529563474755778
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2621209777893402,
+          "interval": [
+            0.2621209777893402,
+            0.2621209777893402
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2691013298863097,
+          "interval": [
+            0.2691013298863097,
+            0.2691013298863097
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.27451502960843016,
+          "interval": [
+            0.27451502960843016,
+            0.27451502960843016
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.27833996461933336,
+          "interval": [
+            0.27833996461933336,
+            0.27833996461933336
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2837737549597996,
+          "interval": [
+            0.2837737549597996,
+            0.2837737549597996
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.28714747039119415,
+          "interval": [
+            0.28714747039119415,
+            0.28714747039119415
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29085023846948466,
+          "interval": [
+            0.29085023846948466,
+            0.29085023846948466
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2947742536806553,
+          "interval": [
+            0.2947742536806553,
+            0.2947742536806553
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3004313765383654,
+          "interval": [
+            0.3004313765383654,
+            0.3004313765383654
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.30543535829812446,
+          "interval": [
+            0.30543535829812446,
+            0.30543535829812446
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3114350913617136,
+          "interval": [
+            0.3114350913617136,
+            0.3114350913617136
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.317925431499036,
+          "interval": [
+            0.317925431499036,
+            0.317925431499036
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.32474059108784786,
+          "interval": [
+            0.32474059108784786,
+            0.32474059108784786
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.33196949957439437,
+          "interval": [
+            0.33196949957439437,
+            0.33196949957439437
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3406753870003298,
+          "interval": [
+            0.3406753870003298,
+            0.3406753870003298
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3483293080364131,
+          "interval": [
+            0.3483293080364131,
+            0.3483293080364131
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3569911489582069,
+          "interval": [
+            0.3569911489582069,
+            0.3569911489582069
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3634737923828795,
+          "interval": [
+            0.3634737923828795,
+            0.3634737923828795
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.37199588522217825,
+          "interval": [
+            0.37199588522217825,
+            0.37199588522217825
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.37848857147242226,
+          "interval": [
+            0.37848857147242226,
+            0.37848857147242226
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3859938306274094,
+          "interval": [
+            0.3859938306274094,
+            0.3859938306274094
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.39246729745766173,
+          "interval": [
+            0.39246729745766173,
+            0.39246729745766173
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3978086494879424,
+          "interval": [
+            0.3978086494879424,
+            0.3978086494879424
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.40198658719510794,
+          "interval": [
+            0.40198658719510794,
+            0.40198658719510794
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4054693092145882,
+          "interval": [
+            0.4054693092145882,
+            0.4054693092145882
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.40770250959050613,
+          "interval": [
+            0.40770250959050613,
+            0.40770250959050613
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4087470006131092,
+          "interval": [
+            0.4087470006131092,
+            0.4087470006131092
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4081517298266793,
+          "interval": [
+            0.4081517298266793,
+            0.4081517298266793
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4073567371140378,
+          "interval": [
+            0.4073567371140378,
+            0.4073567371140378
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4047723413073841,
+          "interval": [
+            0.4047723413073841,
+            0.4047723413073841
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.4016223996929687,
+          "interval": [
+            0.4016223996929687,
+            0.4016223996929687
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3989346431572088,
+          "interval": [
+            0.3989346431572088,
+            0.3989346431572088
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.3944161392820714,
+          "interval": [
+            0.3944161392820714,
+            0.3944161392820714
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.39029533238516206,
+          "interval": [
+            0.39029533238516206,
+            0.39029533238516206
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        }
+      ],
+      "qualification": "Effective patch endmember. Hematite and goethite thin-film specimens; varnished substrates. These are not pure isolated coating optical constants. Original substrate contribution is inseparable without thickness/backing metadata."
+    },
+    "rind": {
+      "sources": [
+        {
+          "file": "ChapterC_Coatings/splib07a_Goethite_Thin_Film_WS222_BECKa_AREF.txt",
+          "sha256": "8051e338d25e8318d0cd32b1cd1fcc5e1fc5b2b8e6cfd1472d88bee2b17cd1f5",
+          "title": "splib07a Record=13451: Goethite_Thin_Film WS222      BECKa AREF"
+        }
+      ],
+      "reflectance": [
+        {
+          "value": 0.0528545283419641,
+          "interval": [
+            0.0528545283419641,
+            0.0528545283419641
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.053686418041449795,
+          "interval": [
+            0.053686418041449795,
+            0.053686418041449795
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.053392767647440005,
+          "interval": [
+            0.053392767647440005,
+            0.053392767647440005
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05337756085225073,
+          "interval": [
+            0.05337756085225073,
+            0.05337756085225073
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0532999902465787,
+          "interval": [
+            0.0532999902465787,
+            0.0532999902465787
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.053526022905830466,
+          "interval": [
+            0.053526022905830466,
+            0.053526022905830466
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05392812497153957,
+          "interval": [
+            0.05392812497153957,
+            0.05392812497153957
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0541949478483,
+          "interval": [
+            0.0541949478483,
+            0.0541949478483
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05489607135799761,
+          "interval": [
+            0.05489607135799761,
+            0.05489607135799761
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.055547962498935004,
+          "interval": [
+            0.055547962498935004,
+            0.055547962498935004
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05701242307559358,
+          "interval": [
+            0.05701242307559358,
+            0.05701242307559358
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.058752573820317865,
+          "interval": [
+            0.058752573820317865,
+            0.058752573820317865
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.061238121572079994,
+          "interval": [
+            0.061238121572079994,
+            0.061238121572079994
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06340786539549463,
+          "interval": [
+            0.06340786539549463,
+            0.06340786539549463
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06446989368,
+          "interval": [
+            0.06446989368,
+            0.06446989368
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0655024273,
+          "interval": [
+            0.0655024273,
+            0.0655024273
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06566153318670687,
+          "interval": [
+            0.06566153318670687,
+            0.06566153318670687
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06606991078573,
+          "interval": [
+            0.06606991078573,
+            0.06606991078573
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06651142303286033,
+          "interval": [
+            0.06651142303286033,
+            0.06651142303286033
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06745203969061,
+          "interval": [
+            0.06745203969061,
+            0.06745203969061
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06794465713276433,
+          "interval": [
+            0.06794465713276433,
+            0.06794465713276433
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06937533124999999,
+          "interval": [
+            0.06937533124999999,
+            0.06937533124999999
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0710691334396544,
+          "interval": [
+            0.0710691334396544,
+            0.0710691334396544
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07358884460684496,
+          "interval": [
+            0.07358884460684496,
+            0.07358884460684496
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07614840617842178,
+          "interval": [
+            0.07614840617842178,
+            0.07614840617842178
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07978066342909927,
+          "interval": [
+            0.07978066342909927,
+            0.07978066342909927
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08436957208140079,
+          "interval": [
+            0.08436957208140079,
+            0.08436957208140079
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08914641293372934,
+          "interval": [
+            0.08914641293372934,
+            0.08914641293372934
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.09543069156772564,
+          "interval": [
+            0.09543069156772564,
+            0.09543069156772564
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.10246990810638115,
+          "interval": [
+            0.10246990810638115,
+            0.10246990810638115
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1111212546385965,
+          "interval": [
+            0.1111212546385965,
+            0.1111212546385965
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.12033932646676457,
+          "interval": [
+            0.12033932646676457,
+            0.12033932646676457
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.13103076750024995,
+          "interval": [
+            0.13103076750024995,
+            0.13103076750024995
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.14261631321538232,
+          "interval": [
+            0.14261631321538232,
+            0.14261631321538232
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1546673313287134,
+          "interval": [
+            0.1546673313287134,
+            0.1546673313287134
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1673642802547024,
+          "interval": [
+            0.1673642802547024,
+            0.1673642802547024
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.17972913516317754,
+          "interval": [
+            0.17972913516317754,
+            0.17972913516317754
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.1918992385042351,
+          "interval": [
+            0.1918992385042351,
+            0.1918992385042351
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.20317844477267144,
+          "interval": [
+            0.20317844477267144,
+            0.20317844477267144
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2134117376703767,
+          "interval": [
+            0.2134117376703767,
+            0.2134117376703767
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.22136497429381446,
+          "interval": [
+            0.22136497429381446,
+            0.22136497429381446
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.22905700154126538,
+          "interval": [
+            0.22905700154126538,
+            0.22905700154126538
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.23460685142517868,
+          "interval": [
+            0.23460685142517868,
+            0.23460685142517868
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2385212209818098,
+          "interval": [
+            0.2385212209818098,
+            0.2385212209818098
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24060949594633332,
+          "interval": [
+            0.24060949594633332,
+            0.24060949594633332
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2421168475417039,
+          "interval": [
+            0.2421168475417039,
+            0.2421168475417039
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2430376935995675,
+          "interval": [
+            0.2430376935995675,
+            0.2430376935995675
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2431675001753728,
+          "interval": [
+            0.2431675001753728,
+            0.2431675001753728
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2430051447044301,
+          "interval": [
+            0.2430051447044301,
+            0.2430051447044301
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24357159834859404,
+          "interval": [
+            0.24357159834859404,
+            0.24357159834859404
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24263381741033332,
+          "interval": [
+            0.24263381741033332,
+            0.24263381741033332
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24286337191401916,
+          "interval": [
+            0.24286337191401916,
+            0.24286337191401916
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24268058328775066,
+          "interval": [
+            0.24268058328775066,
+            0.24268058328775066
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24252841374583745,
+          "interval": [
+            0.24252841374583745,
+            0.24252841374583745
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24374852464246965,
+          "interval": [
+            0.24374852464246965,
+            0.24374852464246965
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24433526314703147,
+          "interval": [
+            0.24433526314703147,
+            0.24433526314703147
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24570550931638974,
+          "interval": [
+            0.24570550931638974,
+            0.24570550931638974
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24700350231122312,
+          "interval": [
+            0.24700350231122312,
+            0.24700350231122312
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.24869364115770778,
+          "interval": [
+            0.24869364115770778,
+            0.24869364115770778
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2506819863266177,
+          "interval": [
+            0.2506819863266177,
+            0.2506819863266177
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.25276699878155046,
+          "interval": [
+            0.25276699878155046,
+            0.25276699878155046
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.25636399180178193,
+          "interval": [
+            0.25636399180178193,
+            0.25636399180178193
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2586395898938007,
+          "interval": [
+            0.2586395898938007,
+            0.2586395898938007
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2613322910706595,
+          "interval": [
+            0.2613322910706595,
+            0.2613322910706595
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.26461919238687964,
+          "interval": [
+            0.26461919238687964,
+            0.26461919238687964
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2684730772463087,
+          "interval": [
+            0.2684730772463087,
+            0.2684730772463087
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2726270995180428,
+          "interval": [
+            0.2726270995180428,
+            0.2726270995180428
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2753531538346575,
+          "interval": [
+            0.2753531538346575,
+            0.2753531538346575
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2787183544186162,
+          "interval": [
+            0.2787183544186162,
+            0.2787183544186162
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.282788373729306,
+          "interval": [
+            0.282788373729306,
+            0.282788373729306
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.28601911357215354,
+          "interval": [
+            0.28601911357215354,
+            0.28601911357215354
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.28907572068281023,
+          "interval": [
+            0.28907572068281023,
+            0.28907572068281023
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2907288719223712,
+          "interval": [
+            0.2907288719223712,
+            0.2907288719223712
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29347885938764084,
+          "interval": [
+            0.29347885938764084,
+            0.29347885938764084
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29489934171856685,
+          "interval": [
+            0.29489934171856685,
+            0.29489934171856685
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29568596502058353,
+          "interval": [
+            0.29568596502058353,
+            0.29568596502058353
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2963053995319271,
+          "interval": [
+            0.2963053995319271,
+            0.2963053995319271
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29615862552512984,
+          "interval": [
+            0.29615862552512984,
+            0.29615862552512984
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29554307834607796,
+          "interval": [
+            0.29554307834607796,
+            0.29554307834607796
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.2942010962732582,
+          "interval": [
+            0.2942010962732582,
+            0.2942010962732582
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.29269614487029744,
+          "interval": [
+            0.29269614487029744,
+            0.29269614487029744
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        }
+      ],
+      "qualification": "Effective patch endmember. Hematite and goethite thin-film specimens; varnished substrates. These are not pure isolated coating optical constants. Original substrate contribution is inseparable without thickness/backing metadata."
+    },
+    "varnish": {
+      "sources": [
+        {
+          "file": "ChapterC_Coatings/splib07a_Desert_Varnish_GDS141_BECKa_AREF.txt",
+          "sha256": "addcad1f21804b653ed529677bbe994e2527775f9c7357591f13aef8ac1fe156",
+          "title": "splib07a Record=13435: Desert_Varnish GDS141         BECKa AREF"
+        },
+        {
+          "file": "ChapterC_Coatings/splib07a_Desert_Varnish_GDS78A_Rhy_BECKa_AREF.txt",
+          "sha256": "8a883c3671197ebbeef627b8eaf82060017ebc486dc96c49de119d938e895e17",
+          "title": "splib07a Record=13443: Desert_Varnish GDS78A Rhy     BECKa AREF"
+        }
+      ],
+      "reflectance": [
+        {
+          "value": 0.0441733841501238,
+          "interval": [
+            0.03993482703772845,
+            0.04841194126251915
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04465286191205543,
+          "interval": [
+            0.04058032452314738,
+            0.048725399300963486
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.045020606267457505,
+          "interval": [
+            0.041053466925875,
+            0.048987745609040005
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.045127829635079324,
+          "interval": [
+            0.041134353411412944,
+            0.049121305858745704
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.045346525218753285,
+          "interval": [
+            0.041426922368275526,
+            0.049266128069231044
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04556385999198255,
+          "interval": [
+            0.04204340802959485,
+            0.04908431195437024
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04614551063478702,
+          "interval": [
+            0.042570403196172946,
+            0.0497206180734011
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04628206250061499,
+          "interval": [
+            0.042634258973049996,
+            0.049929866028179996
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0466612500897394,
+          "interval": [
+            0.04295195852131652,
+            0.05037054165816228
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04713218735552953,
+          "interval": [
+            0.043322099298571004,
+            0.05094227541248805
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04749145481648439,
+          "interval": [
+            0.043912180226780756,
+            0.05107072940618802
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0479976857297368,
+          "interval": [
+            0.044499503633599106,
+            0.051495867825874495
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.048111406133449997,
+          "interval": [
+            0.04479846622272,
+            0.051424346044179996
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04859593731685105,
+          "interval": [
+            0.04531147725708419,
+            0.05188039737661792
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.049192755000000005,
+          "interval": [
+            0.04607833956,
+            0.052307170440000016
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04917520562499997,
+          "interval": [
+            0.046812883099999994,
+            0.05153752814999995
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.04973173567256922,
+          "interval": [
+            0.04646084188613386,
+            0.05300262945900459
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0500178149712925,
+          "interval": [
+            0.0471530437028,
+            0.052882586239785
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05011297108432584,
+          "interval": [
+            0.04759230748391483,
+            0.05263363468473684
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.050930416301669994,
+          "interval": [
+            0.048602627943309995,
+            0.05325820466002999
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05055055082991335,
+          "interval": [
+            0.04835697798837506,
+            0.05274412367145165
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.050839728524999996,
+          "interval": [
+            0.04896083934999999,
+            0.0527186177
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05121960149696997,
+          "interval": [
+            0.049191324274037745,
+            0.0532478787199022
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05139194513810251,
+          "interval": [
+            0.049608058728345,
+            0.05317583154786002
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.051915161223237236,
+          "interval": [
+            0.05008019611576116,
+            0.053750126330713306
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05229516030206052,
+          "interval": [
+            0.050496611166921675,
+            0.05409370943719937
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05254837784595846,
+          "interval": [
+            0.050751263987574895,
+            0.05434549170434204
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.053281026030050305,
+          "interval": [
+            0.05137137996232962,
+            0.05519067209777098
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05393783331522816,
+          "interval": [
+            0.05228315312744127,
+            0.05559251350301505
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05364735528177031,
+          "interval": [
+            0.05294801801102512,
+            0.054346692552515494
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05453449432775576,
+          "interval": [
+            0.053475524311428116,
+            0.05559346434408341
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05457644836359863,
+          "interval": [
+            0.05374648177509774,
+            0.05540641495209952
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0558475362393752,
+          "interval": [
+            0.055558223422271534,
+            0.056136849056478866
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05613704019137192,
+          "interval": [
+            0.055838073669736706,
+            0.056436006713007136
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05765395380759307,
+          "interval": [
+            0.05629297249566493,
+            0.0590149351195212
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.058348388227507264,
+          "interval": [
+            0.056261944098311,
+            0.060434832356703536
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.05907012053047796,
+          "interval": [
+            0.05541429769383038,
+            0.06272594336712553
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06009429572286973,
+          "interval": [
+            0.05550965821250712,
+            0.06467893323323233
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06191828759332889,
+          "interval": [
+            0.05656371089219839,
+            0.06727286429445939
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06331926272694227,
+          "interval": [
+            0.057143976686666875,
+            0.06949454876721767
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06446877031878229,
+          "interval": [
+            0.0572989299534093,
+            0.07163861068415528
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06597270432926829,
+          "interval": [
+            0.057737857800063,
+            0.07420755085847357
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06734276583749489,
+          "interval": [
+            0.05905227986137197,
+            0.07563325181361781
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06712287007566575,
+          "interval": [
+            0.05709931107520076,
+            0.07714642907613076
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06803928635668333,
+          "interval": [
+            0.05736212020108889,
+            0.07871645251227777
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06849961146327743,
+          "interval": [
+            0.05727422041197022,
+            0.07972500251458464
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0693132703036058,
+          "interval": [
+            0.05813885343892087,
+            0.08048768716829073
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.06922761719929438,
+          "interval": [
+            0.057524946053080575,
+            0.08093028834550818
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07051491369172355,
+          "interval": [
+            0.059618582227924474,
+            0.08141124515552263
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07101554781037456,
+          "interval": [
+            0.059788133136890055,
+            0.08224296248385907
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07139008058008334,
+          "interval": [
+            0.06029775832403332,
+            0.08248240283613334
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07170233353209282,
+          "interval": [
+            0.06033414565837158,
+            0.08307052140581407
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07192505402256966,
+          "interval": [
+            0.06039874820509693,
+            0.0834513598400424
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07179669619531695,
+          "interval": [
+            0.059337667498975,
+            0.08425572489165892
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07215148632849744,
+          "interval": [
+            0.059905091704350585,
+            0.0843978809526443
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07183836996506715,
+          "interval": [
+            0.06046785752002021,
+            0.0832088824101141
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07351262601475272,
+          "interval": [
+            0.061888600874668125,
+            0.08513665115483732
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07380746752164521,
+          "interval": [
+            0.062199447005310056,
+            0.08541548803798038
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07455362718783651,
+          "interval": [
+            0.062958939749906,
+            0.08614831462576703
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07503479645167935,
+          "interval": [
+            0.06363275909236456,
+            0.08643683381099415
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07559022408524281,
+          "interval": [
+            0.06374173412467501,
+            0.0874387140458106
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07597022141310088,
+          "interval": [
+            0.06384846068815314,
+            0.08809198213804861
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07662561363511244,
+          "interval": [
+            0.06391660824000507,
+            0.0893346190302198
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07754821616373891,
+          "interval": [
+            0.06438534121394525,
+            0.09071109111353257
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07889554884197811,
+          "interval": [
+            0.06598675234373151,
+            0.09180434534022469
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.07921500898638478,
+          "interval": [
+            0.0644906737944269,
+            0.09393934417834267
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08010748045829688,
+          "interval": [
+            0.06463952962348934,
+            0.0955754312931044
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.081510944200098,
+          "interval": [
+            0.06623534383487752,
+            0.09678654456531849
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08224105565914738,
+          "interval": [
+            0.0669103184920574,
+            0.09757179282623735
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08322617389526095,
+          "interval": [
+            0.06755150636005042,
+            0.09890084143047148
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08403544111980679,
+          "interval": [
+            0.06814471334344516,
+            0.09992616889616844
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08476844034846023,
+          "interval": [
+            0.0676752218396376,
+            0.10186165885728286
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0861871811234931,
+          "interval": [
+            0.06935196537798928,
+            0.10302239686899693
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08621984411316919,
+          "interval": [
+            0.06860238899979997,
+            0.10383729922653841
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08668230830534521,
+          "interval": [
+            0.06865999030978522,
+            0.1047046263009052
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0871869055537072,
+          "interval": [
+            0.06864895492978597,
+            0.10572485617762845
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08812438532454932,
+          "interval": [
+            0.06867293177918038,
+            0.10757583886991826
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.0894639781207392,
+          "interval": [
+            0.07025612288886741,
+            0.10867183335261099
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.08981622162386331,
+          "interval": [
+            0.07003964097826304,
+            0.10959280226946358
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.09058162175723163,
+          "interval": [
+            0.06984946498595343,
+            0.11131377852850982
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        },
+        {
+          "value": 0.09141300917978501,
+          "interval": [
+            0.07065991196249924,
+            0.1121661063970708
+          ],
+          "unit": "1",
+          "interval_kind": "training_specimen_range",
+          "distribution": "unspecified",
+          "reference": "USGS",
+          "evidence_kind": "measured_spectrum_derived",
+          "support_scale": "exposed rock patch; not site admission",
+          "conditions": "Effective coated-surface analogue; includes original specimen substrate. Interval is training specimen spread, not measurement error.",
+          "covariance_group": "surface_v1"
+        }
+      ],
+      "qualification": "Effective patch endmember. Hematite and goethite thin-film specimens; varnished substrates. These are not pure isolated coating optical constants. Original substrate contribution is inseparable without thickness/backing metadata."
+    }
+  },
+  "qualification": "Conditional surface optics predictor only. Spectrum belongs to coating endmembers; legacy substrate supplies three linear RGB bands, so a full reflected substrate spectrum is unavailable. No RELAB data. Lichen unsupported."
+}

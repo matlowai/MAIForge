@@ -1,0 +1,12 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-coast"
+version.workspace = true
+edition.workspace = true
+description = "Opt-in coastal potential fields from published native T1b windows and T0 climate"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+blake3.workspace = true
+vz-tilekey.workspace = true

@@ -1,0 +1,604 @@
+{
+  "schema": "pf.world-trace-rule/v1",
+  "qualification": "background crustal estimate, not an ore body",
+  "selection": "exact shared rock_key; emitted lithology_code mapping documented below; no spatial inputs; absent key means unknown trace composition, not zero",
+  "model": "Bulk trace mass fractions are distributed uniformly across host phases as a declared bookkeeping mixture. Major elemental fractions are reduced proportionally to keep each host mineral mass unchanged. Does not resolve chemical speciation, host partition coefficients, nuggets, ore enrichment or extraction yield.",
+  "references": [
+    {
+      "citation": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "readable_copy": "https://fr.scribd.com/document/622165747/Turekian-Wedepohl-1961-Distribution-of-the-Elements-in-Some-Major-Units-of-the-Earth-s-Crust",
+      "locator": "Table 2 columns and X footnote; sections Choice of units and Silver"
+    },
+    {
+      "citation": "CIAAW 2024 abridged standard atomic weights",
+      "url": "https://ciaaw.org/abridged-atomic-weights.htm"
+    }
+  ],
+  "atomic_weights": [
+    {
+      "element": "Au",
+      "micro_u": 196970000,
+      "evidence": {
+        "value": 196.97,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 196.96,
+          "upper": 196.98,
+          "interpretation": "CIAAW abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged atomic weight; declared-mass mixing does not use atomic weights numerically.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Ag",
+      "micro_u": 107870000,
+      "evidence": {
+        "value": 107.87,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 107.86,
+          "upper": 107.88000000000001,
+          "interpretation": "CIAAW abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged atomic weight; declared-mass mixing does not use atomic weights numerically.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Zn",
+      "micro_u": 65380000,
+      "evidence": {
+        "value": 65.38,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 65.36,
+          "upper": 65.39999999999999,
+          "interpretation": "CIAAW abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged atomic weight; declared-mass mixing does not use atomic weights numerically.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Pb",
+      "micro_u": 207200000,
+      "evidence": {
+        "value": 207.2,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 206.1,
+          "upper": 208.29999999999998,
+          "interpretation": "CIAAW abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged atomic weight; declared-mass mixing does not use atomic weights numerically.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    }
+  ],
+  "lithology_codes": [
+    {
+      "lithology_code": 0,
+      "rock_key": "granite",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 1,
+      "rock_key": "granite",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 2,
+      "rock_key": null,
+      "unknown_reason": "Metamorphic protolith and grade unresolved."
+    },
+    {
+      "lithology_code": 3,
+      "rock_key": "basalt_tholeiitic",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 4,
+      "rock_key": "limestone",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 5,
+      "rock_key": "shale",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 6,
+      "rock_key": "sandstone_quartz",
+      "unknown_reason": null
+    },
+    {
+      "lithology_code": 7,
+      "rock_key": null,
+      "unknown_reason": "Conglomerate clast provenance unresolved; paper excludes this family."
+    },
+    {
+      "lithology_code": 8,
+      "rock_key": null,
+      "unknown_reason": "Evaporite species unresolved; no cited row in this rule."
+    },
+    {
+      "lithology_code": 9,
+      "rock_key": null,
+      "unknown_reason": "Coal trace chemistry depends on ash/source; no cited row in this rule."
+    },
+    {
+      "lithology_code": 10,
+      "rock_key": null,
+      "unknown_reason": "Unconsolidated sediment composition/provenance unresolved; not assigned a sandstone composition."
+    },
+    {
+      "lithology_code": 11,
+      "rock_key": "basalt_tholeiitic",
+      "unknown_reason": null
+    }
+  ],
+  "rows": [
+    {
+      "rock_key": "granite",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "low-calcium granitic rocks",
+      "concentrations": {
+        "Au": {
+          "value": 0.004,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "low-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Ag": {
+          "value": 0.037,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "low-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Cu": {
+          "value": 10,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "low-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 39,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "low-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 19,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "low-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "granodiorite",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "high-calcium granitic rocks",
+      "concentrations": {
+        "Au": {
+          "value": 0.004,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "high-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Ag": {
+          "value": 0.051,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "high-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Cu": {
+          "value": 30,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "high-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 60,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "high-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 15,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "high-calcium granitic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "basalt_tholeiitic",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "basaltic rocks",
+      "concentrations": {
+        "Au": {
+          "value": 0.004,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Ag": {
+          "value": 0.11,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Cu": {
+          "value": 87,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 105,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 6,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "gabbro",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "basaltic rocks (paper explicitly includes gabbro)",
+      "concentrations": {
+        "Au": {
+          "value": 0.004,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks (paper explicitly includes gabbro); background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Ag": {
+          "value": 0.11,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks (paper explicitly includes gabbro); background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Cu": {
+          "value": 87,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks (paper explicitly includes gabbro); background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 105,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks (paper explicitly includes gabbro); background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 6,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "basaltic rocks (paper explicitly includes gabbro); background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "shale",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "shales",
+      "concentrations": {
+        "Au": {
+          "value": 0.003,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 0.001,
+            "upper": 0.01,
+            "interpretation": "Source 0.00X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "shales; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Ag": {
+          "value": 0.07,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "shales; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Cu": {
+          "value": 45,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "shales; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 95,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "shales; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 20,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "shales; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "sandstone_quartz",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "sandstones",
+      "concentrations": {
+        "Au": {
+          "value": 0.003,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 0.001,
+            "upper": 0.01,
+            "interpretation": "Source 0.00X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "sandstones; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Ag": {
+          "value": 0.03,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 0.01,
+            "upper": 0.1,
+            "interpretation": "Source 0.0X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "sandstones; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Cu": {
+          "value": 3,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 1,
+            "upper": 10,
+            "interpretation": "Source X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "sandstones; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Zn": {
+          "value": 16,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "sandstones; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 7,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "sandstones; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    },
+    {
+      "rock_key": "limestone",
+      "qualification": "background crustal estimate, not an ore body",
+      "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+      "source_column": "carbonates",
+      "concentrations": {
+        "Au": {
+          "value": 0.003,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 0.001,
+            "upper": 0.01,
+            "interpretation": "Source 0.00X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "carbonates; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Ag": {
+          "value": 0.03,
+          "unit": "ppm",
+          "interval": {
+            "kind": "bounds",
+            "lower": 0.01,
+            "upper": 0.1,
+            "interpretation": "Source 0.0X ppm is only an order of magnitude; bounds interpret the decade, not a measured confidence interval. The point is a one-significant-figure approximation to the geometric midpoint chosen by this world-wide rule."
+          },
+          "conditions": "carbonates; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "declared_point_in_literature_order_of_magnitude"
+        },
+        "Cu": {
+          "value": 4,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "carbonates; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Zn": {
+          "value": 20,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "carbonates; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        },
+        "Pb": {
+          "value": 9,
+          "unit": "ppm",
+          "interval": {
+            "kind": "not_reported",
+            "reason": "The source gives no statistical interval for this representative abundance; local rocks may differ greatly."
+          },
+          "conditions": "carbonates; background crustal estimate, not an ore body; bulk rock, not pure mineral or extraction yield.",
+          "reference": "Turekian & Wedepohl (1961), GSA Bulletin 72, 175-192, Table 2; doi:10.1130/0016-7606(1961)72[175:DOTEIS]2.0.CO;2",
+          "evidence_kind": "literature_compilation"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-detail"
+version = "0.1.0"
+edition = "2021"
+description = "T2 walkable ground (TER-DETAIL, ADR 043 terrain tier T2): 2 m walk tiles from T1b relief + stratigraphy cut + gully relaxation + channel cross-sections; labelled pre-signoff, Preview, derived, never canon"
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+# Lane BS (2026-10-15): the exposed-layer provenance module (strata_prov) lives in pf-region; shared by this dependency.
+pf-region = { path = "../pf-region" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+blake3 = { workspace = true }
+vz-keyed-rng = { workspace = true }
+
+[[bin]]
+name = "pf-detail"
+path = "src/bin/pf-detail.rs"

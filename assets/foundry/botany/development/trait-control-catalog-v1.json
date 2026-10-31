@@ -1,0 +1,1893 @@
+{
+  "schema": "plant-trait-control-catalog/v1",
+  "status": "ratified",
+  "authority": "development backend control contract; not biological validation",
+  "modules": {
+    "architecture": "monopodial-rhythmic-woody/v1",
+    "foliage": "single-needle-cohorts/v1",
+    "allocation": "coarse-pipe-volume/v1"
+  },
+  "parameters": {
+    "leader_increment_m": {
+      "value_type": "float",
+      "units": "m/year",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting leader_increment_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting leader_increment_m; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "leader_increment_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "juvenile_ramp_years": {
+      "value_type": "float",
+      "units": "year",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting juvenile_ramp_years; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting juvenile_ramp_years; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "juvenile_ramp_years"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "branch_increment_m": {
+      "value_type": "float",
+      "units": "m/year",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting branch_increment_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting branch_increment_m; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "branch_increment_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "branch_extension_decay_years": {
+      "value_type": "float",
+      "units": "year",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting branch_extension_decay_years; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting branch_extension_decay_years; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "branch_extension_decay_years"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "order_extension_factor": {
+      "value_type": "float",
+      "units": "dimensionless",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting order_extension_factor; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting order_extension_factor; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "order_extension_factor"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "minimum_shoot_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting minimum_shoot_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting minimum_shoot_m; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "minimum_shoot_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "new_branch_shoot_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting new_branch_shoot_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting new_branch_shoot_m; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "new_branch_shoot_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "extension_noise_low": {
+      "value_type": "float",
+      "units": "dimensionless",
+      "domain": {
+        "min": 0,
+        "max": 3,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "extension_noise_low"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "extension_noise_high": {
+      "value_type": "float",
+      "units": "dimensionless",
+      "domain": {
+        "min": 0,
+        "max": 3,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.extension",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "extension_noise_high"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "nodal_branch_mean": {
+      "value_type": "float",
+      "units": "branch/cluster",
+      "domain": {
+        "min": 1,
+        "max": 16,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting nodal_branch_mean; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting nodal_branch_mean; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "nodal_branch_mean"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "nodal_span_fraction": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Operator summary of Colin/Houllier: approximate20% zone. Transfer and distribution shape are experimental; not independently transcribed here.",
+      "evidence_class": "supplied-unverified-claim",
+      "provenance": "Operator summary of Colin/Houllier: approximate20% zone. Transfer and distribution shape are experimental; not independently transcribed here.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "nodal_span_fraction"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "year_phase_deg": {
+      "value_type": "float",
+      "units": "degree",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting year_phase_deg; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting year_phase_deg; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "year_phase_deg"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "branch_angle_deg": {
+      "value_type": "float",
+      "units": "degree",
+      "domain": {
+        "min": 0,
+        "max": 180,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting branch_angle_deg; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting branch_angle_deg; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "branch_angle_deg"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "internodal_probability": {
+      "value_type": "float",
+      "units": "probability",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting internodal_probability; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting internodal_probability; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "internodal_probability"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "internodal_trials": {
+      "value_type": "int",
+      "units": "count",
+      "domain": {
+        "min": 1,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting internodal_trials; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting internodal_trials; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "internodal_trials"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "maximum_axis_order": {
+      "value_type": "int",
+      "units": "order",
+      "domain": {
+        "min": 1,
+        "max": 3,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting maximum_axis_order; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting maximum_axis_order; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "maximum_axis_order"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "daughter_trials": {
+      "value_type": "int",
+      "units": "count",
+      "domain": {
+        "min": 1,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting daughter_trials; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting daughter_trials; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "daughter_trials"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "bud_probability": {
+      "value_type": "float",
+      "units": "probability",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting bud_probability; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting bud_probability; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "bud_probability"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "daughter_angle_deg": {
+      "value_type": "float",
+      "units": "degree",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting daughter_angle_deg; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting daughter_angle_deg; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "daughter_angle_deg"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "daughter_vertical_bias": {
+      "value_type": "float",
+      "units": "direction component",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting daughter_vertical_bias; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting daughter_vertical_bias; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "daughter_vertical_bias"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "azimuth_jitter_fraction": {
+      "value_type": "float",
+      "units": "fraction of azimuth slot",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "azimuth_jitter_fraction"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "internodal_min_fraction": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "internodal_min_fraction"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "internodal_vertical_bias": {
+      "value_type": "float",
+      "units": "direction component",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "internodal_vertical_bias"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "daughter_attachment_min": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "daughter_attachment_min"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "daughter_attachment_max": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.branching",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "daughter_attachment_max"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "branch_sag": {
+      "value_type": "float",
+      "units": "direction component/year",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.orientation",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting branch_sag; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting branch_sag; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "branch_sag"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "terminal_upturn": {
+      "value_type": "float",
+      "units": "direction component",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "architecture",
+      "category": "architecture.orientation",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting terminal_upturn; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting terminal_upturn; not a fitted biological coefficient.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "terminal_upturn"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "sag_maturity_years": {
+      "value_type": "int",
+      "units": "year",
+      "domain": {
+        "min": 1,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "architecture",
+      "category": "architecture.orientation",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "sag_maturity_years"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "needle_density_per_m": {
+      "value_type": "float",
+      "units": "needle/m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting needle_density_per_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting needle_density_per_m; not a fitted biological coefficient.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_density_per_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "needle_retention_years": {
+      "value_type": "int",
+      "units": "year",
+      "domain": {
+        "min": 1,
+        "max": 30,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting needle_retention_years; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting needle_retention_years; not a fitted biological coefficient.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_retention_years"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "needle_length_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting needle_length_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting needle_length_m; not a fitted biological coefficient.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_length_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "needle_width_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting needle_width_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting needle_width_m; not a fitted biological coefficient.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_width_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "needle_divergence_deg": {
+      "value_type": "float",
+      "units": "degree",
+      "domain": {
+        "min": null,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_divergence_deg"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "needle_pitch_deg": {
+      "value_type": "float",
+      "units": "degree",
+      "domain": {
+        "min": 0,
+        "max": 180,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "foliage",
+      "category": "foliage.cohorts",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "requires": [
+        "single-needle-cohorts/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "needle_pitch_deg"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "shoot_birth_radius_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.wood",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting shoot_birth_radius_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting shoot_birth_radius_m; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "shoot_birth_radius_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "root_allocation_fraction": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.wood",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting root_allocation_fraction; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting root_allocation_fraction; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "root_allocation_fraction"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "extension_allocation_fraction": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.wood",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting extension_allocation_fraction; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting extension_allocation_fraction; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "extension_allocation_fraction"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "pipe_area_per_needle_m2": {
+      "value_type": "float",
+      "units": "m\u00b2/needle",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.wood",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting pipe_area_per_needle_m2; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting pipe_area_per_needle_m2; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "pipe_area_per_needle_m2"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "foliage_cost_equivalent_m3_per_needle": {
+      "value_type": "float",
+      "units": "m\u00b3 equivalent/needle",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.wood",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental foliar allocation or organ-attachment coefficient; not a measured Norway-spruce law.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "foliage_cost_equivalent_m3_per_needle"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "shade_per_m": {
+      "value_type": "float",
+      "units": "1/m",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.light",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting shade_per_m; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting shade_per_m; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "shade_per_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "shade_baseline": {
+      "value_type": "float",
+      "units": "dimensionless",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.light",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Extracted explicit annual-program coefficient; not a fitted species measurement.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "shade_baseline"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "death_light_threshold": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed",
+        "uniform-calibration"
+      ],
+      "module": "allocation",
+      "category": "allocation.light",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting death_light_threshold; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting death_light_threshold; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "death_light_threshold"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "death_delay_years": {
+      "value_type": "int",
+      "units": "year",
+      "domain": {
+        "min": 1,
+        "max": null,
+        "min_inclusive": true,
+        "max_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "allocation",
+      "category": "allocation.light",
+      "semantic_role": "inherited_trait",
+      "namespace": "inherited",
+      "restart_semantics": "from_birth",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Experimental annual backend setting death_delay_years; not a fitted biological coefficient.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Experimental annual backend setting death_delay_years; not a fitted biological coefficient.",
+      "requires": [
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "parameters",
+          "death_delay_years"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "history.light": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "allocation",
+      "category": "history.conditions",
+      "semantic_role": "annual_environment_input",
+      "namespace": "annual_history",
+      "restart_semantics": "from_year_N",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "calibration appearance input; not a proposed World\u2192Botany field",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Explicit authored annual fixture. No weather/site observation or physiology-derived budget is asserted.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1",
+        "single-needle-cohorts/v1",
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "history",
+        "path": [
+          "years",
+          "*",
+          "light"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "history.competition": {
+      "value_type": "float",
+      "units": "fraction",
+      "domain": {
+        "min": 0,
+        "max": 1,
+        "min_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "allocation",
+      "category": "history.conditions",
+      "semantic_role": "annual_environment_input",
+      "namespace": "annual_history",
+      "restart_semantics": "from_year_N",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "calibration appearance input; not a proposed World\u2192Botany field",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Explicit authored annual fixture. No weather/site observation or physiology-derived budget is asserted.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1",
+        "single-needle-cohorts/v1",
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "history",
+        "path": [
+          "years",
+          "*",
+          "competition"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "history.extension_factor": {
+      "value_type": "float",
+      "units": "dimensionless",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": true
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "allocation",
+      "category": "history.forcing",
+      "semantic_role": "annual_resource_input",
+      "namespace": "annual_history",
+      "restart_semantics": "from_year_N",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "calibration forcing; not a proposed World\u2192Botany field",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Explicit authored annual fixture. No weather/site observation or physiology-derived budget is asserted.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1",
+        "single-needle-cohorts/v1",
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "history",
+        "path": [
+          "years",
+          "*",
+          "extension_factor"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "history.new_wood_m3": {
+      "value_type": "float",
+      "units": "m\u00b3 equivalent/year",
+      "domain": {
+        "min": 0,
+        "max": null,
+        "min_inclusive": false
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "allocation",
+      "category": "history.forcing",
+      "semantic_role": "annual_resource_input",
+      "namespace": "annual_history",
+      "restart_semantics": "from_year_N",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "calibration forcing; not a proposed World\u2192Botany field",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Explicit authored annual fixture. No weather/site observation or physiology-derived budget is asserted.",
+      "requires": [
+        "monopodial-rhythmic-woody/v1",
+        "single-needle-cohorts/v1",
+        "coarse-pipe-volume/v1"
+      ],
+      "forbids": [],
+      "binding": {
+        "document": "history",
+        "path": [
+          "years",
+          "*",
+          "new_wood_m3"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "execution.max_axes": {
+      "value_type": "int",
+      "units": "axis",
+      "domain": {
+        "min": 1,
+        "max": 50000
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "execution",
+      "category": "execution.capacity",
+      "semantic_role": "execution_limit",
+      "namespace": "execution",
+      "restart_semantics": "execution_only",
+      "exposure": "advanced",
+      "editable": true,
+      "description": "Refusal capacity; does not change inherited genetics.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Backend operational bound.",
+      "requires": [],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "execution_limits",
+          "max_axes"
+        ]
+      },
+      "semantic_kind": "int"
+    },
+    "presentation.cohort_colors": {
+      "value_type": "bool",
+      "units": "dimensionless",
+      "domain": {},
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "presentation",
+      "category": "presentation.inspect",
+      "semantic_role": "display_only",
+      "namespace": "presentation",
+      "restart_semantics": "render_only",
+      "exposure": "basic",
+      "editable": true,
+      "description": "Color existing cohorts by age. Does not change organism identity.",
+      "evidence_class": "explicit-calibration-choice",
+      "provenance": "Viewer-only diagnostic overlay.",
+      "requires": [],
+      "forbids": [],
+      "binding": {
+        "document": "viewer",
+        "path": [
+          "cohort_colors"
+        ]
+      },
+      "semantic_kind": "bool"
+    },
+    "target.height_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "min_inclusive": false
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "qualification",
+      "category": "qualification.population",
+      "semantic_role": "outcome_target_read_only",
+      "namespace": "qualification",
+      "restart_semantics": "read_only",
+      "exposure": "advanced",
+      "editable": false,
+      "description": "Population comparison, compatible synthetic age unknown. Never a generation input.",
+      "evidence_class": "peer-reported-source-read",
+      "provenance": "reported350-stems/ha population; age compatibility unknown",
+      "requires": [],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "outcome_targets",
+          "height_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "target.dbh_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "min_inclusive": false
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "qualification",
+      "category": "qualification.population",
+      "semantic_role": "outcome_target_read_only",
+      "namespace": "qualification",
+      "restart_semantics": "read_only",
+      "exposure": "advanced",
+      "editable": false,
+      "description": "Population comparison, compatible synthetic age unknown. Never a generation input.",
+      "evidence_class": "peer-reported-source-read",
+      "provenance": "reported350-stems/ha population; age compatibility unknown",
+      "requires": [],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "outcome_targets",
+          "dbh_m"
+        ]
+      },
+      "semantic_kind": "float"
+    },
+    "target.crown_diameter_m": {
+      "value_type": "float",
+      "units": "m",
+      "domain": {
+        "min": 0,
+        "min_inclusive": false
+      },
+      "supported_distribution_kinds": [
+        "fixed"
+      ],
+      "module": "qualification",
+      "category": "qualification.population",
+      "semantic_role": "outcome_target_read_only",
+      "namespace": "qualification",
+      "restart_semantics": "read_only",
+      "exposure": "advanced",
+      "editable": false,
+      "description": "Population comparison, compatible synthetic age unknown. Never a generation input.",
+      "evidence_class": "peer-reported-source-read",
+      "provenance": "reported350-stems/ha population; age compatibility unknown",
+      "requires": [],
+      "forbids": [],
+      "binding": {
+        "document": "codec",
+        "path": [
+          "outcome_targets",
+          "crown_diameter_m"
+        ]
+      },
+      "semantic_kind": "float"
+    }
+  },
+  "constraints": [
+    {
+      "id": "allocation.sum",
+      "terms": {
+        "root_allocation_fraction": 1,
+        "extension_allocation_fraction": 1
+      },
+      "min": 0,
+      "max": 1,
+      "min_inclusive": false,
+      "max_inclusive": false
+    },
+    {
+      "id": "nodal.internodal-room",
+      "terms": {
+        "nodal_span_fraction": 1,
+        "internodal_min_fraction": 2
+      },
+      "max": 1
+    },
+    {
+      "id": "daughter.attachment-order",
+      "terms": {
+        "daughter_attachment_min": 1,
+        "daughter_attachment_max": -1
+      },
+      "max": 0,
+      "max_inclusive": false
+    },
+    {
+      "id": "extension.noise-order",
+      "terms": {
+        "extension_noise_low": 1,
+        "extension_noise_high": -1
+      },
+      "max": 0
+    }
+  ],
+  "history_fork_rule": "Years <= N are preserved; changes begin at N+1.",
+  "parameter_domain_note": "Bounds encode currently enforced backend constraints, not measured biological ranges. Null bounds mean finite numeric input, not a guessed slider range."
+}

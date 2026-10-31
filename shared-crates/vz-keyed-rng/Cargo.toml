@@ -1,0 +1,23 @@
+[package]
+name = "vz-keyed-rng"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+license = "AGPL-3.0-only"
+description = "vz.keyed-rng/v1: counter-based keyed hierarchical draws (ADR 044 section 2, ADR 042 section 10)"
+
+# Standalone package: its own lockfile and target dir. It is meant to be a
+# PATH DEPENDENCY of world/ and worldfoundry/ (not a member of either; a crate
+# can belong to only one workspace). See
+# unpublished-design-record for the requested manifest lines.
+[workspace]
+
+[dependencies]
+# Same pin and feature set as world/Cargo.toml; worldfoundry's `blake3 = "1"`
+# resolves to the same 1.8.7 in its lockfile.
+blake3 = { version = "=1.8.7", default-features = false }
+
+[[bin]]
+name = "vz-keyed-rng-golden"
+path = "src/bin/vz-keyed-rng-golden.rs"

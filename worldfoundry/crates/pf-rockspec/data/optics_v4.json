@@ -1,0 +1,474 @@
+{
+  "schema": "pf-rockspec-optics/4",
+  "composition_schema": "pf-rockspec/3",
+  "references": {
+    "OPT4": {
+      "citation": "Kubelka and Munk (1931), two-flux layer theory; Hapke (2012), Theory of Reflectance and Emittance Spectroscopy, 2nd ed.; Cornell and Schwertmann (2003), The Iron Oxides, 2nd ed.; Tucker (2001), Sedimentary Petrology, 3rd ed.",
+      "qualification": "Offline bibliographic recollection only. References support mechanisms, not the numerical morphology priors. No pages, quotes, spectral extraction or library calibration claimed.",
+      "verification": "offline_unverified_recollection"
+    }
+  },
+  "transport_transition_lengths": [
+    1.0,
+    5.0
+  ],
+  "transition_qualification": "Reduced two-flux diffuse penetration depth. Smoothstep from one to five return-weighted penetration lengths; global model choice, not a measured universal transition.",
+  "sediments": {
+    "sandstone_quartz.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.020000000000000004
+        }
+      ],
+      "cement_mode": [
+        {
+          "mineral": "quartz",
+          "mass_fraction": 0.1
+        },
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.0049999999999999975
+        }
+      ],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    },
+    "arkose.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.020000000000000004
+        }
+      ],
+      "cement_mode": [
+        {
+          "mineral": "quartz",
+          "mass_fraction": 0.1
+        },
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.0049999999999999975
+        }
+      ],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    },
+    "greywacke.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.016
+        }
+      ],
+      "cement_mode": [
+        {
+          "mineral": "quartz",
+          "mass_fraction": 0.1
+        },
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.004
+        }
+      ],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    },
+    "conglomerate.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.020000000000000004
+        }
+      ],
+      "cement_mode": [
+        {
+          "mineral": "quartz",
+          "mass_fraction": 0.1
+        },
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.0049999999999999975
+        }
+      ],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    },
+    "sand.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.025
+        }
+      ],
+      "cement_mode": [],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    },
+    "regolith.reference": {
+      "coating_mode": [
+        {
+          "mineral": "goethite",
+          "mass_fraction": 0.098
+        }
+      ],
+      "cement_mode": [],
+      "coverage": {
+        "value": 0.7,
+        "interval": [
+          0.2,
+          0.95
+        ],
+        "unit": "1",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "patchy diagenetic grain coats; prior shared by all sediments",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "shell_thickness_support_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-08,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "nominal scale only; actual thickness solved from stock, coverage and physical grain diameter",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "pigment_scattering_length_m": {
+        "value": 1e-06,
+        "interval": [
+          1e-07,
+          1e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "fine Fe oxyhydroxide aggregate effective scattering length; not measured optical constants",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "cement_grain_m": {
+        "value": 5e-06,
+        "interval": [
+          1e-06,
+          5e-05
+        ],
+        "unit": "m",
+        "interval_kind": "plausible_prior_support",
+        "distribution": "unspecified_joint_prior",
+        "reference": "OPT4",
+        "evidence_kind": "project_prior",
+        "support_scale": "conditional sediment morphology; not measured",
+        "conditions": "microcrystalline silica/iron cement; no cement in loose sand or regolith",
+        "covariance_group": "mass_constrained_shell"
+      },
+      "qualification": "Existing dry mineral mass partitioned into grain cores, cement and coats. Lithic source identities remain unresolved. Goethite used because admitted modes contain it; no invented hematite."
+    }
+  }
+}

@@ -1,0 +1,940 @@
+{
+  "schema": "pf.ore-chemistry-table/v1",
+  "version": "ore_chemistry_v1.0.0",
+  "atomic_weights": [
+    {
+      "element": "H",
+      "micro_u": 1008000,
+      "evidence": {
+        "value": 1.008,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 1.0078,
+          "upper": 1.0082,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "C",
+      "micro_u": 12011000,
+      "evidence": {
+        "value": 12.011,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 12.008999999999999,
+          "upper": 12.013,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "N",
+      "micro_u": 14007000,
+      "evidence": {
+        "value": 14.007,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 14.006,
+          "upper": 14.008,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "O",
+      "micro_u": 15999000,
+      "evidence": {
+        "value": 15.999,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 15.998000000000001,
+          "upper": 16.0,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Na",
+      "micro_u": 22990000,
+      "evidence": {
+        "value": 22.99,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 22.988999999999997,
+          "upper": 22.991,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Mg",
+      "micro_u": 24305000,
+      "evidence": {
+        "value": 24.305,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 24.303,
+          "upper": 24.307,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Al",
+      "micro_u": 26982000,
+      "evidence": {
+        "value": 26.982,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 26.980999999999998,
+          "upper": 26.983,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Si",
+      "micro_u": 28085000,
+      "evidence": {
+        "value": 28.085,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 28.084,
+          "upper": 28.086000000000002,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "S",
+      "micro_u": 32060000,
+      "evidence": {
+        "value": 32.06,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 32.04,
+          "upper": 32.080000000000005,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Cl",
+      "micro_u": 35450000,
+      "evidence": {
+        "value": 35.45,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 35.440000000000005,
+          "upper": 35.46,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "K",
+      "micro_u": 39098000,
+      "evidence": {
+        "value": 39.098,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 39.097,
+          "upper": 39.099,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Ca",
+      "micro_u": 40078000,
+      "evidence": {
+        "value": 40.078,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 40.074000000000005,
+          "upper": 40.082,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Ti",
+      "micro_u": 47867000,
+      "evidence": {
+        "value": 47.867,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 47.866,
+          "upper": 47.867999999999995,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Mn",
+      "micro_u": 54938000,
+      "evidence": {
+        "value": 54.938,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 54.937000000000005,
+          "upper": 54.939,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Fe",
+      "micro_u": 55845000,
+      "evidence": {
+        "value": 55.845,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 55.842999999999996,
+          "upper": 55.847,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    },
+    {
+      "element": "Cu",
+      "micro_u": 63546000,
+      "evidence": {
+        "value": 63.546,
+        "unit": "u",
+        "interval": {
+          "kind": "bounds",
+          "lower": 63.543,
+          "upper": 63.549,
+          "interpretation": "CIAAW published abridged uncertainty, not a confidence interval"
+        },
+        "conditions": "CIAAW 2024 abridged conventional atomic weights; exact integer encoding is not exact isotopic mass.",
+        "reference": "https://ciaaw.org/abridged-atomic-weights.htm",
+        "evidence_kind": "reference_atomic_weight"
+      }
+    }
+  ],
+  "endmembers": [
+    {
+      "id": "forsterite",
+      "label": "forsterite: ideal Mg2SiO4",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Mg",
+            "weight": 2
+          },
+          {
+            "element": "Si",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 4
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/forsterite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "fayalite",
+      "label": "fayalite: ideal Fe2SiO4",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Fe",
+            "weight": 2
+          },
+          {
+            "element": "Si",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 4
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/fayalite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "diopside",
+      "label": "diopside: ideal CaMgSi2O6",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 1
+          },
+          {
+            "element": "Mg",
+            "weight": 1
+          },
+          {
+            "element": "Si",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 6
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/diopside.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "hedenbergite",
+      "label": "hedenbergite: ideal CaFeSi2O6",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 1
+          },
+          {
+            "element": "Fe",
+            "weight": 1
+          },
+          {
+            "element": "Si",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 6
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/hedenbergite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "anorthite",
+      "label": "anorthite: ideal CaAl2Si2O8",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 1
+          },
+          {
+            "element": "Al",
+            "weight": 2
+          },
+          {
+            "element": "Si",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 8
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/anorthite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "albite",
+      "label": "albite: ideal NaAlSi3O8",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Na",
+            "weight": 1
+          },
+          {
+            "element": "Al",
+            "weight": 1
+          },
+          {
+            "element": "Si",
+            "weight": 3
+          },
+          {
+            "element": "O",
+            "weight": 8
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/albite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "quartz",
+      "label": "quartz: ideal SiO2",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Si",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 2
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/quartz.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "calcite",
+      "label": "calcite: ideal CaCO3",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 1
+          },
+          {
+            "element": "C",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 3
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/calcite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "dolomite",
+      "label": "dolomite: ideal CaMg(CO3)2",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 1
+          },
+          {
+            "element": "Mg",
+            "weight": 1
+          },
+          {
+            "element": "C",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 6
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/dolomite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "gibbsite",
+      "label": "gibbsite: ideal Al(OH)3",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Al",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 3
+          },
+          {
+            "element": "H",
+            "weight": 3
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/gibbsite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "kaolinite",
+      "label": "kaolinite: ideal Al2Si2O5(OH)4",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Al",
+            "weight": 2
+          },
+          {
+            "element": "Si",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 9
+          },
+          {
+            "element": "H",
+            "weight": 4
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/kaolinite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "hematite",
+      "label": "hematite: ideal Fe2O3",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Fe",
+            "weight": 2
+          },
+          {
+            "element": "O",
+            "weight": 3
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/hematite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "goethite",
+      "label": "goethite: ideal FeO(OH)",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Fe",
+            "weight": 1
+          },
+          {
+            "element": "O",
+            "weight": 2
+          },
+          {
+            "element": "H",
+            "weight": 1
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/goethite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "chalcopyrite",
+      "label": "chalcopyrite: ideal CuFeS2",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Cu",
+            "weight": 1
+          },
+          {
+            "element": "Fe",
+            "weight": 1
+          },
+          {
+            "element": "S",
+            "weight": 2
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/chalcopyrite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "pyrite",
+      "label": "pyrite: ideal FeS2",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Fe",
+            "weight": 1
+          },
+          {
+            "element": "S",
+            "weight": 2
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/pyrite.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "orthoclase",
+      "label": "orthoclase: ideal KAlSi3O8",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "K",
+            "weight": 1
+          },
+          {
+            "element": "Al",
+            "weight": 1
+          },
+          {
+            "element": "Si",
+            "weight": 3
+          },
+          {
+            "element": "O",
+            "weight": 8
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Ideal pure endmember; no trace substitution or isotope-specific assay. Structural OH is included; free pore water excluded.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/orthoclase.pdf",
+        "evidence_kind": "ideal_endmember"
+      }
+    },
+    {
+      "id": "augite_declared_ca_mg_fe_al_v1",
+      "label": "Declared augite representative Ca(Mg0.6Fe0.2Al0.2)(Si1.8Al0.2)O6; integer formula x5",
+      "stoichiometry": {
+        "kind": "formula",
+        "atoms": [
+          {
+            "element": "Ca",
+            "weight": 5
+          },
+          {
+            "element": "Mg",
+            "weight": 3
+          },
+          {
+            "element": "Fe",
+            "weight": 1
+          },
+          {
+            "element": "Al",
+            "weight": 2
+          },
+          {
+            "element": "Si",
+            "weight": 9
+          },
+          {
+            "element": "O",
+            "weight": 30
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "formula unit",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Operator-lane declared charge-balanced representative, not a universal augite formula or the handbook specimen. Na/Ti/Mn and Fe3+ substitutions excluded. Explicit split required for group augite.",
+        "reference": "https://www.handbookofmineralogy.org/pdfs/augite.pdf",
+        "evidence_kind": "declared_model"
+      }
+    },
+    {
+      "id": "organic_matter_declared_chons_v1",
+      "label": "Declared dry organic matter: C/H/O/N/S = 80/5/12/2/1 mass percent",
+      "stoichiometry": {
+        "kind": "declared_mass",
+        "weights": [
+          {
+            "element": "C",
+            "weight": 80
+          },
+          {
+            "element": "H",
+            "weight": 5
+          },
+          {
+            "element": "O",
+            "weight": 12
+          },
+          {
+            "element": "N",
+            "weight": 2
+          },
+          {
+            "element": "S",
+            "weight": 1
+          }
+        ]
+      },
+      "evidence": {
+        "value": 1.0,
+        "unit": "kg/kg",
+        "interval": {
+          "kind": "not_reported",
+          "reason": "Ideal or declared composition, not a measured specimen; natural compositional variation is not quantified here."
+        },
+        "conditions": "Illustrative declared composition, NOT a USGS measured value, coal-rank law, source admission or biomass yield. USGS reference supports CHONS ultimate-analysis basis and separate sulfur forms. Dry organic matter only: no ash, pyritic/sulfate sulfur or free moisture. All S here is declared organic S. Natural variation unquantified; no default for C7.",
+        "reference": "https://pubs.usgs.gov/circ/c735/method.htm",
+        "evidence_kind": "declared_model"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "olivine",
+      "allowed_endmembers": [
+        "forsterite",
+        "fayalite"
+      ]
+    },
+    {
+      "id": "clinopyroxene",
+      "allowed_endmembers": [
+        "diopside",
+        "hedenbergite",
+        "augite_declared_ca_mg_fe_al_v1"
+      ]
+    },
+    {
+      "id": "augite",
+      "allowed_endmembers": [
+        "augite_declared_ca_mg_fe_al_v1"
+      ]
+    },
+    {
+      "id": "plagioclase",
+      "allowed_endmembers": [
+        "anorthite",
+        "albite"
+      ]
+    },
+    {
+      "id": "clay",
+      "allowed_endmembers": [
+        "kaolinite"
+      ]
+    },
+    {
+      "id": "k_feldspar",
+      "allowed_endmembers": [
+        "orthoclase"
+      ]
+    },
+    {
+      "id": "organic_matter",
+      "allowed_endmembers": [
+        "organic_matter_declared_chons_v1"
+      ]
+    }
+  ]
+}

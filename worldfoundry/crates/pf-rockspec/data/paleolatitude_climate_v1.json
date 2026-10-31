@@ -1,0 +1,21 @@
+{
+  "schema": "pf.paleolatitude-climate-proxy/1",
+  "resolver_revision": "pf-inventory/body-material-resolver/2+paleolatitude-proxy-v1",
+  "qualification": "conditional proxy: zonal paleolatitude climate, not a simulated paleoclimate",
+  "bands": [
+    {"name":"humid_equatorial","absolute_latitude_deg":[0,15],"upper_inclusive":false},
+    {"name":"subtropical_arid","absolute_latitude_deg":[15,35],"upper_inclusive":true},
+    {"name":"temperate","absolute_latitude_deg":[35,60],"upper_inclusive":false},
+    {"name":"polar","absolute_latitude_deg":[60,90],"upper_inclusive":true}
+  ],
+  "arid_belt": {"value":25,"unit":"degree absolute paleolatitude","interval":[15,35],"interval_kind":"declared zonal classification support, not confidence interval","reference":"NOAA-circulation; operator proxy authorization 2026-10-25","evidence_kind":"literature-informed conditional model choice","conditions":"Earth-like circulation approximation in planet body-fixed frame; hemispheres symmetric; thresholds are project choices around the literature's approximately 30 degree descending belt"},
+  "temporal_support":"Use the recorded step-end carrier position used by the native deposition operation. Entire formation interval must have contiguous recorded steps. No extrapolation, present-day substitution, or continuous-path claim. Latitude range is sampled min/max, not an uncertainty bound between steps.",
+  "oxidation": {"oxidizing_env_codes":[3],"reducing_env_codes":[4,6,7,9],"unknown_env_codes":[0,1,2,5,8,10],"evidence_kind":"authorized conditional depositional-environment proxy","conditions":"3 fluvial interpreted as subaerial; 4 lacustrine, 6 shelf, 7 deep marine, 9 swamp treated as reducing. These are coarse scenario classes, not measured oxygen fugacity; real lakes and seas need not be reducing. Native v0 has no eolian or alluvial code; never invent one. Deltaic and evaporitic alone do not establish redox."},
+  "uncomputed": {"aridity_index_P_over_PET":null,"temperature_c":null,"continentality":null,"subsequent_bleaching":null,"reason":"No recorded quantitative forcing, coast-distance history, redox chemistry or later fluid/bleaching history. Unknown preservation cannot be asserted false."},
+  "redbed_policy":"Only quartz sandstone in the arid belt with oxidizing support, supported grade/burial and independently supported no-bleaching history may select redbed_v1. No substitute realization for humid or reducing settings. C7 preservation is absent, so eligibility and an actual resolved material are separate outcomes.",
+  "references":[
+    {"id":"NOAA-circulation","url":"https://www.noaa.gov/jetstream/global/global-atmospheric-circulations","read_date":"2026-10-25","supports":"Dry descending subtropics near 30 degrees; equatorial and midlatitude rising wet belts; polar circulation. Does not establish fixed 15/35 thresholds or this planet's paleoclimate."},
+    {"id":"NPS-Navajo","url":"https://home.nps.gov/zion/learn/nature/navajo-colors.htm","read_date":"2026-10-25","supports":"Early iron-oxide coatings and later removal by reducing fluids; qualitative colour variation. No numeric matched Lab standard."}
+  ],
+  "proper_later_fix":"Climate-enabled C8 with passive per-deposition carrier position, climate, environment and subsequent alteration history. New physical recipe. design decides C8; this proxy does not launch it."
+}

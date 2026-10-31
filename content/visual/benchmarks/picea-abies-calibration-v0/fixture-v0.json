@@ -1,0 +1,307 @@
+{
+  "schema": "picea-abies-calibration-fixture/v0",
+  "id": "picea-abies-calibration-v0",
+  "artifact_class": "visual-calibration-fixture",
+  "world_admission": false,
+  "ledger": "evidence-ledger-v0.json",
+  "statement": "One authored Norway spruce calibration hypothesis for the 350 stems per hectare open grown treatment of src.makinen2006. It composes ledger rows into a renderable structure. It is not a species model, not a world plant, not a production generator, and it cannot become any of those by changing a label: the graph validator refuses any artifact_class but visual-calibration-fixture. Structure that is measured comes from the ledger; everything else is a named choice in the same ledger.",
+  "frame": {
+    "units": "m",
+    "up": "+Z",
+    "origin": "root collar at (0,0,0)",
+    "handedness": "right",
+    "note": "The browser viewer is Y up and converts (x,y,z) to (x,z,-y) at load. The conversion lives only in the viewer; every number in the graph and geometry files is in this frame."
+  },
+  "seed_param": "fx.seed",
+  "envelope_targets": {
+    "height": {
+      "param": "pa.tree.height_m",
+      "role": "fixture envelope target"
+    },
+    "crown_diameter": {
+      "param": "pa.tree.crown_diameter_m",
+      "role": "fixture envelope target, solved for by fx.envelope_fit_scalar",
+      "reported_range": "pa.tree.crown_diameter_m.reported_range_m, 4.8 to 8.6 m",
+      "note": "The solver targets the treatment MEAN so the acceptance test is exact. One tree need not equal a population mean, and the reported range travels with the target in the ledger, the build manifest and the viewer readout. Retargeting to a point inside the range is a one line change here."
+    },
+    "tolerance": {
+      "param": "fx.envelope_tolerance_m"
+    }
+  },
+  "reported_but_not_targeted": {
+    "crown_ratio_pct": {
+      "param": "pa.tree.crown_ratio_pct",
+      "handling": "reported next to the fixture's own value, never reconciled and never used as an input"
+    },
+    "lowest_living_whorl_m": {
+      "param": "pa.tree.lowest_living_whorl_m",
+      "handling": "adopted through fx.first_live_whorl_m as a choice, not as a derivation"
+    }
+  },
+  "consumes": [
+    "fx.angle_order_shift_deg",
+    "fx.branch_azimuth_jitter_deg",
+    "fx.branch_count_realization",
+    "fx.branch_taper_exponent",
+    "fx.branchlet_azimuth_jitter_deg",
+    "fx.branchlet_azimuth_scheme",
+    "fx.branchlet_direction_scheme",
+    "fx.crown_taper_exponent",
+    "fx.daughter_radius_fraction",
+    "fx.envelope_fit_scalar",
+    "fx.envelope_tolerance_m",
+    "fx.far_bin_m",
+    "fx.first_live_whorl_m",
+    "fx.growth_unit_arc_m",
+    "fx.leader_length_m",
+    "fx.mid_bucket_arc_m",
+    "fx.mid_cards_per_bucket",
+    "fx.min_primary_length_m",
+    "fx.min_wood_radius_m",
+    "fx.needle_azimuth_step_deg",
+    "fx.needle_cross_section",
+    "fx.needle_length_distribution",
+    "fx.needle_pitch_deg",
+    "fx.needle_pitch_jitter_deg",
+    "fx.needle_sites_per_m",
+    "fx.needle_width_m",
+    "fx.nonprimary_angle_distribution",
+    "fx.primary_angle_apex_deg",
+    "fx.primary_angle_base_deg",
+    "fx.primary_droop_deg_per_m",
+    "fx.primary_foliated_from_fraction",
+    "fx.secondary_length_fraction",
+    "fx.secondary_max_length_m",
+    "fx.secondary_spacing_m",
+    "fx.secondary_start_m",
+    "fx.seed",
+    "fx.stratum_radius_from_diameter",
+    "fx.tertiary_length_fraction",
+    "fx.tertiary_max_length_m",
+    "fx.tertiary_spacing_m",
+    "fx.tertiary_start_m",
+    "fx.trunk_radius_from_dbh",
+    "fx.trunk_taper_exponent",
+    "fx.whorl_azimuth_step_deg",
+    "fx.whorl_count",
+    "fx.whorl_spacing_exponent",
+    "fx.within_whorl_radius_min_fraction",
+    "pa.branch.alive_fraction_by_stratum",
+    "pa.branch.angle_decreases_with_order",
+    "pa.branch.max_diameter_by_stratum_m",
+    "pa.branch.mean_count_per_whorl_by_stratum",
+    "pa.branch.nonprimary_angle_bin_masses",
+    "pa.branch.nonprimary_angle_deg_range",
+    "pa.crown.branch_orientation_by_position",
+    "pa.crown.branching_is_plagiotropic",
+    "pa.gu.axis_decomposes_into_growth_units",
+    "pa.gu.daughter_direction_marginals",
+    "pa.needle.cross_section",
+    "pa.needle.length_m_range",
+    "pa.stand.density_stems_per_ha",
+    "pa.tree.crown_diameter_m",
+    "pa.tree.dbh_m",
+    "pa.tree.height_m",
+    "pa.tree.lowest_living_whorl_m"
+  ],
+  "deliberately_not_consumed": [
+    {
+      "param": "pa.gu.daughter_orientation_association",
+      "why": "reported proportions and a Fisher p do not supply transition coefficients; the marginals are consumed separately and the conditional structure is not modelled"
+    },
+    {
+      "param": "pa.branch.angle_depends_on_position_along_mother",
+      "why": "direction of effect only, no functional form; an invented positional angle law would read as a finding"
+    },
+    {
+      "param": "pa.needle.light_response",
+      "why": "this fixture has no light state, and coefficients cannot be synthesized from an abstract"
+    },
+    {
+      "param": "pa.gu.order_distribution_pct",
+      "why": "wrong population and an unestablished order convention; emitted as a diagnostic under both alignments instead"
+    },
+    {
+      "param": "pa.stand.treatment_contrast",
+      "why": "context for which column is rendered; choosing or interpolating a density is a world decision, not an art one"
+    },
+    {
+      "param": "pa.tree.age_years",
+      "why": "unavailable for this population; the other study's 10 year stand age is not transferable"
+    }
+  ],
+  "subjects": {
+    "branch": {
+      "kind": "extracted-subgraph",
+      "axis": "ax.w00.p0",
+      "note": "The inspected branch is EXTRACTED from the whole tree graph below, not generated separately. Node ids are preserved and the branch local frame carries a 4x4 local_to_tree transform back to tree coordinates."
+    },
+    "tree": {
+      "kind": "whole-graph"
+    }
+  },
+  "budgets": {
+    "note": "Explicit test settings that bound what this prototype will emit. They are rendering constraints, not botanical parameters, and a tier that exceeds one is reported as unavailable with its measured projection rather than quietly reduced.",
+    "near_max_triangles": 2000000,
+    "mid_max_triangles": 1500000,
+    "far_max_triangles": 200000
+  },
+  "wood_radial_segments": {
+    "note": "Rendering budget settings per detail tier and branch order. Order 3 wood is dropped at mid, and all orders above 1 at far; their foliage is still represented by that tier's proxies.",
+    "near": {
+      "0": 10,
+      "1": 7,
+      "2": 5,
+      "3": 4
+    },
+    "mid": {
+      "0": 8,
+      "1": 6,
+      "2": 4
+    },
+    "far": {
+      "0": 6,
+      "1": 4
+    }
+  },
+  "cameras": {
+    "note": "Fixed comparison poses in fixture frame metres, fitted to the MEASURED bounds of the compiled geometry (branch x 0 to 3.17, z 0 to -1.80; tree crown 6.2 m across, 15.7 m tall). The same pose is used for every available tier of its subject, so a near, mid and far capture differ only in geometry. Orbit poses are generated by the viewer around the named target at the named height.",
+    "branch.compare": {
+      "position": [
+        1.58,
+        -4.3,
+        -0.15
+      ],
+      "target": [
+        1.58,
+        0.0,
+        -0.8
+      ],
+      "fov": 40
+    },
+    "branch.close": {
+      "position": [
+        2.55,
+        -0.62,
+        -1.1
+      ],
+      "target": [
+        2.72,
+        0.0,
+        -1.32
+      ],
+      "fov": 34
+    },
+    "branch.orbit": {
+      "target": [
+        1.58,
+        0.0,
+        -0.8
+      ],
+      "radius": 4.0,
+      "height": -0.15
+    },
+    "tree.compare": {
+      "position": [
+        16.5,
+        -21.5,
+        8.0
+      ],
+      "target": [
+        0.0,
+        0.0,
+        7.85
+      ],
+      "fov": 40
+    },
+    "tree.crown": {
+      "position": [
+        5.2,
+        -7.0,
+        4.2
+      ],
+      "target": [
+        0.4,
+        0.0,
+        4.6
+      ],
+      "fov": 42
+    },
+    "tree.orbit": {
+      "target": [
+        0.0,
+        0.0,
+        7.85
+      ],
+      "radius": 27.0,
+      "height": 8.2
+    }
+  },
+  "display_fixtures": {
+    "note": "Neutral display aids, not world geography. Off in beauty captures.",
+    "reference_floor": {
+      "kind": "grid",
+      "extent_m": 20,
+      "spacing_m": 1.0,
+      "why": "reads scale only"
+    },
+    "axes": {
+      "kind": "frame triad",
+      "length_m": 1.0
+    }
+  },
+  "revision": "v0.2, after the peer evidence patch",
+  "whorl_strata": {
+    "note": "Whorl groups counted FROM THE APEX, matching the source's branch strata table. Whorl index 0 is the lowest live whorl, so its distance from the apex is fx.whorl_count minus its index.",
+    "groups": [
+      {
+        "from_apex": [
+          1,
+          5
+        ]
+      },
+      {
+        "from_apex": [
+          6,
+          10
+        ]
+      },
+      {
+        "from_apex": [
+          11,
+          15
+        ]
+      },
+      {
+        "from_apex": [
+          16,
+          20
+        ]
+      }
+    ],
+    "max_diameter": "pa.branch.max_diameter_by_stratum_m",
+    "mean_count": "pa.branch.mean_count_per_whorl_by_stratum",
+    "alive_fraction": "pa.branch.alive_fraction_by_stratum"
+  },
+  "reports": {
+    "note": "Read by the build for side by side reporting only. A row here never changes a vertex.",
+    "params": [
+      "pa.branch.thickest_diameter_m",
+      "fx.thickest_branch_radius_m",
+      "pa.tree.crown_ratio_pct",
+      "pa.tree.lowest_living_branch_m",
+      "pa.gu.order_distribution_pct",
+      "pa.stand.treatment_contrast"
+    ]
+  },
+  "superseded_choices": {
+    "note": "Choices the peer evidence patch replaced with measurements. Kept in the ledger with their rationale so the record shows what was assumed before the evidence arrived.",
+    "ids": [
+      "fx.branch_count_per_whorl",
+      "fx.branch_radius_length_exponent",
+      "fx.branchlet_upward_bias_deg",
+      "fx.thickest_branch_location",
+      "fx.trunk_base_radius_m"
+    ]
+  }
+}

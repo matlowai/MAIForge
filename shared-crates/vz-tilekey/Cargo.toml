@@ -1,0 +1,24 @@
+[package]
+name = "vz-tilekey"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+license = "AGPL-3.0-only"
+description = "vz.tilekey/v2: TileKeyV2, lod ladder and local_oblique_stereographic_v1 chart (ADR 044 sections 3, 4, 7)"
+
+# Standalone package: its own lockfile and target dir. Meant to be a PATH
+# DEPENDENCY of world/ and worldfoundry/ (not a member of either). See
+# unpublished-design-record for the requested manifest lines.
+[workspace]
+
+[dependencies]
+# Same pin as world/Cargo.toml; worldfoundry's `serde = "1"` locks 1.0.229 too.
+serde = { version = "=1.0.229", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "=1.0.151"
+
+[[bin]]
+name = "vz-tilekey-golden"
+path = "src/bin/vz-tilekey-golden.rs"

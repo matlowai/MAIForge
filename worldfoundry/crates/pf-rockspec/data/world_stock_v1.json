@@ -1,0 +1,341 @@
+{
+  "schema": "pf.world-rock-stock-rule/v1",
+  "qualification": "rock-type rule, not simulated chemistry; C8 replaces",
+  "selection": "exact lithology+setting override, then explicit lithology-only row; unknown code refuses",
+  "rows": [
+    {
+      "lithology_code": 0,
+      "setting": null,
+      "rock_key": "granite",
+      "dry_density_kg_m3": 2600,
+      "porosity_permille": 20,
+      "mineral_mass_weights": {
+        "quartz": 300,
+        "orthoclase": 350,
+        "albite": 350
+      },
+      "density_range_kg_m3": [
+        2080,
+        3120
+      ],
+      "porosity_range_permille": [
+        0,
+        120
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 1,
+      "setting": null,
+      "rock_key": "granite",
+      "dry_density_kg_m3": 2600,
+      "porosity_permille": 20,
+      "mineral_mass_weights": {
+        "quartz": 300,
+        "orthoclase": 350,
+        "albite": 350
+      },
+      "density_range_kg_m3": [
+        2080,
+        3120
+      ],
+      "porosity_range_permille": [
+        0,
+        120
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 2,
+      "setting": null,
+      "refusal": "metamorphic protolith/grade not resolved by this rule; no default assemblage"
+    },
+    {
+      "lithology_code": 3,
+      "setting": null,
+      "rock_key": "basalt_tholeiitic",
+      "dry_density_kg_m3": 2850,
+      "porosity_permille": 50,
+      "mineral_mass_weights": {
+        "anorthite": 350,
+        "albite": 150,
+        "diopside": 300,
+        "forsterite": 150,
+        "fayalite": 50
+      },
+      "density_range_kg_m3": [
+        2280,
+        3420
+      ],
+      "porosity_range_permille": [
+        0,
+        150
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 4,
+      "setting": null,
+      "rock_key": "limestone",
+      "dry_density_kg_m3": 2400,
+      "porosity_permille": 100,
+      "mineral_mass_weights": {
+        "calcite": 950,
+        "dolomite": 50
+      },
+      "density_range_kg_m3": [
+        1920,
+        2880
+      ],
+      "porosity_range_permille": [
+        50,
+        200
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 5,
+      "setting": null,
+      "rock_key": "shale",
+      "dry_density_kg_m3": 2350,
+      "porosity_permille": 100,
+      "mineral_mass_weights": {
+        "quartz": 300,
+        "kaolinite": 650,
+        "orthoclase": 50
+      },
+      "density_range_kg_m3": [
+        1880,
+        2820
+      ],
+      "porosity_range_permille": [
+        50,
+        200
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 6,
+      "setting": null,
+      "rock_key": "sandstone_quartz",
+      "dry_density_kg_m3": 2200,
+      "porosity_permille": 170,
+      "mineral_mass_weights": {
+        "quartz": 920,
+        "orthoclase": 50,
+        "kaolinite": 30
+      },
+      "density_range_kg_m3": [
+        1760,
+        2640
+      ],
+      "porosity_range_permille": [
+        120,
+        270
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 6,
+      "setting": 3,
+      "rock_key": "sandstone_quartz",
+      "dry_density_kg_m3": 2200,
+      "porosity_permille": 170,
+      "mineral_mass_weights": {
+        "quartz": 918,
+        "orthoclase": 50,
+        "kaolinite": 30,
+        "hematite": 2
+      },
+      "density_range_kg_m3": [
+        1760,
+        2640
+      ],
+      "porosity_range_permille": [
+        120,
+        270
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once. Fluvial oxidized coating is a conditional setting prior, not a paleoclimate or optical-stock conversion.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 7,
+      "setting": null,
+      "rock_key": "conglomerate",
+      "dry_density_kg_m3": 2300,
+      "porosity_permille": 120,
+      "mineral_mass_weights": {
+        "quartz": 700,
+        "orthoclase": 200,
+        "kaolinite": 100
+      },
+      "density_range_kg_m3": [
+        1840,
+        2760
+      ],
+      "porosity_range_permille": [
+        70,
+        220
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 8,
+      "setting": null,
+      "refusal": "evaporite species unresolved; ORE-1 halite/gypsum chemistry unavailable, no silicate substitution"
+    },
+    {
+      "lithology_code": 9,
+      "setting": null,
+      "rock_key": "coal",
+      "dry_density_kg_m3": 1400,
+      "porosity_permille": 100,
+      "mineral_mass_weights": {
+        "organic_matter_declared_chons_v1": 850,
+        "quartz": 100,
+        "kaolinite": 50
+      },
+      "density_range_kg_m3": [
+        1120,
+        1680
+      ],
+      "porosity_range_permille": [
+        50,
+        200
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 10,
+      "setting": null,
+      "rock_key": "sand",
+      "dry_density_kg_m3": 1700,
+      "porosity_permille": 350,
+      "mineral_mass_weights": {
+        "quartz": 800,
+        "orthoclase": 100,
+        "kaolinite": 100
+      },
+      "density_range_kg_m3": [
+        1360,
+        2040
+      ],
+      "porosity_range_permille": [
+        300,
+        450
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    },
+    {
+      "lithology_code": 11,
+      "setting": null,
+      "rock_key": "basalt_tholeiitic",
+      "dry_density_kg_m3": 2850,
+      "porosity_permille": 50,
+      "mineral_mass_weights": {
+        "anorthite": 350,
+        "albite": 150,
+        "diopside": 300,
+        "forsterite": 150,
+        "fayalite": 50
+      },
+      "density_range_kg_m3": [
+        2280,
+        3420
+      ],
+      "porosity_range_permille": [
+        0,
+        150
+      ],
+      "interval_kind": "conditional broad model bounds, not a measured population interval",
+      "references": [
+        "https://www.epa.gov/environmental-geophysics/density",
+        "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+        "pf-rockspec catalog_v3_1 core references DHZ and Winter; conditional modal realization"
+      ],
+      "evidence": "Family relationships from references; numerical modes and ranges are declared project priors, not extracted assays. Dry density includes pores once.",
+      "refusal": null
+    }
+  ],
+  "mechanics": {
+    "joint_spacing_m": 4.0,
+    "joint_persistence_m": 64.0,
+    "joint_opening_work_j_m2": 100.0,
+    "coupling": 0.2,
+    "source_radius_m": 0.15,
+    "starter_flaw_m": 0.05,
+    "support_max_extent_m": 4.0,
+    "near_source_extent_ratio": 1.5,
+    "quadrature_depth": 4,
+    "qualification": "conditional unresolved joint prior, 3 orthogonal sets in the native chart; no surveyed joints, blast scaling uncalibrated"
+  }
+}

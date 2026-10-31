@@ -1,0 +1,1932 @@
+{
+  "schema": "pf-rockspec-surfaces/3.1b",
+  "qualification": "Manufactured conditional v3.1b surfaces for six new families only; evaluated by unchanged v3 optics; no world admission or reaction rates",
+  "samples": [
+    {
+      "id": "pegmatite.reference/fresh_dry/0.1",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "pegmatite.reference/fresh_dry/2.0",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "pegmatite.reference/fresh_dry/50.0",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "pegmatite.reference/fresh_wet/0.1",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "pegmatite.reference/fresh_wet/2.0",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "pegmatite.reference/fresh_wet/50.0",
+      "realization_id": "pegmatite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "pegmatite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "pegmatite.reference/weathered_dry/0.1",
+      "realization_id": "pegmatite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-pegmatite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.8
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on pegmatite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "pegmatite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "pegmatite.reference/weathered_dry/2.0",
+      "realization_id": "pegmatite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-pegmatite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.8
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on pegmatite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "pegmatite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "pegmatite.reference/weathered_dry/50.0",
+      "realization_id": "pegmatite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-pegmatite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.8
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on pegmatite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "pegmatite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "skarn.reference/fresh_dry/0.1",
+      "realization_id": "skarn.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "skarn.reference/fresh_dry/2.0",
+      "realization_id": "skarn.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "skarn.reference/fresh_dry/50.0",
+      "realization_id": "skarn.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "skarn.reference/fresh_wet/0.1",
+      "realization_id": "skarn.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "skarn.reference/fresh_wet/2.0",
+      "realization_id": "skarn.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "skarn.reference/fresh_wet/50.0",
+      "realization_id": "skarn.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "skarn/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "skarn.reference/weathered_dry/0.1",
+      "realization_id": "skarn.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-skarn-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.45
+            },
+            {
+              "mineral": "smectite",
+              "mass_fraction": 0.35
+            },
+            {
+              "mineral": "calcite",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on skarn; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "skarn/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "skarn.reference/weathered_dry/2.0",
+      "realization_id": "skarn.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-skarn-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.45
+            },
+            {
+              "mineral": "smectite",
+              "mass_fraction": 0.35
+            },
+            {
+              "mineral": "calcite",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on skarn; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "skarn/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "skarn.reference/weathered_dry/50.0",
+      "realization_id": "skarn.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-skarn-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.45
+            },
+            {
+              "mineral": "smectite",
+              "mass_fraction": 0.35
+            },
+            {
+              "mineral": "calcite",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on skarn; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "skarn/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_dry/0.1",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_dry/2.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_dry/50.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_wet/0.1",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_wet/2.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "banded_iron_formation.reference/fresh_wet/50.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "banded_iron_formation/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "banded_iron_formation.reference/weathered_dry/0.1",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-banded_iron_formation-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.5
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on banded_iron_formation; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "banded_iron_formation/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "banded_iron_formation.reference/weathered_dry/2.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-banded_iron_formation-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.5
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on banded_iron_formation; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "banded_iron_formation/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "banded_iron_formation.reference/weathered_dry/50.0",
+      "realization_id": "banded_iron_formation.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-banded_iron_formation-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.5
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on banded_iron_formation; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "banded_iron_formation/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "laterite.reference/fresh_dry/0.1",
+      "realization_id": "laterite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "laterite.reference/fresh_dry/2.0",
+      "realization_id": "laterite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "laterite.reference/fresh_dry/50.0",
+      "realization_id": "laterite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "laterite.reference/fresh_wet/0.1",
+      "realization_id": "laterite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "laterite.reference/fresh_wet/2.0",
+      "realization_id": "laterite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "laterite.reference/fresh_wet/50.0",
+      "realization_id": "laterite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "laterite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "laterite.reference/weathered_dry/0.1",
+      "realization_id": "laterite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-laterite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.4
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "gibbsite",
+              "mass_fraction": 0.3
+            },
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.15
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on laterite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "laterite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "laterite.reference/weathered_dry/2.0",
+      "realization_id": "laterite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-laterite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.4
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "gibbsite",
+              "mass_fraction": 0.3
+            },
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.15
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on laterite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "laterite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "laterite.reference/weathered_dry/50.0",
+      "realization_id": "laterite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-laterite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.4
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "gibbsite",
+              "mass_fraction": 0.3
+            },
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.15
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on laterite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "laterite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "mylonite.reference/fresh_dry/0.1",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "mylonite.reference/fresh_dry/2.0",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "mylonite.reference/fresh_dry/50.0",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "mylonite.reference/fresh_wet/0.1",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "mylonite.reference/fresh_wet/2.0",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "mylonite.reference/fresh_wet/50.0",
+      "realization_id": "mylonite.reference",
+      "history": "fresh_wet",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "mylonite/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "mylonite.reference/weathered_dry/0.1",
+      "realization_id": "mylonite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-mylonite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.1
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on mylonite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "mylonite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "mylonite.reference/weathered_dry/2.0",
+      "realization_id": "mylonite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-mylonite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.1
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on mylonite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "mylonite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "mylonite.reference/weathered_dry/50.0",
+      "realization_id": "mylonite.reference",
+      "history": "weathered_dry",
+      "weathering_family": "silicate_hydrolysis",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-mylonite-residue",
+          "mineral_mode": [
+            {
+              "mineral": "kaolinite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.25
+            },
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.1
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.18,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate silicate_hydrolysis residue on mylonite; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "mylonite/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "gossan.reference/fresh_dry/0.1",
+      "realization_id": "gossan.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "gossan.reference/fresh_dry/2.0",
+      "realization_id": "gossan.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "gossan.reference/fresh_dry/50.0",
+      "realization_id": "gossan.reference",
+      "history": "fresh_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured dry fracture diagnostic",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "gossan.reference/fresh_wet/0.1",
+      "realization_id": "gossan.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "gossan.reference/fresh_wet/2.0",
+      "realization_id": "gossan.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "gossan.reference/fresh_wet/50.0",
+      "realization_id": "gossan.reference",
+      "history": "fresh_wet",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.0,
+        "coating": null,
+        "creation_event": "diagnostic-cut-v1",
+        "exposure_elapsed_s": 0.0,
+        "forcing_record": "manufactured fully wet fresh fracture; 100 micrometre film",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "fresh_fracture",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.0,
+        "surface_id": "gossan/fresh_wet",
+        "water_film_m": 0.0001,
+        "wet_coverage": 1.0
+      },
+      "footprint_m": 50.0
+    },
+    {
+      "id": "gossan.reference/weathered_dry/0.1",
+      "realization_id": "gossan.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-gossan-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on gossan; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "gossan/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 0.1
+    },
+    {
+      "id": "gossan.reference/weathered_dry/2.0",
+      "realization_id": "gossan.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-gossan-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on gossan; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "gossan/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 2.0
+    },
+    {
+      "id": "gossan.reference/weathered_dry/50.0",
+      "realization_id": "gossan.reference",
+      "history": "weathered_dry",
+      "weathering_family": "oxidation_residual",
+      "surface": {
+        "abrasion": 0.05,
+        "coating": {
+          "source_event": "manufactured-v31-gossan-residue",
+          "mineral_mode": [
+            {
+              "mineral": "goethite",
+              "mass_fraction": 0.65
+            },
+            {
+              "mineral": "hematite",
+              "mass_fraction": 0.15
+            },
+            {
+              "mineral": "quartz",
+              "mass_fraction": 0.2
+            }
+          ],
+          "grain_diameter_m": 0.0002,
+          "thickness_m": 5e-05,
+          "coverage": 0.4,
+          "extinction_m_inv": 10000
+        },
+        "creation_event": "diagnostic-inherited-v31",
+        "exposure_elapsed_s": null,
+        "forcing_record": "manufactured wet-temperate oxidation_residual residue on gossan; supplied surface stock; no kinetics, elapsed age, or bulk reaction claimed",
+        "material_coordinate_m": [
+          0.123,
+          0.456,
+          0.789
+        ],
+        "mechanism": "inherited",
+        "normal_material": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rms_slope_history_rad": 0.08,
+        "surface_id": "gossan/weathered_dry",
+        "water_film_m": 0.0,
+        "wet_coverage": 0.0
+      },
+      "footprint_m": 50.0
+    }
+  ]
+}

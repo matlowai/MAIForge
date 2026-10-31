@@ -1,0 +1,12 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-contracts"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+blake3.workspace = true
+thiserror.workspace = true
+vz-tilekey.workspace = true

@@ -1,0 +1,13 @@
+[package]
+license = "AGPL-3.0-only"
+name = "pf-grid"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+pf-contracts = { path = "../pf-contracts" }
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

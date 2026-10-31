@@ -1,0 +1,219 @@
+{
+  "reference": {
+    "citation": "Winter (2010), Principles of Igneous and Metamorphic Petrology, 2nd ed.; Deer, Howie and Zussman (1992), An Introduction to the Rock-Forming Minerals, 2nd ed.; Butt and Zeegers, eds. (1992), Regolith Exploration Geochemistry in Tropical and Subtropical Terrains; MODEL_V3_1.md",
+    "qualification": "Offline memory only; broad petrological relationships, no consulted pages or extracted modal/optical numbers. All new numbers are conditional project priors, not setting-wide averages, measurements, or calibration.",
+    "verification": "offline_memory_unverified_project_prior"
+  },
+  "realizations": {
+    "basalt_tholeiitic.lip": {
+      "scenario": "declared moderately differentiated flood-lava assemblage; not every LIP basalt",
+      "mode": [
+        {
+          "mineral": "plagioclase",
+          "mass_fraction": {
+            "value": 0.5,
+            "interval": [
+              0.15,
+              0.9
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "augite",
+          "mass_fraction": {
+            "value": 0.34,
+            "interval": [
+              0.10200000000000001,
+              0.6120000000000001
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "orthopyroxene",
+          "mass_fraction": {
+            "value": 0.02,
+            "interval": [
+              0.006,
+              0.036000000000000004
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "olivine",
+          "mass_fraction": {
+            "value": 0.02,
+            "interval": [
+              0.006,
+              0.036000000000000004
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "magnetite",
+          "mass_fraction": {
+            "value": 0.06,
+            "interval": [
+              0.018,
+              0.108
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "volcanic_glass",
+          "mass_fraction": {
+            "value": 0.06,
+            "interval": [
+              0.018,
+              0.108
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "qualification": "Modal change only. All grain, porosity, An and structure parameters retain v3 values. Offline illustrative prior, not extracted measurement."
+    },
+    "basalt_tholeiitic.island_shield": {
+      "scenario": "declared olivine-bearing shield-lava assemblage; not every ocean-island tholeiite",
+      "mode": [
+        {
+          "mineral": "plagioclase",
+          "mass_fraction": {
+            "value": 0.45,
+            "interval": [
+              0.135,
+              0.81
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "augite",
+          "mass_fraction": {
+            "value": 0.32,
+            "interval": [
+              0.096,
+              0.5760000000000001
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "olivine",
+          "mass_fraction": {
+            "value": 0.12,
+            "interval": [
+              0.036,
+              0.216
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "magnetite",
+          "mass_fraction": {
+            "value": 0.04,
+            "interval": [
+              0.012,
+              0.07200000000000001
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        },
+        {
+          "mineral": "volcanic_glass",
+          "mass_fraction": {
+            "value": 0.07,
+            "interval": [
+              0.021,
+              0.12600000000000003
+            ],
+            "unit": "1",
+            "interval_kind": "plausible_prior_support",
+            "distribution": "unspecified_joint_prior",
+            "reference": "RS31",
+            "evidence_kind": "project_prior",
+            "support_scale": "body realization; no site admission",
+            "conditions": "dry mass mode; joint simplex; illustrative differentiated or olivine-bearing lava interior",
+            "covariance_group": "v31_closed_assemblage"
+          }
+        }
+      ],
+      "qualification": "Modal change only. All grain, porosity, An and structure parameters retain v3 values. Offline illustrative prior, not extracted measurement."
+    }
+  }
+}
