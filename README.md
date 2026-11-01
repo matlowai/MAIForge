@@ -57,7 +57,8 @@ The core owns generation, stable identities, physical units and model evidence.
 Engine adapters consume its geometry/fields, handle coordinate conversion, upload,
 rendering and collision representations. Generation rules should not be duplicated
 inside an adapter. The optional [Three.js adapter](https://github.com/matlowai/MAIForge-ThreeJS)
-is included as the `viewer/` Git submodule. It runs independently with a bundled,
+is included as the `viewer/` Git submodule.
+[Open the live browser demo](https://matlowai.github.io/MAIForge-ThreeJS/). It runs independently with a bundled,
 verified generated globe and no other engine or art packs:
 
 ```sh
