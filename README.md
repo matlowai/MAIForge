@@ -56,8 +56,23 @@ or a production terrain guarantee.
 The core owns generation, stable identities, physical units and model evidence.
 Engine adapters consume its geometry/fields, handle coordinate conversion, upload,
 rendering and collision representations. Generation rules should not be duplicated
-inside an adapter. A Three.js browser setup as an optional Git submodule is planned
-for a later phase; it is not included in this initial source release.
+inside an adapter. The optional [Three.js adapter](https://github.com/matlowai/MAIForge-ThreeJS)
+is included as the `viewer/` Git submodule. It runs independently with a bundled,
+verified generated globe and no other engine or art packs:
+
+```sh
+git submodule update --init --recursive
+bash scripts/viewer.sh
+```
+
+Use Node.js 22.12 or newer. The browser client provides orbit-to-surface
+navigation, camera-relative rendering, worker-generated LOD and field inspection.
+The reference has approximately 69.5 km geological source spacing; close-up mesh
+subdivision is not fine geological data. Native process exporters are included
+for development, but full fine-world streaming is not yet implemented. Read the
+adapter README for data fidelity, performance and gameplay limitations.
+`bash scripts/export_viewer.sh WORLD_ROOT OUTPUT_DIR` exports another verified
+native endpoint. The core demo's `generated/<run>/run` directory is one such input.
 
 Large generated worlds are outputs/caches, not required repository assets. Models,
 textures or packs sourced from third parties are not bundled. See DATA_NOTICES.md

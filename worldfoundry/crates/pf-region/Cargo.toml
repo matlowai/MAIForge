@@ -6,6 +6,7 @@ edition.workspace = true
 description = "T1a chart-wide drainage skeleton (TER-SKELETON) and T1b regional relief windows (TER-REGION), ADR 043 terrain tiers; labelled pre-signoff"
 
 [dependencies]
+pf-hydro-catchment = { path = "../pf-hydro-catchment" }
 pf-contracts = { path = "../pf-contracts" }
 pf-grid = { path = "../pf-grid" }
 serde.workspace = true

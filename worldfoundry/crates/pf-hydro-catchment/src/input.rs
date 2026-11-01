@@ -262,3 +262,96 @@ impl Input {
         })
     }
 }
+
+/// The actual endpoint fields consumed by the shared initial terrain law.
+/// A historical surface-pass trace is not required merely to sample this law.
+pub trait SurfaceFields {
+    fn grid(&self) -> Grid;
+    fn seed(&self) -> u64;
+    fn elevation(&self) -> &[f64];
+    fn relief(&self) -> &[f64];
+}
+impl SurfaceFields for Input {
+    fn grid(&self) -> Grid {
+        self.grid
+    }
+    fn seed(&self) -> u64 {
+        self.seed
+    }
+    fn elevation(&self) -> &[f64] {
+        &self.elevation
+    }
+    fn relief(&self) -> &[f64] {
+        &self.relief
+    }
+}
+
+/// A typed endpoint input for native refinement, independent of archived traces.
+/// No frame, pre-surface reconstruction or historical arrays are fabricated.
+#[derive(Clone)]
+pub struct EndpointInput {
+    pub grid: Grid,
+    pub seed: u64,
+    pub elevation: Vec<f64>,
+    pub relief: Vec<f64>,
+    pub runoff_m_yr: f64,
+    pub published_flow: Vec<usize>,
+    pub sea: f64,
+    pub provenance: Value,
+}
+impl EndpointInput {
+    pub fn from_legacy(input: &Input) -> Result<Self> {
+        let result = Self {
+            grid: input.grid,
+            seed: input.seed,
+            elevation: input.elevation.clone(),
+            relief: input.relief.clone(),
+            runoff_m_yr: input.runoff_m_yr,
+            published_flow: input.published_flow.clone(),
+            sea: input.sea,
+            provenance: input.provenance.clone(),
+        };
+        result.validate()?;
+        Ok(result)
+    }
+    pub fn validate(&self) -> Result<()> {
+        let n = self
+            .grid
+            .nx
+            .checked_mul(self.grid.ny)
+            .ok_or("native endpoint grid overflow")?;
+        Grid::new(self.grid.ny, self.grid.nx, self.grid.radius)?;
+        if self.elevation.len() != n
+            || self.relief.len() != n
+            || self.published_flow.len() != n
+            || self.elevation.iter().any(|x| !x.is_finite())
+            || self.relief.iter().any(|x| !x.is_finite() || *x < 0.)
+            || self.published_flow.iter().any(|&x| x != NONE && x >= n)
+            || !self.runoff_m_yr.is_finite()
+            || self.runoff_m_yr < 0.
+            || !self.sea.is_finite()
+        {
+            return Err("invalid native endpoint fields".into());
+        }
+        Ok(())
+    }
+}
+impl SurfaceFields for EndpointInput {
+    fn grid(&self) -> Grid {
+        self.grid
+    }
+    fn seed(&self) -> u64 {
+        self.seed
+    }
+    fn elevation(&self) -> &[f64] {
+        &self.elevation
+    }
+    fn relief(&self) -> &[f64] {
+        &self.relief
+    }
+}
+
+/// SHA256 for transfer payloads; usable by browser-native Web Crypto validators.
+pub fn sha256_bytes(bytes: &[u8]) -> String {
+    format!("{:x}", Sha256::digest(bytes))
+}

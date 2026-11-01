@@ -334,3 +334,12 @@ pub mod t1b_surface_channels;
 pub mod t1b_surface_area;
 
 pub mod t1b_escarp;
+
+// Engine-neutral, planet-addressed native terrain construction.
+pub mod planet_datum;
+pub mod planet_relief;
+pub mod planet_cell;
+pub mod planet_catchment;
+pub mod planet_hillslope;
+pub mod planet_transport;
+pub mod planet_initial;

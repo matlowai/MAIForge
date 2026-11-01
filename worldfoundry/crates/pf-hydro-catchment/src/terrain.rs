@@ -105,13 +105,13 @@ fn noise3(p: [f64; 3], seed: u64) -> f64 {
 /// Q24 uses pinned endpoint elevation, not Q20 pre-pass reconstruction.
 /// Conditional initial relief law at any planet address. No river geometry is sampled.
 /// Native relief is mean-to-trunk, not RMS: 0.2 is an explicit global assumed RMS fraction.
-pub fn terrain(input: &crate::input::Input, cell: usize, u: f64, v: f64) -> f64 {
-    let g = input.grid;
+pub fn terrain(input: &impl crate::input::SurfaceFields, cell: usize, u: f64, v: f64) -> f64 {
+    let g = input.grid();
     let p = g.point(cell, u, v);
     let xyz = [p[1].cos() * p[0].cos(), p[1].cos() * p[0].sin(), p[1].sin()];
     let mut r = 0.;
     for (scale, weight) in [(40000., 1.), (20000., 0.5), (10000., 0.25)] {
-        r += weight * noise3(xyz.map(|x| x * g.radius / scale), input.seed);
+        r += weight * noise3(xyz.map(|x| x * g.radius / scale), input.seed());
     }
-    g.sample(&input.elevation, cell, u, v) + g.sample(&input.relief, cell, u, v) * 0.2 * r / 0.4
+    g.sample(input.elevation(), cell, u, v) + g.sample(input.relief(), cell, u, v) * 0.2 * r / 0.4
 }
